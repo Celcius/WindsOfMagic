@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 512621dc42e1f3b4490fc9878add1a40, type: 3}
-  m_Name: GameSpeed
+  m_Script: {fileID: 11500000, guid: 4356666a3578eb044b9aa537d8a2572a, type: 3}
+  m_Name: GameTimeVar
   m_EditorClassIdentifier: 
-  setupValue: 1
-  value: 1
+  setupValue:
+    ElapsedTime: 0
+    GameSpeed: 1
+  value:
+    ElapsedTime: 0
+    GameSpeed: 1

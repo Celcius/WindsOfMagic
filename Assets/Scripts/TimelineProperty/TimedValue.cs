@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class TimedValue<V> 
+public abstract class TimedValue<V>
 {
     public float Timestamp;
     public V Value;

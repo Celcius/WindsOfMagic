@@ -20,7 +20,7 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
         return timeline.HasValues && ((TimedValue<V>)timeline[0]).Timestamp < timestamp;
     }
 
-    public V InterpolatedValueAt(float timestamp, bool overrideRightEdge = true)
+    public V InterpolatedValueAt(float timestamp, bool clampRightEdge = true)
     {
         if(!HasValue)
         {
@@ -31,12 +31,11 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
             return timeline[0].Value;
         }
 
-        TimedValue<V> left;
-        TimedValue<V> right;
+        T left, right;
 
         if(timestamp > timeline[timeline.Count-1].Timestamp)
         {
-            if(overrideRightEdge)
+            if(clampRightEdge)
             {
                 return timeline[timeline.Count-1].Value;
             }
@@ -50,6 +49,20 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
         }        
 
         return left.RelativeLerp(right, timestamp);
+    }
+
+
+    public void SetValue(float timestamp, V value)
+    {
+        if(timeline.Count == 0)
+        {
+            return;
+        }
+        
+        T  nextValue = timeline.GetNextValue(timestamp);
+        nextValue.Timestamp = timestamp;
+        nextValue.Value = value;
+        SetValue(nextValue);
     }
 
     public void SetValue(T value)
@@ -90,7 +103,7 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
 
         float lastInstant = timeline[0].Timestamp + duration;
         
-        TimedValue<V>[] values = timeline.GetRange(0, i);
+        T[] values = timeline.GetRange(0, i);
         values[i].Timestamp = lastInstant;
         values[i].Value = InterpolatedValueAt(lastInstant);
         timeline.SetTimeEvents(values);
@@ -113,7 +126,7 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
 
         float firstInstant = timeline[lastIndex].Timestamp - duration;
         
-        TimedValue<V>[] values = timeline.GetRange(i, lastIndex);
+        T[] values = timeline.GetRange(i, lastIndex);
         values[0].Timestamp = firstInstant;
         values[0].Value = InterpolatedValueAt(firstInstant);
         timeline.SetTimeEvents(values);

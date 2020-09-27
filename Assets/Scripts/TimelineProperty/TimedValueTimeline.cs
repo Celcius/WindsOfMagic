@@ -7,18 +7,18 @@ public class TimedValueTimeline<T,V>
        where T : TimedValue<V>
 {
 
-    private IndexableStack<TimedValue<V>> timelineStack = new IndexableStack<TimedValue<V>>();
+    private IndexableStack<T> timelineStack = new IndexableStack<T>();
 
     public bool HasValues => timelineStack.Count > 0;
 
     public int Count => timelineStack.Count;
 
-    public TimedValue<V> this[int index]
+    public T this[int index]
     {
         get => timelineStack[index];
     }
 
-    public void SetTimeEvents(TimedValue<V>[] values)
+    public void SetTimeEvents(T[] values)
     {
         timelineStack.Clear();
         timelineStack.AddRange(values);
@@ -40,8 +40,8 @@ public class TimedValueTimeline<T,V>
         }
         
         // Memory optimization, interpolates
-        TimedValue<V> prev = timelineStack[timelineStack.Count-2];
-        TimedValue<V> last = timelineStack[timelineStack.Count-1];
+        T prev = timelineStack[timelineStack.Count-2];
+        T last = timelineStack[timelineStack.Count-1];
         V expectedVal = prev.RelativeLerp(last, timeEvent.Timestamp);
 
         if(timeEvent.SameValue(expectedVal))
@@ -79,17 +79,17 @@ public class TimedValueTimeline<T,V>
         timelineStack.Clear();
     }
 
-    public TimedValue<V> GetPrevValue(float timestamp, bool removeAfter = false)
+    public T GetPrevValue(float timestamp, bool removeAfter = false)
     {
         if(removeAfter)
         {
             RemoveAfter(timestamp);
-            return ((TimedValue<V>)timelineStack[timelineStack.Count-1]);
+            return ((T)timelineStack[timelineStack.Count-1]);
         }
 
         for(int i = timelineStack.Count -1; i >= 0 ; i--)
         {
-            TimedValue<V> timedValue = timelineStack[i];
+            T timedValue = timelineStack[i];
             if(timedValue.Timestamp < timestamp)
             {
                 return timedValue;
@@ -99,14 +99,14 @@ public class TimedValueTimeline<T,V>
         return null;
     }
 
-    public TimedValue<V> GetNextValue(float timestamp)
+    public T GetNextValue(float timestamp)
     {
         if(timelineStack.Count == 0)
         {
             return null;
         }
 
-        TimedValue<V> lastVal = timelineStack[timelineStack.Count-1];
+        T lastVal = timelineStack[timelineStack.Count-1];
         if(lastVal.Timestamp <= timestamp || timelineStack.Count == 0)
         {
             return lastVal;
@@ -114,7 +114,7 @@ public class TimedValueTimeline<T,V>
 
         for(int i = timelineStack.Count-2; i >= 0 ; i--)
         {
-            TimedValue<V> timedVal = timelineStack[i];
+            T timedVal = timelineStack[i];
             if(timedVal.Timestamp < timestamp)
             {
                 return timelineStack[i+1];
@@ -124,7 +124,7 @@ public class TimedValueTimeline<T,V>
         return null;
     }
 
-    public TimedValue<V> GetLastValue()
+    public T GetLastValue()
     {
         return HasValues? timelineStack[timelineStack.Count-1] : null;
     }
@@ -134,7 +134,7 @@ public class TimedValueTimeline<T,V>
         return Mathf.Abs(timelineStack[index1].Timestamp - timelineStack[index2].Timestamp);
     }
 
-    public TimedValue<V>[] GetRange(int start, int end)
+    public T[] GetRange(int start, int end)
     {
         return timelineStack.GetRange(start, end-start+1).ToArray();
     }

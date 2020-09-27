@@ -36,7 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Player\TestController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\CurveAnimeTimeBoundAdapter.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\DestroyOnBirth.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\GameTime.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\GameTimeBoundTransform.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\GameTimeVar.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TimeBoundAdapter.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TimeController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TransformMovementTimeBoundAdapter.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
