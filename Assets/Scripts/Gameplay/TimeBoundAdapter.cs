@@ -6,14 +6,14 @@ public abstract class TimeBoundAdapter<T> : MonoBehaviour where T : MonoBehaviou
 {
     protected T[] components;
 
-    [SerializeField]
-    private GameTimeVar gameTime;
+    private GameTime gameTime;
 
     private float birthTime = 0;
     private bool enabledComponents = true;
 
     private void Start()
     {
+        gameTime = GameTime.Instance;
         components = GetComponents<T>();
         birthTime = gameTime.ElapsedTime;
     }

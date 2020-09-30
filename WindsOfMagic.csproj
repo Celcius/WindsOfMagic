@@ -36,14 +36,29 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Gameplay\BulletSpawnDefinition.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\BulletWave.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\BulletWaveShooter.cs" />
      <Compile Include="Assets\Scripts\Gameplay\CurveAnimeTimeBoundAdapter.cs" />
      <Compile Include="Assets\Scripts\Gameplay\DestroyOnBirth.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\GameController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTime.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTimeBoundTransform.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\GameTimeVar.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\IGameTimeListener.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Pickups\PlayerPickups.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Pickups\ProjectilePickups.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\PlayerStatsTimeHandler.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStatsVar.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStats.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStatsVar.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimeBoundAdapter.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TimeBoundCurveTransformMove.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimeController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TimedDisableOnCollision.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TransformMovementTimeBoundAdapter.cs" />
+     <Compile Include="Assets\Scripts\Input\InputHandler.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

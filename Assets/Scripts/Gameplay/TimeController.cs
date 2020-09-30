@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
-    [SerializeField]
-    private GameTimeVar gameTime;
+    private GameTime gameTime;
 
-    // Update is called once per frame
+    void Start() 
+    {
+        gameTime = GameTime.Instance;
+    }
+
     void Update()
     {    
         if(gameTime.GameSpeed != 0)
         {
-            gameTime.ElapsedTime = Mathf.Clamp(gameTime.ElapsedTime + Time.deltaTime * gameTime.GameSpeed,
+            gameTime.ElapsedTime = Mathf.Clamp(gameTime.ElapsedTime + gameTime.DeltaTime,
                                                0,
                                                float.MaxValue);
         }

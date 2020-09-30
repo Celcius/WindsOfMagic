@@ -70,6 +70,7 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\ChangeFollowOffsetOnScreenSize.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\CurveTransformMove.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\DestroyOnCollision.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\DisableOnCollision.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\FollowTransform.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\InstantiateOnCollision.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\InstantiateTimer.cs" />

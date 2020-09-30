@@ -52,7 +52,7 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
     }
 
 
-    public void SetValue(float timestamp, V value)
+    public void UpdateValue(float timestamp, V value)
     {
         if(timeline.Count == 0)
         {
