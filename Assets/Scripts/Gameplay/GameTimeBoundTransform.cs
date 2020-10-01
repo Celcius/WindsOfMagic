@@ -48,6 +48,11 @@ public class GameTimeBoundTransform : MonoBehaviour, IGameTimeListener
     {
         GameTime.Instance.RemoveTimeListener(this);
     }
+
+    private void OnDestroy()
+    {
+        GameTime.Instance.RemoveTimeListener(this);
+    }
     
     private void OnDisable() 
     {
