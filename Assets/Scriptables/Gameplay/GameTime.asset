@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4356666a3578eb044b9aa537d8a2572a, type: 3}
   m_Name: GameTime
   m_EditorClassIdentifier: 
-  elapsedTime: 3.8465533
-  gameSpeed: -1
+  elapsedTime: 9.210272
+  gameSpeed: 1

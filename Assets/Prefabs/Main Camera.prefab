@@ -112,6 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
   basePlayerStats: {fileID: 11400000, guid: 0c3cb16cf21cce642a09f38f1086c01b, type: 2}
+  projectileStats: {fileID: 11400000, guid: 75fd1d4e1a4befe4e91d637ddecc781e, type: 2}
+  baseProjectileStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4,
+    type: 2}
   gameTime: {fileID: 11400000, guid: 8843693cf6ff95149afe803e02d0be85, type: 2}
 --- !u!114 &8994501835197992478
 MonoBehaviour:

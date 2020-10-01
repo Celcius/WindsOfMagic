@@ -11,12 +11,20 @@ public class GameController : MonoBehaviour
     private PlayerStats basePlayerStats;
 
     [SerializeField]
+    private ProjectileStats projectileStats;
+
+    [SerializeField]
+    private ProjectileStats baseProjectileStats;
+
+
+    [SerializeField]
     private GameTime gameTime;
 
     // Start is called before the first frame update
     void Start()
     {
         playerStats.SetPlayerStats(basePlayerStats);
+        projectileStats.SetProjectileStats(baseProjectileStats);
         gameTime.ElapsedTime = 0.0f;
         gameTime.GameSpeed = 1.0f;
     }

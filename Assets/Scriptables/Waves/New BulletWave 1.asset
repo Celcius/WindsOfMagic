@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae18992218ef7f4d8ba2e5edffb6de9, type: 3}
   m_Name: New BulletWave 1
   m_EditorClassIdentifier: 
-  projectile: {fileID: 4146506474727049750, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+  projectile: {fileID: 4010735528938276734, guid: b9e324911fda2ea4fad8f0ee8703897c,
     type: 3}
   amount: 30
   range: 360

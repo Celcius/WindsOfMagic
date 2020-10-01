@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67be57302e6b1a7469e9ae44727f6bf0, type: 3}
   m_Name: CurrentProjectileStats
   m_EditorClassIdentifier: 
-  AddedSpeed: 3
-  Size: 0.5
+  AddedSpeed: 1
+  Size: 0.15
   Damage: 1

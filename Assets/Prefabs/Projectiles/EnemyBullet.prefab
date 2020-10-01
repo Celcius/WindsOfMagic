@@ -10,12 +10,22 @@ PrefabInstance:
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: useTag
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: otherTag
-      value: Player
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: useLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 5120
       objectReference: {fileID: 0}
     - target: {fileID: 3232561443532337185, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
@@ -31,6 +41,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146506474727049737, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4146506474727049750, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
@@ -86,6 +101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485464173169576233, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 283ed9dbfb9213a4a8e635ce84ca72e0, type: 3}

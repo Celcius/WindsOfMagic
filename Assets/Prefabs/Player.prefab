@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4406686250223132562}
   - component: {fileID: 4406686250223132563}
   - component: {fileID: 4406686250223132560}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -133,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: e41409226a32ab34b8761019bfdfbd39, type: 2}
   playerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
+  projectileStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4, type: 2}
+  bullet: {fileID: 989803756278082413, guid: fc01c41cc0e18664491191c0cb364472, type: 3}
   deadzone: 0.05
 --- !u!58 &4406686250223132563
 CircleCollider2D:
