@@ -16,6 +16,6 @@ public class InputHandler : ScriptableObject
 
     public bool IsReversing()
     {
-        return false;
+        return Input.GetKey(KeyCode.Space);
     }
 }

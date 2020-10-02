@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Gameplay\PlayerStatsTimeHandler.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Projectiles\PlayerProjectile.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Projectiles\PlayerProjectileTransformMovement.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\RollbackTimer.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStatsVar.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStats.cs" />

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private InputHandler input;
+
     private Rigidbody2D body;
     private GameTime timeHandler;
 
@@ -28,6 +29,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 lastMovement = Vector2.right;
 
+    [SerializeField]
+    private RollbackTimer rollbackTimer;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -37,7 +41,24 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(timeHandler.GameSpeed > 0)
+        if(input.IsReversing() && !GameTime.Instance.IsReversing && rollbackTimer.FilledRollbacks >= 1.0f)
+        {
+            GameTime.Instance.Reverse();
+        }
+        else if((GameTime.Instance.IsReversing || GameTime.Instance.IsStopped) && !input.IsReversing())
+        {
+            rollbackTimer.Value = rollbackTimer.FilledRollbacks;
+            GameTime.Instance.Play();
+        }
+        else if(GameTime.Instance.IsReversing && rollbackTimer.Value <= 0)
+        {
+            GameTime.Instance.Stop();
+        }
+        else if(GameTime.Instance.GameSpeed < 0 && input.IsReversing())
+        {
+            rollbackTimer.Value += GameTime.Instance.DeltaTime;
+        }
+        else if(timeHandler.GameSpeed > 0)
         {
             Vector2 moveDir = input.GetMoveAxis();
             Vector3 speed = (Vector3)moveDir * playerStats.MoveSpeed;
@@ -57,7 +78,8 @@ public class PlayerController : MonoBehaviour
             {
                 lastMovement = new Vector2(moveDir.x, moveDir.y);
             }
-            
+
+            rollbackTimer.Value += GameTime.Instance.DeltaTime * playerStats.RollbackRecoverySpeed;
         }
     }
 

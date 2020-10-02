@@ -25,7 +25,6 @@ public class GameController : MonoBehaviour
     {
         playerStats.SetPlayerStats(basePlayerStats);
         projectileStats.SetProjectileStats(baseProjectileStats);
-        gameTime.ElapsedTime = 0.0f;
-        gameTime.GameSpeed = 1.0f;
+        GameTime.Instance.Start();
     }
 }

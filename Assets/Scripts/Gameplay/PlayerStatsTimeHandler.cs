@@ -17,6 +17,7 @@ public class PlayerStatsTimeHandler : ScriptableObject, IGameTimeListener
         Acceleration = 0,
         MoveSpeed,
         Health,
+        RollbackTime,
         RollbackCount,
         RollbackRecoverySpeed,
         iFrameTime,
@@ -40,7 +41,7 @@ public class PlayerStatsTimeHandler : ScriptableObject, IGameTimeListener
         GameTime.Instance.AddTimeListener(this);
         currentPlayerStats.OnChangeEvent += OnStatsChange;
         currentProjectileStats.OnChangeEvent += OnStatsChange;
-
+        
         playerStats = new TimelinedProperty<TimedFloat, float>[(int)StatsIndex.End];
         for(int i = 0; i < playerStats.Length; i++)
         {
@@ -81,6 +82,7 @@ public class PlayerStatsTimeHandler : ScriptableObject, IGameTimeListener
         currentPlayerStats.SetPlayerStats(playerStats[(int)StatsIndex.Acceleration].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.MoveSpeed].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.Health].InterpolatedValueAt(timeElapsed),
+                                          playerStats[(int)StatsIndex.RollbackTime].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.RollbackCount].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.RollbackRecoverySpeed].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.iFrameTime].InterpolatedValueAt(timeElapsed),
@@ -98,6 +100,7 @@ public class PlayerStatsTimeHandler : ScriptableObject, IGameTimeListener
         stats[(int)StatsIndex.Acceleration] = currentPlayerStats.Acceleration;
         stats[(int)StatsIndex.MoveSpeed] = currentPlayerStats.MoveSpeed;
         stats[(int)StatsIndex.Health] = currentPlayerStats.Health;
+        stats[(int)StatsIndex.RollbackTime] = currentPlayerStats.RollbackTime;
         stats[(int)StatsIndex.RollbackCount] = currentPlayerStats.RollbackCount;
         stats[(int)StatsIndex.RollbackRecoverySpeed] = currentPlayerStats.RollbackRecoverySpeed;
         stats[(int)StatsIndex.iFrameTime] = currentPlayerStats.iFrameTime;

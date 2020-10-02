@@ -306,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 2486006704330155589, guid: e4e48ab260cd7994882171684c2c8215,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4e48ab260cd7994882171684c2c8215, type: 3}
@@ -319,6 +319,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4406686250223132562, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
         type: 3}
+      propertyPath: timeInSpeed.Curve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406686250223132562, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
+        type: 3}
       propertyPath: bullet
       value: 
       objectReference: {fileID: 989803756278082413, guid: fc01c41cc0e18664491191c0cb364472,
@@ -329,6 +334,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4,
         type: 2}
+    - target: {fileID: 4406686250223132562, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
+        type: 3}
+      propertyPath: timeInSpeed.Curve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406686250223132562, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
+        type: 3}
+      propertyPath: timeInSpeed.Curve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406686250223132562, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
+        type: 3}
+      propertyPath: timeInSpeed.Curve.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406686250223132562, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
+        type: 3}
+      propertyPath: timeInSpeed.Curve.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406686250223132562, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
+        type: 3}
+      propertyPath: timeInSpeed.CurveType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4406686250223132564, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
         type: 3}
       propertyPath: m_Material
@@ -608,6 +638,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 56ade1d5b291445458cdf6e104e344d6,
         type: 2}
+    - target: {fileID: 8994501835197992478, guid: 2410d857e34bc4e439f136bbc3cd8739,
+        type: 3}
+      propertyPath: followRatio
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 8994501835197992672, guid: 2410d857e34bc4e439f136bbc3cd8739,
         type: 3}
       propertyPath: m_Name

@@ -12,5 +12,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4356666a3578eb044b9aa537d8a2572a, type: 3}
   m_Name: GameTime
   m_EditorClassIdentifier: 
-  elapsedTime: 9.210272
-  gameSpeed: 1
+  elapsedTime: 29.232574
+  gameSpeed: 0.80493534
+  maxStats: {fileID: 11400000, guid: 90e4dbaf9745ac74a9c34cf3eab0f382, type: 2}
+  reverseSpeed: -0.5
+  timeSpeedFast:
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    CurveType: 1
+    Offset: 0
+    TimeOffset: 0
+    AxisMultiplier: 1
+    TimeMultiplier: 1
+  timeSpeedSlow:
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    CurveType: 1
+    Offset: 0
+    TimeOffset: 0
+    AxisMultiplier: 1
+    TimeMultiplier: 3

@@ -38,10 +38,17 @@ public class GameTimeBoundTransform : MonoBehaviour, IGameTimeListener
 
     public void OnTimeElapsed(float elapsed)
     {
-        if(!gameObject.activeInHierarchy && elapsed < disableTime)
-        {
-            gameObject.SetActive(true);
-        } 
+         if(!gameObject.activeInHierarchy)
+         {
+            if(elapsed < disableTime)
+            {
+                gameObject.SetActive(true);
+            } 
+            else if(GameTime.Instance.GameSpeed > 0 &&  elapsed > disableTime + GameTime.Instance.MaxDeathTime)
+            {
+                Destroy(gameObject);
+            }
+         }
     }
 
     private void OnEnable() 
