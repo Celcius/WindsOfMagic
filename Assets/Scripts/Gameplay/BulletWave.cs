@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletWave : ScriptableObject
+[System.Serializable]
+public struct BulletWave
 {
     public Transform projectile;
-    public float amount = 1;
+    public float amount;
 
-    [Range(0, 360)]
-    public float range = 360;
+    public float range;
 
-    public float rotation = 0;
+    public float rotation;
+    public float damage; 
 }

@@ -51,6 +51,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -99,11 +100,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 5}
+  m_Offset: {x: 0, y: 4.9}
   m_SpriteTilingProperty:
-    border: {x: 0.12, y: 0.12, z: 0.12, w: 0.12}
+    border: {x: 0.48, y: 0.48, z: 0.48, w: 0.48}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 13, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
@@ -125,11 +126,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -5}
+  m_Offset: {x: 0, y: -4.9}
   m_SpriteTilingProperty:
-    border: {x: 0.12, y: 0.12, z: 0.12, w: 0.12}
+    border: {x: 0.48, y: 0.48, z: 0.48, w: 0.48}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 13, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
@@ -151,11 +152,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -6.5, y: 0}
+  m_Offset: {x: -6.4, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.12, y: 0.12, z: 0.12, w: 0.12}
+    border: {x: 0.48, y: 0.48, z: 0.48, w: 0.48}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 13, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 1
@@ -177,11 +178,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 6.5, y: 0}
+  m_Offset: {x: 6.4, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.12, y: 0.12, z: 0.12, w: 0.12}
+    border: {x: 0.48, y: 0.48, z: 0.48, w: 0.48}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 13, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 1

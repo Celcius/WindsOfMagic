@@ -9,11 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ae18992218ef7f4d8ba2e5edffb6de9, type: 3}
-  m_Name: New BulletWave 1
+  m_Script: {fileID: 11500000, guid: 5891bfdf8c372a8468bc59fd335e7dc3, type: 3}
+  m_Name: TimedBoundRandom
   m_EditorClassIdentifier: 
-  projectile: {fileID: 4010735528938276734, guid: b9e324911fda2ea4fad8f0ee8703897c,
-    type: 3}
-  amount: 30
-  range: 360
-  rotation: 0

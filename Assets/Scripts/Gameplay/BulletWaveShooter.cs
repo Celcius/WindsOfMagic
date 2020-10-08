@@ -70,7 +70,12 @@ public class BulletWaveShooter : MonoBehaviour
             float angle = GeometryUtils.AngleInArc(arcStart, arcEnd, offset);
             Vector3 pos = GeometryUtils.PointInCircle(spawnOffset,angle);
         
-            Transform.Instantiate(wave.projectile, transform.position + pos, Quaternion.Euler(0,0,angle));
+            Transform newP = Transform.Instantiate(wave.projectile, transform.position + pos, Quaternion.Euler(0,0,angle));
+            ApplyDamageOnCollision damageOnCollision = newP.GetComponent<ApplyDamageOnCollision>();
+            if(damageOnCollision != null)
+            {
+              damageOnCollision.Damage = wave.damage;              
+            }
         }
     }
 }

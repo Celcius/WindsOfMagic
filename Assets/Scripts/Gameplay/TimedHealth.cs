@@ -25,6 +25,10 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
     [SerializeField]
     public bool ShouldRevertTime = true;
 
+    [SerializeField]
+    private bool isInvincible = false;
+    public bool IsInvincible => isInvincible;
+
     private void Start()
     {
         SetupHealth(maxHealth, maxHealth);
@@ -47,7 +51,11 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
             healthTimeline.Clear();    
         }
         
-        SetHealthDelta(currentHealth - this.healthTimeline.Value);
+        float delta = currentHealth - this.healthTimeline.Value;
+        if(!isInvincible || delta > 0)
+        {
+            SetHealthDelta(delta);   
+        }
     }
 
     public void SetHealthDelta(float delta)
