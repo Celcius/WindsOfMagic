@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BasePlayerStats
   m_EditorClassIdentifier: 
   acceleration: 200
-  moveSpeed: 10
+  moveSpeed: 1
   health: 3
   rollbackTime: 1
   rollbackCount: 3

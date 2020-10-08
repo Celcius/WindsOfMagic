@@ -37,6 +37,21 @@ PrefabInstance:
       propertyPath: useTag
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3703824415889062729, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703824415889062729, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 3703824415889062729, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: useLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4146506474727049737, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: m_Name

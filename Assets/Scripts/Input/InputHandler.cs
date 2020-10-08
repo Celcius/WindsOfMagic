@@ -9,6 +9,11 @@ public class InputHandler : ScriptableObject
         return new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
 
+    public Vector2 GetShootAxis()
+    {
+        return new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+    }
+
     public bool IsShooting()
     {
         return true;

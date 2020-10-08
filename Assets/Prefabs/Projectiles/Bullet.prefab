@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5834299222843188208}
   - component: {fileID: 6488877784065744974}
   - component: {fileID: 8485464173169576233}
+  - component: {fileID: 3703824415889062729}
   - component: {fileID: 1671679668734070761}
   m_Layer: 0
   m_Name: Bullet
@@ -52,6 +53,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -136,7 +138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMove: 1
-  AxisMultipliers: {x: 1, y: 1, z: 1}
   XCurve:
     Curve:
       serializedVersion: 2
@@ -215,6 +216,26 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &3703824415889062729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146506474727049737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0a358b3c37e6c4ab9a1c400bfd2a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  useTag: 0
+  otherTag: 
+  damage: 0
 --- !u!114 &1671679668734070761
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4406686250223132562}
   - component: {fileID: 4406686250223132563}
   - component: {fileID: 4406686250223132560}
+  - component: {fileID: 3203721967941925044}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -51,6 +52,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -98,7 +100,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 0
@@ -135,8 +137,10 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
   projectileStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4, type: 2}
   bullet: {fileID: 989803756278082413, guid: fc01c41cc0e18664491191c0cb364472, type: 3}
+  timeVoyageMask: PlayerInvincible
   deadzone: 0.05
   rollbackTimer: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
+  timeVoyageRatio: {fileID: 11400000, guid: e67e9ba0f10d23c47b3b5b810e9ff465, type: 2}
 --- !u!58 &4406686250223132563
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +170,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScriptVar: {fileID: 11400000, guid: 65fba8915f3678848a77128dea7b96b3, type: 2}
+--- !u!114 &3203721967941925044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406686250223132567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53d4cfa7ddc96b4991c2867644e0948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  disableOnDeath: 1
+  externalVar: {fileID: 11400000, guid: c0255e0a710a5d84dbb5c2eaf9715af1, type: 2}
+  ShouldRevertTime: 1

@@ -13,6 +13,10 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
 
     public V Value => timeline.HasValues? timeline.GetLastValue().Value : default(V);
 
+    public float LastInstant => !HasValue? 0 : timeline[timeline.Count-1].Timestamp;
+
+    public T FirstValue => !HasValue? null : timeline[0];
+
     public int TimePoints => timeline.Count;
     
     public bool HasValueBefore(float timestamp)
@@ -75,6 +79,11 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
         timeline.RevertToIndex(0);
     }
 
+    public void Clear()
+    {
+        timeline.Clear();
+    }
+    
     public void SetValues(T[] values, bool clearAll = true)
     {
         if(clearAll)
@@ -88,7 +97,7 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
         }
     }
 
-    public void ClipDurationFromEnd(float duration)
+    public void ClipDurationFromEnd(float duration, bool interpolate = true)
     {
         if(Duration <= duration)
         {
@@ -104,12 +113,16 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
         float lastInstant = timeline[0].Timestamp + duration;
         
         T[] values = timeline.GetRange(0, i);
+        T val = timeline.GetPrevValue(lastInstant);
+        values[i].Value = timeline.Count == 1 ? timeline[0].Value :
+                                               interpolate?
+                                               InterpolatedValueAt(lastInstant) :
+                                               val == null? timeline[0].Value : val.Value;
         values[i].Timestamp = lastInstant;
-        values[i].Value = InterpolatedValueAt(lastInstant);
         timeline.SetTimeEvents(values);
     }
 
-    public void ClipDurationFromBeginning(float duration)
+    public void ClipDurationFromBeginning(float duration, bool interpolate = true)
     {
         if(Duration <= duration)
         {
@@ -125,10 +138,12 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
         }
 
         float firstInstant = timeline[lastIndex].Timestamp - duration;
+
         
         T[] values = timeline.GetRange(i, lastIndex);
+        values[0].Value = timeline.Count == 1 ? timeline[0].Value :
+                                            interpolate? InterpolatedValueAt(firstInstant) : timeline[i].Value;
         values[0].Timestamp = firstInstant;
-        values[0].Value = InterpolatedValueAt(firstInstant);
         timeline.SetTimeEvents(values);
     }
 }

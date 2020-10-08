@@ -273,6 +273,57 @@ public class TimelinePropertyTestSuite
         Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
     }
 
+
+
+    [UnityTest]
+    public IEnumerator TestClipBeginningNoInterp()
+    {
+        TimelineFloat timeFloat = new TimelineFloat();
+        yield return TestInit();
+        
+        TimedFloat[] testVals = {new TimedFloat(1,1), 
+                            new TimedFloat(2,5),
+                            new TimedFloat(3.25f, 25)};
+
+        timeFloat.SetValues(testVals);
+
+        
+        Assert.True(timeFloat.Duration == 2.25f, "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 3, "TimelineProperty with unexpected points");
+        Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
+
+        timeFloat.ClipDurationFromBeginning(3.0f,false);
+
+        Assert.True(timeFloat.Duration == 2.25f, "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 3, "TimelineProperty with unexpected points");
+        Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.FirstValue.Value == testVals[0].Value, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.FirstValue.Timestamp == testVals[0].Timestamp, "TimelineProperty with unexpected Value");
+
+        timeFloat.ClipDurationFromBeginning(2.25f, false);
+
+        Assert.True(timeFloat.Duration == 2.25f, "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 3, "TimelineProperty with unexpected points");
+        Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.FirstValue.Value == testVals[0].Value, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.FirstValue.Timestamp == testVals[0].Timestamp, "TimelineProperty with unexpected Value");
+
+        timeFloat.ClipDurationFromBeginning(1.67f, false);
+
+        Assert.True(timeFloat.Duration == 1.67f, "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 3, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.FirstValue.Value == 1, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.FirstValue.Timestamp == testVals[2].Timestamp - 1.67f, "TimelineProperty with unexpected Value");
+
+        timeFloat.ClipDurationFromBeginning(0.25f, false);
+
+        Assert.True(timeFloat.Duration == 0.25f, "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 2, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.FirstValue.Value == 5, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.FirstValue.Timestamp == testVals[2].Timestamp - 0.25f, "TimelineProperty with unexpected Value");
+    }
     
 
     [UnityTest]
@@ -319,6 +370,53 @@ public class TimelinePropertyTestSuite
         Assert.True(timeFloat.Duration == 0.5f, "TimelineProperty with unexpected Duration");
         Assert.True(timeFloat.TimePoints == 2, "TimelineProperty with unexpected Value");
         Assert.True(timeFloat.Value == expectedValue, "TimelineProperty with unexpected Value");
+    }
+
+      [UnityTest]
+    public IEnumerator TestClipEndNoInterp()
+    {
+        TimelineFloat timeFloat = new TimelineFloat();
+        yield return TestInit();
+        timeFloat.ClipDurationFromEnd(1.0f);
+        yield return TestInit();
+
+        TimedFloat[] testVals = {new TimedFloat(1,1), 
+                                 new TimedFloat(2,5),
+                                 new TimedFloat(3.25f, 25)};
+
+        timeFloat.SetValues(testVals);
+
+        Assert.True(timeFloat.Duration == 2.25f, "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 3, "TimelineProperty with unexpected points");
+        Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
+
+        timeFloat.ClipDurationFromEnd(3.0f, false);
+
+        Assert.True(timeFloat.Duration == 2.25f, "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 3, "TimelineProperty with unexpected points");
+        Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
+
+        timeFloat.ClipDurationFromEnd(2.15f, false);
+
+        Assert.True(timeFloat.Duration == 2.15f, "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 3, "TimelineProperty with unexpected points");
+        Assert.True(timeFloat.Value == testVals[2].Value, "TimelineProperty with unexpected Value");
+
+        timeFloat.ClipDurationFromEnd(2, false);
+
+        Assert.True( Mathf.Approximately(timeFloat.Duration, 2), "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 3, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.Value == 5, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.LastInstant == 3, "TimelineProperty with unexpected Value");
+
+        
+        timeFloat.ClipDurationFromEnd(0.5f, false);
+
+        Assert.True(Mathf.Approximately(timeFloat.Duration, 0.5f), "TimelineProperty with unexpected Duration");
+        Assert.True(timeFloat.TimePoints == 2, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.Value == 1, "TimelineProperty with unexpected Value");
+        Assert.True(timeFloat.LastInstant == 1+0.5f, "TimelineProperty with unexpected Value");
+        yield return null;
     }
 
     private float QuickInterpolation(TimedFloat a, TimedFloat b, float Yc)

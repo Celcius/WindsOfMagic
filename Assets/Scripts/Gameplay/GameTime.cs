@@ -30,6 +30,13 @@ public class GameTime : SingletonScriptableObject<GameTime>
     [SerializeField]
     private PhysicsAnimationCurve reverseSpeedOut;
 
+    private float defaultSpeed = 1.0f;
+    public float DefaultSpeed => defaultSpeed;
+
+    public delegate void OnSpeedChange();
+    public event OnSpeedChange OnSpeedChangeEvent;
+
+
 
     private IEnumerator timeInRoutine = null;
 
@@ -67,17 +74,26 @@ public class GameTime : SingletonScriptableObject<GameTime>
     public float GameSpeed
     {
         get { return gameSpeed; }
-        set { gameSpeed = value; }
+        set 
+        { 
+            gameSpeed = value;  
+            OnSpeedChangeEvent?.Invoke(); 
+        }
     } 
+
+
 
     public float DeltaTime => (Time.deltaTime * GameSpeed);
 
-    public void UpdateTimeline<T,V>(TimelinedProperty<T, V> timeline, T currentValue) 
+    public void UpdateTimeline<T,V>(TimelinedProperty<T, V> timeline, T currentValue)
         where T : TimedValue<V>
     {
-        float gameSpeed = this.GameSpeed;
-        float time  = this.ElapsedTime;
+        UpdateTimeline<T,V>(timeline, currentValue, this.gameSpeed, this.ElapsedTime);
+    }
 
+    public void UpdateTimeline<T,V>(TimelinedProperty<T, V> timeline, T currentValue, float gameSpeed, float time) 
+        where T : TimedValue<V>
+    {
         if(gameSpeed > 0)
         {
             timeline.SetValue(currentValue);
@@ -116,7 +132,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
     public void Start()
     {
         elapsedTime = 0.0f;
-        gameSpeed = 1.0f;
+        gameSpeed = defaultSpeed;
         isReversing = false;
         isStopped = false;
     }
@@ -124,7 +140,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
     {
         isReversing = false;
         isStopped = false;
-        ChangeTime(1.0f, reverseSpeedOut, playSpeedIn);
+        ChangeTime(defaultSpeed, reverseSpeedOut, playSpeedIn);
     }
 
     public void Reverse()
@@ -139,6 +155,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
         isStopped = true;
         isReversing = false;
         gameSpeed = 0;
+        OnSpeedChangeEvent?.Invoke(); 
     }
 
     private void ChangeTime(float toValue, PhysicsAnimationCurve curveFrom, PhysicsAnimationCurve curveTo)
@@ -160,6 +177,8 @@ public class GameTime : SingletonScriptableObject<GameTime>
             {
                 gameSpeed = curveFrom.Evaluate(gameSpeed, duration - elapsed) * startSpeed;
                 elapsed += Time.deltaTime;
+                
+                OnSpeedChangeEvent?.Invoke(); 
 
                 yield return new WaitForEndOfFrame();
             }  
@@ -173,11 +192,12 @@ public class GameTime : SingletonScriptableObject<GameTime>
         {
             gameSpeed = curveTo.Evaluate(gameSpeed, elapsed)* value;
             elapsed += Time.deltaTime;
-
+            OnSpeedChangeEvent?.Invoke(); 
             yield return new WaitForEndOfFrame();
         }
 
         gameSpeed = value;
+        OnSpeedChangeEvent?.Invoke(); 
     }
 
     private void PrepareTimeChange()

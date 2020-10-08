@@ -11,8 +11,36 @@ public class GameTimeBoundTransform : MonoBehaviour, IGameTimeListener
     private TimelinedProperty<TimedVector3, Vector3> scaleTimeline = new TimelinedProperty<TimedVector3, Vector3>();
     
     private float disableTime = -1;
+
+    private bool ignoreGameSpeed = false;
+    float ignoreStartPoint;
+    float currentElapsed;
+    float totalElapsed;
+
+    public bool IgnoreGameSpeed
+    {
+        get { return ignoreGameSpeed; }
+        set 
+        {
+            if(value != ignoreGameSpeed)
+            {
+                if(value)
+                {
+                    ignoreStartPoint = GameTime.Instance.ElapsedTime;
+                    currentElapsed = 0;
+                }
+                else 
+                {
+                    totalElapsed += Mathf.Abs(ignoreStartPoint - GameTime.Instance.ElapsedTime) + currentElapsed;
+                }
+            }
+            ignoreGameSpeed = value;
+        }
+    }
+
     private void Start()
     {
+        totalElapsed = 0;
         gameTime = GameTime.Instance;
         posTimeline.SetValue(new TimedVector3(gameTime.ElapsedTime, transform.position));
         rotationTimeline.SetValue(new TimedQuaternion(gameTime.ElapsedTime, transform.rotation));
@@ -21,15 +49,28 @@ public class GameTimeBoundTransform : MonoBehaviour, IGameTimeListener
 
     void Update()
     {
-        gameTime.UpdateTimeline<TimedVector3, Vector3>(posTimeline, 
-            new TimedVector3(gameTime.ElapsedTime, transform.position));
+        if(IgnoreGameSpeed)
+        {
+            currentElapsed += Time.deltaTime * gameTime.DefaultSpeed;
+        }
+        
+        float gameSpeed = IgnoreGameSpeed? gameTime.DefaultSpeed : gameTime.GameSpeed;
+        float timestamp = IgnoreGameSpeed? ignoreStartPoint + currentElapsed : gameTime.ElapsedTime + totalElapsed;
+                          
+        gameTime.UpdateTimeline<TimedVector3, Vector3>(posTimeline,                      
+            new TimedVector3(timestamp, transform.position),
+            gameSpeed,
+            timestamp);
 
         gameTime.UpdateTimeline<TimedQuaternion, Quaternion>(rotationTimeline,
-            new TimedQuaternion(gameTime.ElapsedTime, transform.rotation));
-
+            new TimedQuaternion(timestamp, transform.rotation), 
+            gameSpeed,
+            timestamp);
         
         gameTime.UpdateTimeline<TimedVector3, Vector3>(scaleTimeline,
-            new TimedVector3(gameTime.ElapsedTime, transform.localScale));
+            new TimedVector3(timestamp, transform.localScale), 
+            gameSpeed,
+            timestamp);
 
         transform.position = posTimeline.Value;
         transform.rotation = rotationTimeline.Value;
@@ -38,8 +79,8 @@ public class GameTimeBoundTransform : MonoBehaviour, IGameTimeListener
 
     public void OnTimeElapsed(float elapsed)
     {
-         if(!gameObject.activeInHierarchy)
-         {
+        if(!gameObject.activeInHierarchy)
+        {
             if(elapsed < disableTime)
             {
                 gameObject.SetActive(true);
@@ -48,7 +89,7 @@ public class GameTimeBoundTransform : MonoBehaviour, IGameTimeListener
             {
                 Destroy(gameObject);
             }
-         }
+        }
     }
 
     private void OnEnable() 
