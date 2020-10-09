@@ -36,7 +36,12 @@ public class TimedBoundRandom : SingletonScriptableObject<TimedBoundRandom>, IGa
         seed = Random.Range(0, int.MaxValue);
         timeline.Clear();
         Random.InitState(seed);
-        timeline.SetValue(GetCurrentState());
+        
+        if(Application.isPlaying)
+        {
+            timeline.SetValue(GetCurrentState());
+        }
+        
         GameTime.Instance.AddTimeListener(this);
     }
 

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8994501835197992477}
   - component: {fileID: 8994501835197992478}
   - component: {fileID: 3033622361297763422}
+  - component: {fileID: 6471522227655755631}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -167,3 +168,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves: {fileID: 11400000, guid: 261b781eeae5bf74a8e9d81fa91ab2dd, type: 2}
   aliveEnemies: {fileID: 11400000, guid: 5dcbe7e0783fcda4db9a549aa7b81077, type: 2}
+  minWavePickups:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 3
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxWavePickups:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 3
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  wavesToMaxPickups: 5
+  roundPickupPrefab: {fileID: 7888927315083973873, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+    type: 3}
+  currentPickups: {fileID: 11400000, guid: 9e2fbfe1e7326fe4ebebd53e23cf26bf, type: 2}
+--- !u!114 &6471522227655755631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994501835197992672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9203214b819b194d809ef555fd8ceaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScriptVar: {fileID: 11400000, guid: 74fc92dde75efab4e941f8a02ed54ffa, type: 2}

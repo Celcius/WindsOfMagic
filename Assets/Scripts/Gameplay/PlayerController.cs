@@ -99,6 +99,7 @@ public class PlayerController : MonoBehaviour
             }
 
            body.MovePosition(nextPos);
+           transform.right = transform.right + (transform.position-nextPos).normalized* GameTime.Instance.DeltaTime;
 
             moveDir = moveDir.normalized;
             if(!Mathf.Approximately(moveDir.x, 0) || !Mathf.Approximately(moveDir.y,0))

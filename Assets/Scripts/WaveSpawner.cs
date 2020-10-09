@@ -5,15 +5,34 @@ using AmoaebaUtils;
 
 public class WaveSpawner : MonoBehaviour, IGameTimeListener
 {
-    [SerializeField]
-    private EnemyWaves waves;
-
     private TimelinedProperty<TimedFloat, float> currentIndex = new TimelinedProperty<TimedFloat, float>();
     private TimelinedProperty<TimedBool, bool> instantiatedWave = new TimelinedProperty<TimedBool, bool>(); 
     
     [SerializeField]
+    private EnemyWaves waves;
+
+
+    [SerializeField]
 
     private TransformArrVar aliveEnemies;
+
+    public int CurrentWave => (int)currentIndex.Value;
+
+    [SerializeField]
+    private AnimationCurve minWavePickups;
+    
+    [SerializeField]
+    private AnimationCurve maxWavePickups;
+
+    [SerializeField]
+    private int wavesToMaxPickups = 5;
+
+    [SerializeField]
+    private RoundPickup roundPickupPrefab;
+
+    [SerializeField]
+    private TransformArrVar currentPickups;
+
 
     
     public void Start()
@@ -24,13 +43,32 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         SetIsInstantiatedValue(false);
         aliveEnemies.OnChange -= OnEnemyChange;
         aliveEnemies.OnChange += OnEnemyChange;
+        currentPickups.OnChange -= OnPickupChange;
+        currentPickups.OnChange += OnPickupChange;
         GameTime.Instance.AddTimeListener(this);
     }
 
     private void OnDestroy() 
     {
         aliveEnemies.OnChange -= OnEnemyChange;
+        currentPickups.OnChange -= OnPickupChange;
         GameTime.Instance.RemoveTimeListener(this);
+    }
+
+    public void OnPickupChange(Transform[] oldVal, Transform[] newVal)
+    {
+        if(instantiatedWave.Value && oldVal.Length > 0 && newVal.Length < oldVal.Length)
+        {
+            foreach(Transform pickup in newVal)
+            {
+                if(pickup != null && pickup.gameObject.activeInHierarchy)
+                {
+                    pickup.gameObject.SetActive(false);
+                }
+            }
+
+            SetIsInstantiatedValue(false);
+        }
     }
 
     public void OnEnemyChange(Transform[] oldVal, Transform[] newVal)
@@ -50,7 +88,14 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         }
         else if(!GameTime.Instance.IsStopped && !instantiatedWave.Value)
         {
-            InstantiateWave();
+            if(currentIndex.Value % 2 == 0)
+            {
+                InstantiateWave();
+            }
+            else
+            {
+                InstantiatePickups();
+            }
         }
     }
 
@@ -67,6 +112,22 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
             Instantiate(childPrefab, childPrefab.position, childPrefab.rotation);
         }
 
+        SetIsInstantiatedValue(true);
+    }
+
+    private void InstantiatePickups()
+    {
+        SetCurrentIndexValue((int)currentIndex.Value+1);
+
+        float ratio = Mathf.Clamp01((float) CurrentWave / wavesToMaxPickups);
+        int toCreate = TimedBoundRandom.RandomInt((int)minWavePickups.Evaluate(ratio),
+                                                  (int)maxWavePickups.Evaluate(ratio)+1);
+        toCreate = Mathf.Max(1, toCreate);
+
+        for(int i = 0; i < toCreate; i++)
+        {
+            Instantiate(roundPickupPrefab);
+        }
         SetIsInstantiatedValue(true);
     }
 
