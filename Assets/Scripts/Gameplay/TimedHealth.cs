@@ -52,14 +52,15 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
         }
         
         float delta = currentHealth - this.healthTimeline.Value;
-        if(!isInvincible || delta > 0)
-        {
-            SetHealthDelta(delta);   
-        }
+        SetHealthDelta(delta);   
     }
 
     public void SetHealthDelta(float delta)
     {
+        if(delta <= 0 && isInvincible)
+        {
+            return;
+        }
         float current = Mathf.Clamp(healthTimeline.Value + delta, 0, maxHealth);
         healthTimeline.SetValue(new TimedFloat(GameTime.Instance.ElapsedTime, current));
         

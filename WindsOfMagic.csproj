@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\Gameplay\RollbackTimer.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStats.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Chaser.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\TimeVoyagePickup.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimedDisableOnCollision.cs" />
      <Compile Include="Assets\Scripts\Gameplay\CurveAnimeTimeBoundAdapter.cs" />
@@ -66,8 +67,10 @@
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PlayerPickups.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStatsVar.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTimeBoundTransform.cs" />
-     <Compile Include="Assets\Scripts\Chaser.cs" />
      <Compile Include="Assets\Scripts\DisableAndRespawn.cs" />
+     <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
+     <Compile Include="Assets\Scripts\WaveSpawner.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\EnemyWaves.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac3b9e32e76a2e4ebebb754c61d5481, type: 3}
+  m_Name: NormalModeWaves
+  m_EditorClassIdentifier: 
+  possibleWaves:
+  - {fileID: 8663742101571060574, guid: 42dac5060bb43be459f8146afbf8f082, type: 3}
+  - {fileID: 8736711427224805933, guid: e2a11f31a7094e348b7f6802ec84551a, type: 3}
