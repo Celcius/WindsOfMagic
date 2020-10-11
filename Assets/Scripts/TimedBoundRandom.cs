@@ -40,9 +40,9 @@ public class TimedBoundRandom : SingletonScriptableObject<TimedBoundRandom>, IGa
         if(Application.isPlaying)
         {
             timeline.SetValue(GetCurrentState());
+            GameTime.Instance.AddTimeListener(this);
         }
-        
-        GameTime.Instance.AddTimeListener(this);
+            
     }
 
     private void OnDisable()

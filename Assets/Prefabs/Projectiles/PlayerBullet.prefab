@@ -29,6 +29,16 @@ PrefabInstance:
       propertyPath: useLayerMask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2630988780769934401, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: blendMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2630988780769934401, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: shareMaterial
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3703824415889062729, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: layerMask.m_Bits
@@ -103,6 +113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146506474727049751, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6488877784065744974, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}

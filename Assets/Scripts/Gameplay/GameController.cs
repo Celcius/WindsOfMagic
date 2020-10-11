@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private ProjectileStats baseProjectileStats;
 
-
     [SerializeField]
     private GameTime gameTime;
 

@@ -36,27 +36,37 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Wall.cs" />
+     <Compile Include="Assets\ApplyBlendColor.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-Framebuffer.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-Grab.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\BlendModes\Shaders\BlendFunctions.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\BlendModes\Shaders\BlendModesCG.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-OverlayMasked.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-UnifiedGrabMasked.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-UnifiedGrab.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-FramebufferMasked.shader" />
+     <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-GrabMasked.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -807,6 +817,16 @@
     <ProjectReference Include="AmoaebaAds.csproj">
       <Project>{ff409301-41da-4be1-ad78-f8c2466baa64}</Project>
       <Name>AmoaebaAds</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Elringus.BlendModes.Runtime.csproj">
+      <Project>{e7e9e15c-a516-32d8-a9dd-21a0914a720a}</Project>
+      <Name>Elringus.BlendModes.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Elringus.BlendModes.Editor.csproj">
+      <Project>{3eb6041f-144c-acf2-1a09-480dbf394cd0}</Project>
+      <Name>Elringus.BlendModes.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

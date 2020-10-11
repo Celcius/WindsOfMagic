@@ -33,6 +33,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeVoyagePickup
       objectReference: {fileID: 0}
+    - target: {fileID: 6754477029475978285, guid: 2dc220a5f6c5f304d9162e4766415820,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978286, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -87,6 +92,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828506043833718001, guid: 2dc220a5f6c5f304d9162e4766415820,
+        type: 3}
+      propertyPath: type
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 0.48933274
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 0.6509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
+        type: 3}
+      propertyPath: shareMaterial
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
+        type: 3}
+      propertyPath: blendMaterial
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6754477029475978288, guid: 2dc220a5f6c5f304d9162e4766415820, type: 3}
