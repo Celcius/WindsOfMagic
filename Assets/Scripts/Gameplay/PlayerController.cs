@@ -81,6 +81,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(gameTime.IsPaused)
+        {
+            return;
+        }
+
         if(timeBoundTransform.IgnoreGameSpeed || (!gameTime.IsReversing && timeHandler.GameSpeed > 0 && !gameTime.IsStopped))
         {
             float delta =  (isTimeVoyaging || timeBoundTransform.IgnoreGameSpeed)? Time.deltaTime : gameTime.DeltaTime;
@@ -116,7 +121,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
+        if(gameTime.IsPaused)
+        {
+            return;
+        }
+
         if(timeBoundTransform.IgnoreGameSpeed && !isTimeVoyaging && gameTime.GameSpeed >= gameTime.DefaultSpeed)
         {
             timeBoundTransform.IgnoreGameSpeed = false;

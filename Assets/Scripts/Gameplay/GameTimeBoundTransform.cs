@@ -49,6 +49,11 @@ public class GameTimeBoundTransform : MonoBehaviour, IGameTimeListener
 
     void Update()
     {
+        if(gameTime.IsPaused)
+        {
+            return;
+        }
+        
         if(IgnoreGameSpeed)
         {
             currentElapsed += Time.deltaTime * gameTime.DefaultSpeed;

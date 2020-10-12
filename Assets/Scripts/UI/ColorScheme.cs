@@ -49,27 +49,65 @@ public class ColorScheme : ScriptableObject
     }
 #endif
 
+    public void SetColor(ColorType colorType, Color color)
+    {
+        switch(colorType)
+        {
+            case ColorType.PlayerColor:
+                this.PlayerColor = color;
+                break;
+            case ColorType.PlayerBulletsColor:
+                this.PlayerBulletsColor = color;
+                break;
+            case ColorType.EnemyColor:
+                this.EnemyColor = color;
+                break;
+            case ColorType.EnemyBulletsColor:
+                this.EnemyBulletsColor = color;
+                break;
+            case ColorType.PickupColor:
+                this.PickupColor = color;
+                break;
+            case ColorType.HealthColor:
+                this.HealthColor = color;
+                break;
+            case ColorType.RewindColor:
+                this.RewindColor = color;
+                break;
+        }
+
+        OnChange?.Invoke();
+    }
+
     public Color GetColor(ColorType type)
     {
+        Color color = Color.magenta;
         switch(type)
         {
             case ColorType.None:
-                return Color.magenta;
             case ColorType.PlayerColor:
-                return PlayerColor;
+                color = PlayerColor;
+                break;
             case ColorType.PlayerBulletsColor:
-                return PlayerBulletsColor;
+                color = PlayerBulletsColor;
+                break;
             case ColorType.EnemyColor:
-                return EnemyColor;
+                color = EnemyColor;
+                break;
             case ColorType.EnemyBulletsColor:
-                return EnemyBulletsColor;
+                color = EnemyBulletsColor;
+                break;
             case ColorType.PickupColor:
-                return PickupColor;
+                color = PickupColor;
+                break;
             case ColorType.HealthColor:
-                return HealthColor;
+                color = HealthColor;
+                break;
             case ColorType.RewindColor:
-                return RewindColor;
+                color = RewindColor;
+                break;
         }
-        return Color.magenta;
+        color.a = 1.0f;
+        return color;
     }
 }

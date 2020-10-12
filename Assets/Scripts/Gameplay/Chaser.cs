@@ -19,7 +19,7 @@ public class Chaser : MonoBehaviour
 
     void Update()
     {
-        if(GameTime.Instance.GameSpeed <= 0)
+        if(GameTime.Instance.GameSpeed <= 0 || player.Value  == null)
         {
             return;
         }

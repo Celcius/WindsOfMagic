@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindsOfMagic", "WindsOfMagi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePack", "MessagePack.csproj", "{0e955163-360b-7381-3bc9-82d964878a6d}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elringus.BlendModes.Runtime", "Elringus.BlendModes.Runtime.csproj", "{e7e9e15c-a516-32d8-a9dd-21a0914a720a}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmoaebaWallet", "AmoaebaWallet.csproj", "{83882c78-bf3f-850c-4580-9180e1ef1f0b}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelineProperty", "TimelineProperty.csproj", "{d5384755-c707-94fe-0d23-70f75b1e9d0c}"
@@ -23,7 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionCommands", "ActionCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmoaebaLockSystem", "AmoaebaLockSystem.csproj", "{b2600c6b-b313-5195-0e41-d9e989c767bf}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elringus.BlendModes.Runtime", "Elringus.BlendModes.Runtime.csproj", "{e7e9e15c-a516-32d8-a9dd-21a0914a720a}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexibleColorPicker", "FlexibleColorPicker.csproj", "{f53e309e-328b-1fcb-6ef6-111446d5be51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{5699269e-fe78-c1f4-5767-e7ffa4e5e536}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InControl.Editor", "InControl.Editor.csproj", "{1fd736d5-c576-bf60-82f1-ce6069c955e9}"
 EndProject
@@ -32,6 +36,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionCommandsTests", "ActionCommandsTests.csproj", "{0398263e-e505-6532-b736-827918ad5182}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmoaebaUtilsEditor", "AmoaebaUtilsEditor.csproj", "{4f7efe0e-6f1b-0415-ee4a-7f540cce601d}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elringus.BlendModes.Editor", "Elringus.BlendModes.Editor.csproj", "{3eb6041f-144c-acf2-1a09-480dbf394cd0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmoaebaUtilsPersistanceTests", "AmoaebaUtilsPersistanceTests.csproj", "{9725b6b6-497e-c7dc-80ae-bbc4e1d223b0}"
 EndProject
@@ -42,8 +48,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimelinePropertyTests", "TimelinePropertyTests.csproj", "{d1a5b89d-1633-da01-a3d2-c8af50bd63cf}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScriptableObjectUtilsEditor", "ScriptableObjectUtilsEditor.csproj", "{23738ab4-1a0d-6191-27d2-1debf4b31e7f}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elringus.BlendModes.Editor", "Elringus.BlendModes.Editor.csproj", "{3eb6041f-144c-acf2-1a09-480dbf394cd0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +62,8 @@ Global
 		{0528afcc-ff97-924f-28c9-f87b028c9573}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0e955163-360b-7381-3bc9-82d964878a6d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0e955163-360b-7381-3bc9-82d964878a6d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{e7e9e15c-a516-32d8-a9dd-21a0914a720a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e7e9e15c-a516-32d8-a9dd-21a0914a720a}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83882c78-bf3f-850c-4580-9180e1ef1f0b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{83882c78-bf3f-850c-4580-9180e1ef1f0b}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d5384755-c707-94fe-0d23-70f75b1e9d0c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,8 +78,10 @@ Global
 		{54074702-6910-799a-784c-b2706c924988}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{b2600c6b-b313-5195-0e41-d9e989c767bf}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{b2600c6b-b313-5195-0e41-d9e989c767bf}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{e7e9e15c-a516-32d8-a9dd-21a0914a720a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{e7e9e15c-a516-32d8-a9dd-21a0914a720a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{f53e309e-328b-1fcb-6ef6-111446d5be51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{f53e309e-328b-1fcb-6ef6-111446d5be51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5699269e-fe78-c1f4-5767-e7ffa4e5e536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5699269e-fe78-c1f4-5767-e7ffa4e5e536}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1fd736d5-c576-bf60-82f1-ce6069c955e9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1fd736d5-c576-bf60-82f1-ce6069c955e9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d4b9c763-2d81-d659-b5f5-bb05e340af84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -82,6 +90,8 @@ Global
 		{0398263e-e505-6532-b736-827918ad5182}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4f7efe0e-6f1b-0415-ee4a-7f540cce601d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4f7efe0e-6f1b-0415-ee4a-7f540cce601d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3eb6041f-144c-acf2-1a09-480dbf394cd0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3eb6041f-144c-acf2-1a09-480dbf394cd0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9725b6b6-497e-c7dc-80ae-bbc4e1d223b0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9725b6b6-497e-c7dc-80ae-bbc4e1d223b0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{855b096a-a300-baf1-9215-d622bcc72b10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -92,8 +102,6 @@ Global
 		{d1a5b89d-1633-da01-a3d2-c8af50bd63cf}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23738ab4-1a0d-6191-27d2-1debf4b31e7f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23738ab4-1a0d-6191-27d2-1debf4b31e7f}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3eb6041f-144c-acf2-1a09-480dbf394cd0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3eb6041f-144c-acf2-1a09-480dbf394cd0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

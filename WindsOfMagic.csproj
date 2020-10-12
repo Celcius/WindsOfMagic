@@ -37,7 +37,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Gameplay\RollbackTimer.cs" />
+     <Compile Include="Assets\Scripts\ExampleColorReceiver.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStats.cs" />
+     <Compile Include="Assets\Scripts\UI\ColorType.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Chaser.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\TimeVoyagePickup.cs" />
@@ -58,6 +60,7 @@
      <Compile Include="Assets\Scripts\Gameplay\BulletSpawnDefinition.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimeController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BulletWaveShooter.cs" />
+     <Compile Include="Assets\Scripts\HSBColor.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimeBoundCurveTransformMove.cs" />
      <Compile Include="Assets\Scripts\Wall.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Projectiles\PlayerProjectile.cs" />
@@ -67,6 +70,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Projectiles\PlayerProjectileTransformMovement.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTime.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimedHealth.cs" />
+     <Compile Include="Assets\Scripts\UI\BlendColorApplier.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ApplyDamageOnCollision.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PlayerPickups.cs" />
@@ -74,12 +78,12 @@
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTimeBoundTransform.cs" />
      <Compile Include="Assets\Scripts\DisableAndRespawn.cs" />
+     <Compile Include="Assets\Scripts\UI\ColorScheme.cs" />
      <Compile Include="Assets\Scripts\WaveSpawnerVar.cs" />
      <Compile Include="Assets\Scripts\WallScriptVar.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\UI\ColorScheme.cs" />
-     <Compile Include="Assets\Scripts\UI\BlendColorApplier.cs" />
-     <Compile Include="Assets\Scripts\UI\ColorType.cs" />
+     <Compile Include="Assets\Scripts\UI\ColorTypeVar.cs" />
+     <Compile Include="Assets\Scripts\FlexibleColorSetup.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -681,6 +685,11 @@
     <ProjectReference Include="Elringus.BlendModes.Runtime.csproj">
       <Project>{e7e9e15c-a516-32d8-a9dd-21a0914a720a}</Project>
       <Name>Elringus.BlendModes.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="FlexibleColorPicker.csproj">
+      <Project>{f53e309e-328b-1fcb-6ef6-111446d5be51}</Project>
+      <Name>FlexibleColorPicker</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

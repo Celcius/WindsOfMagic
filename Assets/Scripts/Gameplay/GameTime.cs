@@ -30,6 +30,10 @@ public class GameTime : SingletonScriptableObject<GameTime>
     [SerializeField]
     private PhysicsAnimationCurve reverseSpeedOut;
 
+    
+    [SerializeField]
+    private BoolVar isPaused;
+
     private float defaultSpeed = 1.0f;
     public float DefaultSpeed => defaultSpeed;
 
@@ -52,6 +56,10 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     private bool isStopped = false;
     public bool IsStopped => isStopped;
+
+    public bool IsPaused => isPaused.Value;
+
+    private float storedPauseSpeed = 0;
 
     public float ElapsedTime
     {
@@ -135,7 +143,33 @@ public class GameTime : SingletonScriptableObject<GameTime>
         gameSpeed = defaultSpeed;
         isReversing = false;
         isStopped = false;
+
+        isPaused.OnChange += PauseChange;
+        PauseChange(false, isPaused.Value);
     }
+
+    private void OnDisable() 
+    {
+        isPaused.OnChange -= PauseChange;
+    }
+
+    private void PauseChange(bool oldVal, bool newVal)
+    {
+        if(oldVal == newVal)
+        {
+            return;
+        }
+
+        if(newVal)
+        {
+            storedPauseSpeed = gameSpeed;
+        }
+        else
+        {
+            gameSpeed = storedPauseSpeed;
+        }
+    }
+
     public void Play()
     {
         isReversing = false;

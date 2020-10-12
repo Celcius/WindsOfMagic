@@ -36,7 +36,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\ApplyBlendColor.cs" />
+     <Compile Include="Assets\SettingNameFromColorType.cs" />
+     <Compile Include="Assets\PauseMenu.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-Framebuffer.shader" />
@@ -59,6 +60,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-UnifiedGrabMasked.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\FlexibleColorPicker\Materials\FCP_Gradient.shader" />
      <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-UnifiedGrab.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
@@ -749,9 +751,19 @@
       <Name>GoogleExporter</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="Elringus.BlendModes.Runtime.csproj">
+      <Project>{e7e9e15c-a516-32d8-a9dd-21a0914a720a}</Project>
+      <Name>Elringus.BlendModes.Runtime</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="ActionCommandsTests.csproj">
       <Project>{0398263e-e505-6532-b736-827918ad5182}</Project>
       <Name>ActionCommandsTests</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Elringus.BlendModes.Editor.csproj">
+      <Project>{3eb6041f-144c-acf2-1a09-480dbf394cd0}</Project>
+      <Name>Elringus.BlendModes.Editor</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="WalletTests.csproj">
@@ -819,14 +831,9 @@
       <Name>AmoaebaAds</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
-    <ProjectReference Include="Elringus.BlendModes.Runtime.csproj">
-      <Project>{e7e9e15c-a516-32d8-a9dd-21a0914a720a}</Project>
-      <Name>Elringus.BlendModes.Runtime</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Elringus.BlendModes.Editor.csproj">
-      <Project>{3eb6041f-144c-acf2-1a09-480dbf394cd0}</Project>
-      <Name>Elringus.BlendModes.Editor</Name>
+    <ProjectReference Include="FlexibleColorPicker.csproj">
+      <Project>{f53e309e-328b-1fcb-6ef6-111446d5be51}</Project>
+      <Name>FlexibleColorPicker</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

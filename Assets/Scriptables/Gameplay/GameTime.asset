@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4356666a3578eb044b9aa537d8a2572a, type: 3}
   m_Name: GameTime
   m_EditorClassIdentifier: 
-  elapsedTime: 0.47499073
+  elapsedTime: 0
   gameSpeed: 1
   maxStats: {fileID: 11400000, guid: 90e4dbaf9745ac74a9c34cf3eab0f382, type: 2}
   reverseSpeed: -0.5
@@ -42,6 +42,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     CurveType: 1
+    wrapMode: 0
     Offset: 0
     TimeOffset: 0
     AxisMultiplier: 1
@@ -72,6 +73,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     CurveType: 1
+    wrapMode: 0
     Offset: 0
     TimeOffset: 0
     AxisMultiplier: 1
@@ -102,6 +104,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     CurveType: 1
+    wrapMode: 0
     Offset: 0
     TimeOffset: 0
     AxisMultiplier: 1
@@ -132,7 +135,9 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     CurveType: 1
+    wrapMode: 0
     Offset: 0
     TimeOffset: 0
     AxisMultiplier: 1
     TimeMultiplier: 0.25
+  isPaused: {fileID: 11400000, guid: 39af5ae432704aa46903cc02d0538f08, type: 2}

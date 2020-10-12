@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad526eddd9cc202418297946df5a3919, type: 3}
   m_Name: DefaultColorScheme
   m_EditorClassIdentifier: 
-  PlayerColor: {r: 0, g: 0, b: 0, a: 0}
-  PlayerBulletsColor: {r: 0, g: 0, b: 0, a: 0}
-  EnemyColor: {r: 0, g: 0, b: 0, a: 0}
-  EnemyBulletsColor: {r: 0, g: 0, b: 0, a: 0}
-  PickupColor: {r: 0, g: 0, b: 0, a: 0}
-  HealthColor: {r: 0, g: 0, b: 0, a: 0}
-  RewindColor: {r: 0, g: 0, b: 0, a: 0}
+  PlayerColor: {r: 0, g: 1, b: 0.8638129, a: 1}
+  PlayerBulletsColor: {r: 0, g: 0.31960154, b: 1, a: 1}
+  EnemyColor: {r: 1, g: 0, b: 0, a: 1}
+  EnemyBulletsColor: {r: 1, g: 0.4366033, b: 0, a: 1}
+  PickupColor: {r: 0, g: 0.6320754, b: 0.22223632, a: 1}
+  HealthColor: {r: 1, g: 0, b: 0.3796172, a: 1}
+  RewindColor: {r: 0, g: 0.620383, b: 1, a: 1}
