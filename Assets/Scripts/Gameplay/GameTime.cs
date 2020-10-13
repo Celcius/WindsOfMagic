@@ -61,6 +61,13 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     private float storedPauseSpeed = 0;
 
+    private float speedModifier = 1.0f;
+    public float SpeedModifier
+    {
+        get { return speedModifier; }
+        set { speedModifier = value; }
+    }
+
     public float ElapsedTime
     {
         get { return elapsedTime; }
@@ -81,7 +88,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     public float GameSpeed
     {
-        get { return gameSpeed; }
+        get { return gameSpeed * speedModifier; }
         set 
         { 
             gameSpeed = value;  

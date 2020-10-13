@@ -36,13 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\SettingNameFromColorType.cs" />
-     <Compile Include="Assets\PauseMenu.cs" />
+     <Compile Include="Assets\Colorblind Effect\Assets\Scripts\Colorblind.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-Framebuffer.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\BlendModes\Shaders\Generated\SpritesDefault\BlendModes-SpritesDefault-Grab.shader" />
+     <None Include="Assets\Colorblind Effect\Documentation\ReadMe.txt" />
+     <None Include="Assets\Colorblind Effect\Assets\Shaders\Colorblind.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\BlendModes\Shaders\BlendFunctions.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -756,6 +757,11 @@
       <Name>Elringus.BlendModes.Runtime</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="FlexibleColorPicker.csproj">
+      <Project>{f53e309e-328b-1fcb-6ef6-111446d5be51}</Project>
+      <Name>FlexibleColorPicker</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="ActionCommandsTests.csproj">
       <Project>{0398263e-e505-6532-b736-827918ad5182}</Project>
       <Name>ActionCommandsTests</Name>
@@ -829,11 +835,6 @@
     <ProjectReference Include="AmoaebaAds.csproj">
       <Project>{ff409301-41da-4be1-ad78-f8c2466baa64}</Project>
       <Name>AmoaebaAds</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="FlexibleColorPicker.csproj">
-      <Project>{f53e309e-328b-1fcb-6ef6-111446d5be51}</Project>
-      <Name>FlexibleColorPicker</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
