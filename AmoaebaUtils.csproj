@@ -55,6 +55,7 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\ScriptableEvent.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\IndexableStack.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\ScriptableObjectUtility.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterTransformArrVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\UpdateTextOnTimeVarChange.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\IntVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\AnimationUtils\CurveAnim.cs" />
@@ -118,12 +119,12 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\FollowTransform.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\TransformVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterTransform.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\TransformArrVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\CameraVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterComponentVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SceneTransitionHandler.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\TransformMovement.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\TransformArrVar.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterTransformArrVar.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\MenuUtils\BoolVarToggle.cs" />
      <None Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\AmoaebaUtils.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
