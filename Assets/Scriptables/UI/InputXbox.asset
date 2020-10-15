@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcdce1152c8de5748a0a0207cf942952, type: 3}
+  m_Name: InputXbox
+  m_EditorClassIdentifier: 
+  PresetName: Xbox Controller
+  UseJoysticks: 1
+  PositiveXKey: 100
+  NegativeXKey: 97
+  PositiveYKey: 119
+  NegativeYKey: 115
+  PositiveShootXKey: 276
+  NegativeShootXKey: 273
+  PositiveShootYKey: 274
+  NegativeShootYKey: 275
+  ReverseTimeKey: 335
+  PauseKey: 337

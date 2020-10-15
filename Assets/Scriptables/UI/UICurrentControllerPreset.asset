@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24e66104f16ac924dbdd131a6fe9550c, type: 3}
-  m_Name: InputHandler
+  m_Script: {fileID: 11500000, guid: c9553ca2c5442db4ea4f0e646070e369, type: 3}
+  m_Name: UICurrentControllerPreset
   m_EditorClassIdentifier: 
-  currentScheme: {fileID: 11400000, guid: 52a3367770fda8b4db9d40b495857cfa, type: 2}
-  customInputScheme: {fileID: 11400000, guid: aef29b98217a8924ba43987fd21d4e35, type: 2}
+  setupValue: 0
+  value: 0

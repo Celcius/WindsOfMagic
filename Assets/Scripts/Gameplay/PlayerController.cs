@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using AmoaebaUtils;
-
+using System;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(GameTimeBoundTransform))]
 [RequireComponent(typeof(TimedHealth))]
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
             if(!isTimeVoyaging)
             {
                 shotElapsed -= delta;
-                if(shotElapsed <= 0 && input.IsShooting() && moveDir.magnitude > deadzone)
+                if(shotElapsed <= 0 && input.IsShooting())
                 {
                     Shoot(speed.magnitude);
                     shotElapsed = playerStats.FireRate;
@@ -169,12 +169,14 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot(float speedMagnitude)
     {
-        if(bullet == null)
+        Vector2 shootDir = input.GetShootAxis();
+        if(bullet == null || Mathf.Approximately(shootDir.magnitude,0))
         {
             return;
         }
-        float angle = Vector2.Angle(Vector2.right, lastMovement.normalized);
-        angle = lastMovement.y < 0 ? - angle : angle;
+        //float angle = Vector2.Angle(Vector2.right, lastMovement.normalized);
+        //angle = lastMovement.y < 0 ? - angle : angle;
+        float angle = Vector2.SignedAngle(Vector2.right, shootDir.normalized);
         PlayerProjectile projectile = Instantiate(bullet,
                                                   transform.position,
                                                   Quaternion.Euler(0,0,angle));

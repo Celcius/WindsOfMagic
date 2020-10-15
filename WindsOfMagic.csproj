@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\RegisterSpawnWaveVar.cs" />
      <Compile Include="Assets\Scripts\FlexibleColorSetup.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStatsVar.cs" />
+     <Compile Include="Assets\Scripts\Input\InputScheme.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BulletSpawnDefinition.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimeController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BulletWaveShooter.cs" />
@@ -74,6 +75,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Projectiles\PlayerProjectileTransformMovement.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTime.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimedHealth.cs" />
+     <Compile Include="Assets\Scripts\GameSpeedUI.cs" />
      <Compile Include="Assets\Scripts\UI\BlendColorApplier.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ApplyDamageOnCollision.cs" />
@@ -81,12 +83,14 @@
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStatsVar.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTimeBoundTransform.cs" />
+     <Compile Include="Assets\Scripts\Input\InputSchemeVar.cs" />
      <Compile Include="Assets\Scripts\DisableAndRespawn.cs" />
      <Compile Include="Assets\Scripts\UI\ColorScheme.cs" />
      <Compile Include="Assets\Scripts\WaveSpawnerVar.cs" />
      <Compile Include="Assets\Scripts\WallScriptVar.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\GameSpeedUI.cs" />
+     <Compile Include="Assets\Scripts\UI\KeyChangeSetting.cs" />
+     <Compile Include="Assets\Scripts\UI\InputSettingsController.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
