@@ -170,10 +170,11 @@ public class GameTime : SingletonScriptableObject<GameTime>
         if(newVal)
         {
             storedPauseSpeed = gameSpeed;
+            GameSpeed = 0;
         }
         else
         {
-            gameSpeed = storedPauseSpeed;
+            GameSpeed = storedPauseSpeed;
         }
     }
 

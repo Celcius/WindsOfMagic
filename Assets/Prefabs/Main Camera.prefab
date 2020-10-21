@@ -119,6 +119,8 @@ MonoBehaviour:
   baseProjectileStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4,
     type: 2}
   gameTime: {fileID: 11400000, guid: 8843693cf6ff95149afe803e02d0be85, type: 2}
+  inputHandler: {fileID: 11400000, guid: e41409226a32ab34b8761019bfdfbd39, type: 2}
+  pauseMenu: {fileID: 0}
 --- !u!114 &8994501835197992478
 MonoBehaviour:
   m_ObjectHideFlags: 0

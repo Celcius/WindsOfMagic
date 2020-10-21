@@ -82,6 +82,11 @@ public class InputHandler : ScriptableObject
         return Input.GetKey(currentScheme.Value.ReverseTimeKey);
     }
 
+    public bool IsPauseDown()
+    {
+        return Input.GetKeyDown(currentScheme.Value.PauseKey);
+    }
+
     private float ValueFromKey(KeyCode code)
     {
         return Input.GetKey(code) ? 1 : 0;

@@ -18,11 +18,25 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private GameTime gameTime;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    private InputHandler inputHandler;
+
+    [SerializeField]
+    private PauseMenu pauseMenu;
+    
     void Start()
     {
         playerStats.SetPlayerStats(basePlayerStats);
         projectileStats.SetProjectileStats(baseProjectileStats);
         GameTime.Instance.Start();
+    }
+
+    
+    void Update()
+    {    
+        if(inputHandler.IsPauseDown())
+        {
+            pauseMenu.SwapPause();
+        }
     }
 }

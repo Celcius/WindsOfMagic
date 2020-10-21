@@ -87,6 +87,7 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\Rigidbody2DVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\BootScriptableObject.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\Parallax\Parallaxable.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\MenuUtils\BoolVarToggle.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\UpdateTextOnVarChange.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\VoidEvent.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterRigidbody2D.cs" />
@@ -124,7 +125,6 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterComponentVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SceneTransitionHandler.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\TransformMovement.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\MenuUtils\BoolVarToggle.cs" />
      <None Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\AmoaebaUtils.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

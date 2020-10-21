@@ -191,6 +191,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: {fileID: 11400000, guid: 39af5ae432704aa46903cc02d0538f08, type: 2}
+  enableOnPause:
+  - {fileID: 5014561614743971019}
+  disableOnPause:
+  - {fileID: 5583948913971761602}
+  - {fileID: 5688789723090883362}
 --- !u!1001 &805447414887708938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378,6 +383,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 5673069952064347585, guid: e99bc2b711cb9ee4589e03269b285be3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8244050338147370716, guid: e99bc2b711cb9ee4589e03269b285be3,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -539,6 +549,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PickerParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389509351266510951, guid: 7227ad68d6264204998355016334f045,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7227ad68d6264204998355016334f045, type: 3}
@@ -1804,7 +1819,7 @@ PrefabInstance:
     - target: {fileID: 6555382274609559126, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}
       propertyPath: m_fontSize
-      value: 27.75
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6562093039431028843, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}
@@ -2079,7 +2094,7 @@ PrefabInstance:
     - target: {fileID: 9048734872218280968, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}
       propertyPath: m_Size
-      value: 0.17689656
+      value: 0.17793104
       objectReference: {fileID: 0}
     - target: {fileID: 9105255196046373942, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}

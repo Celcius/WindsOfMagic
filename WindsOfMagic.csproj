@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Gameplay\TransformMovementTimeBoundAdapter.cs" />
      <Compile Include="Assets\Scripts\SettingNameFromColorType.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BulletWave.cs" />
+     <Compile Include="Assets\Scripts\UI\InputSettingsController.cs" />
      <Compile Include="Assets\Scripts\UIController.cs" />
      <Compile Include="Assets\Scripts\RegisterWallScriptVar.cs" />
      <Compile Include="Assets\Scripts\Gameplay\EnemyWaves.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\Scripts\Gameplay\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ApplyDamageOnCollision.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PlayerPickups.cs" />
+     <Compile Include="Assets\Scripts\UI\KeyChangeSetting.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStatsVar.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTimeBoundTransform.cs" />
@@ -89,8 +91,6 @@
      <Compile Include="Assets\Scripts\WaveSpawnerVar.cs" />
      <Compile Include="Assets\Scripts\WallScriptVar.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\UI\KeyChangeSetting.cs" />
-     <Compile Include="Assets\Scripts\UI\InputSettingsController.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
