@@ -40,6 +40,13 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private FloatVar timeVoyageRatio;
+
+    [SerializeField]
+    private BoolVar IsAssistModeOn;
+
+    [SerializeField]
+    private TransformArrVar enemies;
+
     private bool isTimeVoyaging = false;
 
     GameTimeBoundTransform timeBoundTransform;
@@ -96,7 +103,7 @@ public class PlayerController : MonoBehaviour
             if(!isTimeVoyaging)
             {
                 shotElapsed -= delta;
-                if(shotElapsed <= 0 && input.IsShooting())
+                if(shotElapsed <= 0 && (input.IsShooting() || IsAssistModeOn.Value))
                 {
                     Shoot(speed.magnitude);
                     shotElapsed = playerStats.FireRate;
@@ -169,7 +176,7 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot(float speedMagnitude)
     {
-        Vector2 shootDir = input.GetShootAxis();
+        Vector2 shootDir = IsAssistModeOn.Value? GetClosestEnemyDir() : input.GetShootAxis();
         if(bullet == null || Mathf.Approximately(shootDir.magnitude,0))
         {
             return;
@@ -196,6 +203,28 @@ public class PlayerController : MonoBehaviour
         timeVoyageRatio.Value = 0; 
         gameObject.layer = LayerMask.NameToLayer(defaultMask);
         health.ShouldRevertTime = true;
+    }
+
+    private Vector2 GetClosestEnemyDir()
+    {
+        if(enemies.Count() <= 0)
+        {
+            return Vector2.zero;
+        }
+
+        float magnitude = float.MaxValue;
+        Vector2 dir = Vector2.zero;
+        foreach(Transform enemy in enemies.Value)
+        {
+            Vector2 tempDist = (enemy.position - transform.position);
+            float tempMagnitude = tempDist.magnitude;
+            if(tempMagnitude < magnitude)
+            {
+                magnitude = tempMagnitude;
+                dir = tempDist.normalized;
+            }
+        }
+        return dir;
     }
 }
 

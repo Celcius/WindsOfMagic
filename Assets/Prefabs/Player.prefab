@@ -247,6 +247,8 @@ MonoBehaviour:
   deadzone: 0.05
   rollbackTimer: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
   timeVoyageRatio: {fileID: 11400000, guid: e67e9ba0f10d23c47b3b5b810e9ff465, type: 2}
+  IsAssistModeOn: {fileID: 11400000, guid: e5053ee69bac0b04fa8e38e0855bbde4, type: 2}
+  enemies: {fileID: 11400000, guid: 5dcbe7e0783fcda4db9a549aa7b81077, type: 2}
 --- !u!58 &4406686250223132563
 CircleCollider2D:
   m_ObjectHideFlags: 0

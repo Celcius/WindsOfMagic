@@ -18,9 +18,9 @@ MonoBehaviour:
   NegativeXKey: 113
   PositiveYKey: 122
   NegativeYKey: 115
-  PositiveShootXKey: 276
-  NegativeShootXKey: 273
-  PositiveShootYKey: 274
-  NegativeShootYKey: 275
+  PositiveShootXKey: 275
+  NegativeShootXKey: 276
+  PositiveShootYKey: 273
+  NegativeShootYKey: 274
   ReverseTimeKey: 32
   PauseKey: 27
