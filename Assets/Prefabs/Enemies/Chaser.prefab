@@ -69,7 +69,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495453202576260339}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a53d4cfa7ddc96b4991c2867644e0948, type: 3}
   m_Name: 
@@ -78,7 +78,7 @@ MonoBehaviour:
   disableOnDeath: 1
   externalVar: {fileID: 0}
   ShouldRevertTime: 1
-  isInvincible: 1
+  isInvincible: 0
 --- !u!114 &3636208660513731290
 MonoBehaviour:
   m_ObjectHideFlags: 0

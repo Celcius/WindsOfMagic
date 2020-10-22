@@ -91,6 +91,8 @@
      <Compile Include="Assets\Scripts\WaveSpawnerVar.cs" />
      <Compile Include="Assets\Scripts\WallScriptVar.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentation.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentationArr.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

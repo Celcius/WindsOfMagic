@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using AmoaebaUtils;
 
 [RequireComponent(typeof(TransformMovement))]
@@ -21,11 +22,25 @@ public class RoundPickup : MonoBehaviour
     [SerializeField]
     private WallScriptVar wall;
 
+    private PlayerPickups playerStats;
+
+    private ProjectilePickups projectileStats;
+
+    private SpriteRenderer image;
+
     private TransformMovement movement;
 
     Vector2 dir;
+
+    private void Awake() 
+    {
+        this.image = GetComponent<SpriteRenderer>();
+        projectileStats = GetComponent<ProjectilePickups>();
+        playerStats = GetComponent<PlayerPickups>();
+    }
     void Start()
     {
+
         movement = GetComponent<TransformMovement>();
 
         int posType = TimedBoundRandom.RandomInt(0,4);
@@ -62,5 +77,17 @@ public class RoundPickup : MonoBehaviour
 
         movement.SetAxisMultiplier(dir * speed);
         Destroy(this);
+    }
+
+    public void SetPlayerStats(PlayerStats stats, Sprite representation)
+    {
+        this.playerStats.offsetToApply = stats;
+        this.image.sprite = representation;
+    }
+
+    public void SetProjectileStats(ProjectileStats stats,  Sprite representation)
+    {
+        this.projectileStats.offsetToApply = stats;
+        this.image.sprite = representation;
     }
 }

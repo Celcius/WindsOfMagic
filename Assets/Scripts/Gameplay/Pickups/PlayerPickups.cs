@@ -9,7 +9,7 @@ public class PlayerPickups: ApplyOnCollision
     protected PlayerStats currentStats;
 
     [SerializeField]
-    protected PlayerStats offsetToApply;
+    public PlayerStats offsetToApply;
 
     [SerializeField]
     protected PlayerStats minCurrentStats;

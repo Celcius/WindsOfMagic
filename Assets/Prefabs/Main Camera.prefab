@@ -223,6 +223,9 @@ MonoBehaviour:
   roundPickupPrefab: {fileID: 7888927315083973873, guid: 3a645c86b19cf2647a42d8b6e94d520b,
     type: 3}
   currentPickups: {fileID: 11400000, guid: 9e2fbfe1e7326fe4ebebd53e23cf26bf, type: 2}
+  normalModePickups: {fileID: 11400000, guid: aee25b6dfa0cc5f4397a3621c726e619, type: 2}
+  assistModePickups: {fileID: 11400000, guid: 6ea51c23d5da2d4488f6d6d22120f633, type: 2}
+  isAssistMode: {fileID: 11400000, guid: e5053ee69bac0b04fa8e38e0855bbde4, type: 2}
 --- !u!114 &6471522227655755631
 MonoBehaviour:
   m_ObjectHideFlags: 0

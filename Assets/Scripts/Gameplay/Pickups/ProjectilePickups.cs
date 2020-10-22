@@ -9,7 +9,7 @@ public class ProjectilePickups : ApplyOnCollision
     protected ProjectileStats currentStats;
 
     [SerializeField]
-    protected ProjectileStats offsetToApply;
+    public ProjectileStats offsetToApply;
 
     [SerializeField]
     protected ProjectileStats minCurrentStats;

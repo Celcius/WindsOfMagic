@@ -33,8 +33,15 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     [SerializeField]
     private TransformArrVar currentPickups;
 
-
+    [SerializeField]
+    private PickupRepresentationArr normalModePickups;
     
+    [SerializeField]
+    private PickupRepresentationArr assistModePickups;
+
+    [SerializeField]
+    private BoolVar isAssistMode;
+
     public void Start()
     {
         currentIndex.Clear();
@@ -126,7 +133,8 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
         for(int i = 0; i < toCreate; i++)
         {
-            Instantiate(roundPickupPrefab);
+            RoundPickup pickup = Instantiate(roundPickupPrefab);
+            PopulatePickup(pickup);
         }
         SetIsInstantiatedValue(true);
     }
@@ -139,5 +147,28 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     private void SetIsInstantiatedValue(bool val)
     {
         instantiatedWave.SetValue(new TimedBool(GameTime.Instance.ElapsedTime, val));
+    }
+
+    private void PopulatePickup(RoundPickup pickup)
+    {
+        PickupRepresentationArr possiblePickups = isAssistMode.Value? assistModePickups : normalModePickups;
+
+        int chosenIndex = TimedBoundRandom.RandomInt(0, possiblePickups.Pickups.Length);
+        if(chosenIndex >= possiblePickups.Pickups.Length)
+        {
+            return;
+        }
+
+        PickupRepresentation representation = possiblePickups.Pickups[chosenIndex];
+        if(representation.playerStats != null)
+        {
+            pickup.SetPlayerStats(representation.playerStats, 
+                                  representation.image);
+        }
+        else if(representation.projectileStats != null)
+        {
+            pickup.SetProjectileStats(representation.projectileStats,
+                                      representation.image);
+        }
     }
 }
