@@ -16,17 +16,29 @@ MonoBehaviour:
   - playerStats: {fileID: 11400000, guid: bf6041e60cd2fb149abc7b0f3578b3bf, type: 2}
     projectileStats: {fileID: 0}
     image: {fileID: 2886992322533997917, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
-  - playerStats: {fileID: 11400000, guid: c3dd20fbfa04c1c4cbc857c1ee8e3b21, type: 2}
+  - playerStats: {fileID: 11400000, guid: 187ed4cecc86c13418c3f79e830f0f49, type: 2}
     projectileStats: {fileID: 0}
     image: {fileID: 504316003040135311, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
-  - playerStats: {fileID: 11400000, guid: 133c2c69cf7097a4d8167e3d7d792ace, type: 2}
+  - playerStats: {fileID: 11400000, guid: c3dd20fbfa04c1c4cbc857c1ee8e3b21, type: 2}
     projectileStats: {fileID: 0}
     image: {fileID: -3021750769373421687, guid: 0024eb47ebb11274aa5239de6d95b98a,
       type: 3}
-  - playerStats: {fileID: 11400000, guid: c3dd20fbfa04c1c4cbc857c1ee8e3b21, type: 2}
+  - playerStats: {fileID: 11400000, guid: a0a6c886f4dcbe840bbbcf1718ec7cb3, type: 2}
     projectileStats: {fileID: 0}
     image: {fileID: -7855135459221035460, guid: 0024eb47ebb11274aa5239de6d95b98a,
       type: 3}
-  - playerStats: {fileID: 11400000, guid: 7b212085adfa42142b2878803de031b6, type: 2}
+  - playerStats: {fileID: 11400000, guid: 4c824b262609e614589c7e8e33721a42, type: 2}
     projectileStats: {fileID: 0}
     image: {fileID: 9072153261115446230, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+  - playerStats: {fileID: 11400000, guid: 7b212085adfa42142b2878803de031b6, type: 2}
+    projectileStats: {fileID: 0}
+    image: {fileID: 1824485410431554308, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+  - playerStats: {fileID: 11400000, guid: 133c2c69cf7097a4d8167e3d7d792ace, type: 2}
+    projectileStats: {fileID: 0}
+    image: {fileID: 3956823666664838685, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+  - playerStats: {fileID: 11400000, guid: 3d95b97a0752e6145a81ab40254ef751, type: 2}
+    projectileStats: {fileID: 0}
+    image: {fileID: 4755841339584763518, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+  - playerStats: {fileID: 11400000, guid: 34252c1ab1a3bdd46975189da99c24db, type: 2}
+    projectileStats: {fileID: 0}
+    image: {fileID: 3502465980181349762, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}

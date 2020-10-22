@@ -165,7 +165,8 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
             pickup.SetPlayerStats(representation.playerStats, 
                                   representation.image);
         }
-        else if(representation.projectileStats != null)
+        
+        if(representation.projectileStats != null)
         {
             pickup.SetProjectileStats(representation.projectileStats,
                                       representation.image);

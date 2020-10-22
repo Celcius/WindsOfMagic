@@ -7,8 +7,7 @@ public class PlayerStats : ScriptableObject
     public delegate void OnChange();
     public event OnChange OnChangeEvent;
 
-    [SerializeField]
-    private float acceleration = 0.1f;
+    private float acceleration = 200;
     [SerializeField]
     private float moveSpeed = 3;
     [SerializeField]
