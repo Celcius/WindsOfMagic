@@ -28,9 +28,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - timeToSpawn: 0.75
+  - timeToSpawn: 1.1
     wave:
-      projectile: {fileID: 835492258789714034, guid: d8480d8a479d4c144bec95ae8d88ea96,
+      projectile: {fileID: 835492258789714034, guid: c3c98e9dc593cc94fa502cad0cc457ae,
         type: 3}
       amount: 1
       range: 360
@@ -41,7 +41,7 @@ MonoBehaviour:
   spawnRadiusOffset: 0
   spawnOffset: {x: 0, y: -0.06}
   ignoreRotation: 0
-  playerMinDistance: 2.5
+  playerMinDistance: 2
   player: {fileID: 11400000, guid: 65fba8915f3678848a77128dea7b96b3, type: 2}
 --- !u!1001 &3613361144961966686
 PrefabInstance:
@@ -53,7 +53,7 @@ PrefabInstance:
     - target: {fileID: 216628068212905589, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
       propertyPath: moveSpeed
-      value: 0.7
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 495453202576260339, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
@@ -115,6 +115,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1505641978206718927, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707599690226135672, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380267862307857483, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380267862307857483, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380267862307857483, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380267862307857483, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380267862307857483, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 5380267862307857483, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: animationSpeed.CurveType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5381833610912775827, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -124,15 +164,30 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 847f7cccbba9f1a4aa8665640ee1c78b,
+      objectReference: {fileID: 21300000, guid: ffa097bad80abf54f8e24a76bb925ed8,
         type: 3}
+    - target: {fileID: 5381833610912775827, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381833610912775827, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381833610912775827, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 6920260613937629572, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
       propertyPath: blendMaterial
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4893325533155317093, guid: facb1cfb2b4391840ba3bf431171cc56, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: facb1cfb2b4391840ba3bf431171cc56, type: 3}
 --- !u!1 &3802455086157471405 stripped
 GameObject:

@@ -10,6 +10,16 @@ public class RollbackTimer : FloatVar
     public int FilledRollbacks => (int)(value / currentStats.RollbackTime);
     public float UnfilledRatio => (value - (int)value) / currentStats.RollbackTime;
 
+    public void AddPercentage(float percentage)
+    {
+        Value += currentStats.RollbackTime * percentage;
+    }
+
+    public void SetPercentage(float percentage)
+    {
+        Value = currentStats.RollbackTime * percentage;
+    }
+
     public override float Value
     {
         get { return value; }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7ecc4078a26ef840885181b69d7d7bf, type: 3}
+  m_Name: DropsDefinition
+  m_EditorClassIdentifier: 
+  drops:
+  - pickup: {fileID: 3363098276734323662, guid: 36b27ba0c0879b34abd836de990eca71,
+      type: 3}
+    dropPercentage: 0.1
+  - pickup: {fileID: 3363098276734323662, guid: 8cfb949919f55a94ab7354c86283e2f4,
+      type: 3}
+    dropPercentage: 0.1

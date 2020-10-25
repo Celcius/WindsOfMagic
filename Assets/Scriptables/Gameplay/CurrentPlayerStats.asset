@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d578f20ac9e9a6143b874da428e5dcbb, type: 3}
   m_Name: CurrentPlayerStats
   m_EditorClassIdentifier: 
-  acceleration: 200
-  moveSpeed: 10
+  moveSpeed: 1
   health: 3
+  rollbackTime: 1
   rollbackCount: 3
   rollbackRecoverySpeed: 0.33
-  iframeTime: 0.3
+  iframeTime: 0.5
   fireRate: 1
   fireAmount: 1

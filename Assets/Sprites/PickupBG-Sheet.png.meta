@@ -44,6 +44,24 @@ TextureImporter:
   - first:
       213: 3502465980181349762
     second: PickupBG-Sheet_8
+  - first:
+      213: 8143512146793223825
+    second: PickupBG-Sheet_5
+  - first:
+      213: 6183027628834179682
+    second: PickupBG-Sheet_6
+  - first:
+      213: -4242252187776921105
+    second: PickupBG-Sheet_7
+  - first:
+      213: 5906168184503438616
+    second: PickupBG-Sheet_8
+  - first:
+      213: 2378118773658779027
+    second: PickupBG-Sheet_9
+  - first:
+      213: 7207808067841273161
+    second: PickupBG-Sheet_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -262,8 +280,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 403d7a270dfd15910800000000000000
-      internalID: 1824485410431554308
+      spriteID: 19650bdb621930170800000000000000
+      internalID: 8143512146793223825
       vertices: []
       indices: 
       edges: []
@@ -283,8 +301,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d169a62292679e630800000000000000
-      internalID: 3956823666664838685
+      spriteID: 26a461d8ed68ec550800000000000000
+      internalID: 6183027628834179682
       vertices: []
       indices: 
       edges: []
@@ -304,8 +322,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7651163084200240800000000000000
-      internalID: 4755841339584763518
+      spriteID: fe1dee39c1e7025c0800000000000000
+      internalID: -4242252187776921105
       vertices: []
       indices: 
       edges: []
@@ -325,8 +343,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 285899a80424b9030800000000000000
-      internalID: 3502465980181349762
+      spriteID: 81d8a0debace6f150800000000000000
+      internalID: 5906168184503438616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupBG-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 0
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d7e91cc66c00120800000000000000
+      internalID: 2378118773658779027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupBG-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94dafd4cf37470460800000000000000
+      internalID: 7207808067841273161
       vertices: []
       indices: 
       edges: []

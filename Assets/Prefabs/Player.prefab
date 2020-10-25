@@ -249,6 +249,7 @@ MonoBehaviour:
   timeVoyageRatio: {fileID: 11400000, guid: e67e9ba0f10d23c47b3b5b810e9ff465, type: 2}
   IsAssistModeOn: {fileID: 11400000, guid: e5053ee69bac0b04fa8e38e0855bbde4, type: 2}
   enemies: {fileID: 11400000, guid: 5dcbe7e0783fcda4db9a549aa7b81077, type: 2}
+  playtest: {fileID: 11400000, guid: 96e1d32d1f0de0a4997c74b19cc27b5c, type: 2}
 --- !u!58 &4406686250223132563
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -291,7 +292,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  disableOnDeath: 1
+  disableOnDeath: 0
   externalVar: {fileID: 11400000, guid: c0255e0a710a5d84dbb5c2eaf9715af1, type: 2}
   ShouldRevertTime: 1
   isInvincible: 0
+  healthSprite: {fileID: 5477285701870237602}
+  iFrame: 0.1
+  usePlayerIFrame: 1
+  currentPlayerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}

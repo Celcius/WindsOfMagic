@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53d4cfa7ddc96b4991c2867644e0948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 2
   disableOnDeath: 1
   externalVar: {fileID: 0}
   ShouldRevertTime: 1
@@ -50,6 +50,7 @@ MonoBehaviour:
       range: 360
       rotation: 0
       damage: 1
+      debugColor: {r: 0, g: 0, b: 0, a: 0}
   - timeToSpawn: 6
     wave:
       projectile: {fileID: 7540363586766784355, guid: 7c4f8e4323d2ff04191b0e9235facb54,
@@ -58,8 +59,13 @@ MonoBehaviour:
       range: 360
       rotation: 0
       damage: 2
+      debugColor: {r: 0, g: 0, b: 0, a: 0}
   repeat: 1
-  spawnOffset: 0
+  spawnRadiusOffset: 0
+  spawnOffset: {x: 0, y: 0}
+  ignoreRotation: 0
+  playerMinDistance: 3.4028235e+38
+  player: {fileID: 0}
 --- !u!1001 &3612682597308436948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -126,6 +132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6697674482771637745, guid: 836acce49ca5ed04b80a18a09df15f04,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 836acce49ca5ed04b80a18a09df15f04, type: 3}

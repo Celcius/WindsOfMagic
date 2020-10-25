@@ -142,7 +142,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         int toCreate = TimedBoundRandom.RandomInt((int)minWavePickups.Evaluate(ratio),
                                                   (int)maxWavePickups.Evaluate(ratio)+1);
         toCreate = Mathf.Max(1, toCreate);
-
+    
         for(int i = 0; i < toCreate; i++)
         {
             RoundPickup pickup = Instantiate(roundPickupPrefab);

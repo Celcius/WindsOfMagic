@@ -12,12 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d578f20ac9e9a6143b874da428e5dcbb, type: 3}
   m_Name: MinPlayerStats
   m_EditorClassIdentifier: 
-  acceleration: 200
   moveSpeed: 0.5
   health: 1
-  rollbackTime: 0.5
+  rollbackTime: 2
   rollbackCount: 1
   rollbackRecoverySpeed: 0.15
-  iframeTime: 0.1
+  iframeTime: 0.3
   fireRate: 0.2
   fireAmount: 1

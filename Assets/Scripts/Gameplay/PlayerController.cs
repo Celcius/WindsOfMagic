@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using AmoaebaUtils;
 using System;
+using UnityEngine.SceneManagement;
+
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(GameTimeBoundTransform))]
 [RequireComponent(typeof(TimedHealth))]
@@ -47,7 +49,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private TransformArrVar enemies;
 
+    [SerializeField]
+    private PlayTestOptions playtest;
+
     private bool isTimeVoyaging = false;
+    private bool IsTimeVoyaging
+    {
+        get { return isTimeVoyaging; }
+        set { isTimeVoyaging = value || playtest.alwaysTimeVoyage; }
+    }
 
     GameTimeBoundTransform timeBoundTransform;
 
@@ -60,6 +70,7 @@ public class PlayerController : MonoBehaviour
         gameTime = GameTime.Instance;
         timeBoundTransform = GetComponent<GameTimeBoundTransform>();
         health = GetComponent<TimedHealth>();
+        health.OnDeathEvent += OnDeath;
         isTimeVoyaging = false;
         timeBoundTransform.IgnoreGameSpeed = false;
         timeVoyageRatio.Value = 0;
@@ -70,6 +81,18 @@ public class PlayerController : MonoBehaviour
 
         playerStats.OnChangeEvent += OnStatsChanged;
         OnStatsChanged();
+    }
+
+    private void OnDeath()
+    {
+        if(rollbackTimer.FilledRollbacks >= 1)
+        {
+            GameTime.Instance.Stop();
+        }
+        else
+        {
+            SceneManager.LoadScene(0,LoadSceneMode.Single);
+        }
     }
 
     private void OnStatsChanged()
@@ -95,12 +118,12 @@ public class PlayerController : MonoBehaviour
 
         if(timeBoundTransform.IgnoreGameSpeed || (!gameTime.IsReversing && timeHandler.GameSpeed > 0 && !gameTime.IsStopped))
         {
-            float delta =  (isTimeVoyaging || timeBoundTransform.IgnoreGameSpeed)? Time.deltaTime : gameTime.DeltaTime;
+            float delta =  (IsTimeVoyaging || timeBoundTransform.IgnoreGameSpeed)? Time.deltaTime : gameTime.DeltaTime;
             Vector2 moveDir = input.GetMoveAxis();
             Vector3 speed = (Vector3)moveDir * playerStats.MoveSpeed;
             Vector3 nextPos = transform.position + speed * delta;
 
-            if(!isTimeVoyaging)
+            if(!IsTimeVoyaging)
             {
                 shotElapsed -= delta;
                 if(shotElapsed <= 0 && (input.IsShooting() || IsAssistModeOn.Value))
@@ -119,7 +142,7 @@ public class PlayerController : MonoBehaviour
                 lastMovement = new Vector2(moveDir.x, moveDir.y);
             }
 
-            if(gameTime.GameSpeed >= gameTime.DefaultSpeed)
+            if(gameTime.GameSpeed >= gameTime.DefaultSpeed && playtest.useTimeRecovery)
             {
                 rollbackTimer.Value += delta * playerStats.RollbackRecoverySpeed;
             }
@@ -133,31 +156,32 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if(timeBoundTransform.IgnoreGameSpeed && !isTimeVoyaging && gameTime.GameSpeed >= gameTime.DefaultSpeed)
+        if(timeBoundTransform.IgnoreGameSpeed && !IsTimeVoyaging && gameTime.GameSpeed >= gameTime.DefaultSpeed)
         {
             timeBoundTransform.IgnoreGameSpeed = false;
         }
 
         if(input.IsReversing() && !gameTime.IsReversing && rollbackTimer.FilledRollbacks >= 1.0f)
         {
-            if(!isTimeVoyaging && timeVoyageRatio.Value >= 1.0f)
+            if(!IsTimeVoyaging && timeVoyageRatio.Value >= 1.0f)
             {
                 StartTimeVoyage();
             }
             gameTime.Reverse();
         }
-        else if((gameTime.IsReversing || gameTime.IsStopped) && !input.IsReversing())
+        else if((gameTime.IsReversing || gameTime.IsStopped) && !input.IsReversing() && health.IsAlive)
         {
-            if(isTimeVoyaging)
+            if(IsTimeVoyaging)
             {
                 StopTimeVoyage();
             }
             rollbackTimer.Value = rollbackTimer.FilledRollbacks;
+            
             gameTime.Play();
         }
         else if(gameTime.IsReversing && rollbackTimer.Value <= 0)
         {
-            if(isTimeVoyaging)
+            if(IsTimeVoyaging)
             {
                 StopTimeVoyage();
                 rollbackTimer.Value = 0;
@@ -193,13 +217,13 @@ public class PlayerController : MonoBehaviour
     private void StartTimeVoyage()
     {
         gameObject.layer  =LayerMask.NameToLayer(timeVoyageMask);
-        timeBoundTransform.IgnoreGameSpeed = isTimeVoyaging = true;     
+        timeBoundTransform.IgnoreGameSpeed = IsTimeVoyaging = true;     
         health.ShouldRevertTime = false;          
     }
 
     private void StopTimeVoyage()
     {
-        isTimeVoyaging = false;
+        IsTimeVoyaging = false;
         timeVoyageRatio.Value = 0; 
         gameObject.layer = LayerMask.NameToLayer(defaultMask);
         health.ShouldRevertTime = true;

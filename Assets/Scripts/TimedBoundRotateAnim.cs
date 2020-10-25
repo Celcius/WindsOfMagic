@@ -16,9 +16,15 @@ public class TimedBoundRotateAnim : RotateAnim
     }
 
     
-    void Start()
+    protected override void Start()
     {
         dir = Mathf.Sign(TimedBoundRandom.RandomFloat(float.MinValue, float.MaxValue));
         base.Start();
     }
+
+    
+   public override float GetDeltaTime()
+   {
+       return GameTime.Instance.DeltaTime;
+   }
 }

@@ -22,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: layerMask.m_Bits
-      value: 6144
+      value: 22528
       objectReference: {fileID: 0}
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
@@ -42,7 +42,7 @@ PrefabInstance:
     - target: {fileID: 3703824415889062729, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: layerMask.m_Bits
-      value: 2048
+      value: 18432
       objectReference: {fileID: 0}
     - target: {fileID: 3703824415889062729, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}

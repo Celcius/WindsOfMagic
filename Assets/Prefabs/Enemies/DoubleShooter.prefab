@@ -1,51 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &8437282159693986890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354374841096809693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47d8b4232aaf90c49889cdaf2736c0ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animationSpeed:
-    Curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 2
-        outSlope: 2
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    CurveType: 3
-    wrapMode: 1
-    Offset: 0
-    TimeOffset: 0
-    AxisMultiplier: 15
-    TimeMultiplier: 2
-  randomStart: 0
-  speedVec: {x: 0, y: 0, z: 1}
-  randomDir: 1
 --- !u!1001 &358155659168125896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57,6 +11,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599859867274592021, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1708675444389892134, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2015306047904923547, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -72,6 +36,11 @@ PrefabInstance:
         type: 3}
       propertyPath: blendMaterial
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2792268842175670673, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3541134176908325931, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -138,6 +107,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleShooter
       objectReference: {fileID: 0}
+    - target: {fileID: 3802455086157471405, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: waves.Array.size
@@ -157,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: waves.Array.data[1].timeToSpawn
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -209,7 +183,7 @@ PrefabInstance:
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: waves.Array.data[0].timeToSpawn
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -305,6 +279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: waves.Array.data[2].wave.debugColor.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: playerMinDistance
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5921257752952908762, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -424,6 +403,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: animationSpeed.AxisMultiplier
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: animationSpeed.CurveType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: animationSpeed.Curve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8688888398810619085, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -443,9 +457,3 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 9007497836838804229, guid: 8ad68835f25adfd4c90aaf4cef828e0c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8ad68835f25adfd4c90aaf4cef828e0c, type: 3}
---- !u!1 &1354374841096809693 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1599859867274592021, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
-    type: 3}
-  m_PrefabInstance: {fileID: 358155659168125896}
-  m_PrefabAsset: {fileID: 0}

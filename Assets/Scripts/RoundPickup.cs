@@ -69,7 +69,7 @@ public class RoundPickup : MonoBehaviour
         Vector2 size = wall.Value.GameBounds.size;
         // Assume center is 0,0
         Vector2 startPos = Vector2.Scale(-dir, size/2.0f) * startPosOffset;
-        transform.position = startPos + Vector2.Scale(offset, size) * TimedBoundRandom.RandomFloat(-0.475f, 0.475f);
+        transform.position = startPos + Vector2.Scale(offset, size) * TimedBoundRandom.RandomFloat(-0.4f, 0.4f);
 
         
         float speedRatio = (float) (Mathf.Clamp(waveSpawner.Value.CurrentWave,0,roundsToMaxSpeed) / roundsToMaxSpeed);

@@ -49,7 +49,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
     private List<IGameTimeListener> timeListeners = new List<IGameTimeListener>();
     private List<IGameTimeListener> toRemove = new List<IGameTimeListener>();
 
-    public float MaxDeathTime => maxStats.RollbackTime * maxStats.RollbackCount;
+    public float MaxDeathTime => maxStats.RollbackTime * maxStats.RollbackCount+0.5f;
     
     private bool isReversing = false;
     public bool IsReversing => isReversing;
@@ -58,7 +58,6 @@ public class GameTime : SingletonScriptableObject<GameTime>
     public bool IsStopped => isStopped;
 
     public bool IsPaused => isPaused.Value;
-
     private float storedPauseSpeed = 0;
 
     private float speedModifier = 1.0f;
@@ -194,6 +193,11 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     public void Stop()
     {
+        if(runner != null && timeInRoutine != null)
+        {
+            runner.StopCoroutine(timeInRoutine);            
+        }
+
         isStopped = true;
         isReversing = false;
         gameSpeed = 0;

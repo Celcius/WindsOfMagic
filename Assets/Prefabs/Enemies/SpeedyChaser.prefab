@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 216628068212905589, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
       propertyPath: moveSpeed
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 495453202576260339, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
@@ -93,6 +93,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1505641978206718927, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2707599690226135672, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3013738270878703045, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
       propertyPath: m_Offset.x
@@ -124,6 +134,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: fb29e412e5f55ef46893ed3c94e047b1,
         type: 3}
+    - target: {fileID: 5381833610912775827, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3013738270878703045, guid: facb1cfb2b4391840ba3bf431171cc56, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: facb1cfb2b4391840ba3bf431171cc56, type: 3}

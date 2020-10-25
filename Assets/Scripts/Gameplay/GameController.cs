@@ -23,9 +23,13 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private PauseMenu pauseMenu;
+
+    [SerializeField]
+    private PlayTestOptions playTestOptions;
     
     void Start()
     {
+        playTestOptions.ResetOptions();
         playerStats.SetPlayerStats(basePlayerStats);
         projectileStats.SetProjectileStats(baseProjectileStats);
         GameTime.Instance.Start();
