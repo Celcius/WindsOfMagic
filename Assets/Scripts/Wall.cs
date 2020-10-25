@@ -24,4 +24,9 @@ public class Wall : MonoBehaviour
         }
         gameBounds = new Bounds(startPos + size/2.0f, size);
     }
+
+    public bool IsOutOfBounds(Vector2 position)
+    {
+        return !gameBounds.Contains(position);
+    }
 }

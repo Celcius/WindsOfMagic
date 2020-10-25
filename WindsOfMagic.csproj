@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\RoundPickup.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimeBoundAdapter.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerStatsTimeHandler.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentation.cs" />
      <Compile Include="Assets\Scripts\Gameplay\DestroyOnBirth.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TransformMovementTimeBoundAdapter.cs" />
      <Compile Include="Assets\Scripts\SettingNameFromColorType.cs" />
@@ -90,9 +91,11 @@
      <Compile Include="Assets\Scripts\UI\ColorScheme.cs" />
      <Compile Include="Assets\Scripts\WaveSpawnerVar.cs" />
      <Compile Include="Assets\Scripts\WallScriptVar.cs" />
-     <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentation.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentationArr.cs" />
+     <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\RotateTowardsPlayer.cs" />
+     <Compile Include="Assets\Scripts\TimedBoundRotateAnim.cs" />
+     <Compile Include="Assets\Scripts\DestroyIfOutOfBounds.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

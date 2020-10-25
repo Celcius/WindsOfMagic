@@ -16,6 +16,14 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     private TransformArrVar aliveEnemies;
 
+#if UNITY_EDITOR
+    [SerializeField]
+
+    private bool canSpawn = true;
+#else
+    private bool canSpawn = true;
+#endif
+
     public int CurrentWave => (int)currentIndex.Value;
 
     [SerializeField]
@@ -88,6 +96,10 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     public void OnTimeElapsed(float timeElapsed)
     {
+        if(!canSpawn)
+        {
+            return;
+        }
         if(GameTime.Instance.IsReversing)
         {
             currentIndex.InterpolatedValueAt(GameTime.Instance.ElapsedTime);

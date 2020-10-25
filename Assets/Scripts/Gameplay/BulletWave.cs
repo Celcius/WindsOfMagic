@@ -6,10 +6,12 @@ using UnityEngine;
 public struct BulletWave
 {
     public Transform projectile;
-    public float amount;
+    public int amount;
 
     public float range;
 
     public float rotation;
     public float damage; 
+
+    public Color debugColor;
 }
