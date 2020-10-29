@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DefaultColorScheme
   m_EditorClassIdentifier: 
   PlayerColor: {r: 0, g: 1, b: 0.8638129, a: 1}
-  PlayerBulletsColor: {r: 0, g: 0.31960154, b: 1, a: 1}
-  EnemyColor: {r: 1, g: 0, b: 0, a: 1}
-  EnemyBulletsColor: {r: 1, g: 0.4366033, b: 0, a: 1}
-  PickupColor: {r: 0, g: 0.6320754, b: 0.22223632, a: 1}
-  HealthColor: {r: 1, g: 0, b: 0.3796172, a: 1}
-  RewindColor: {r: 0, g: 0.620383, b: 1, a: 1}
+  PlayerBulletsColor: {r: 0.46262014, g: 0.72652376, b: 0.8679245, a: 1}
+  EnemyColor: {r: 1, g: 0.08064836, b: 0, a: 1}
+  EnemyBulletsColor: {r: 1, g: 0.32082564, b: 0, a: 1}
+  PickupColor: {r: 0, g: 0.89716387, b: 1, a: 1}
+  HealthColor: {r: 0.9529412, g: 0, b: 0.43760324, a: 1}
+  RewindColor: {r: 0.4129634, g: 0, b: 1, a: 1}
