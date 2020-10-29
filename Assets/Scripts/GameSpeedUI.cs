@@ -50,7 +50,17 @@ public class GameSpeedUI : MonoBehaviour
 
         for(int i = 0; i < count; i++)
         {
-            speedLabels[i].text = "" + speeds[i] + "x";
+            float intPart = (int) speeds[i];
+            float floatPart = Mathf.Round((speeds[i] - intPart) * 100f);
+            if(floatPart  - Mathf.Round(floatPart/10) * 10 == 0)
+            {
+                floatPart /= 10;
+            }
+
+            string number = (intPart > 0? ""+ intPart : "")
+                            + (floatPart > 0? "."+ floatPart : "");
+                            
+             speedLabels[i].text = number + "x";
         }
     }
 }
