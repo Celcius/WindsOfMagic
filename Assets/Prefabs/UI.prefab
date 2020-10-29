@@ -787,10 +787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grainImage: {fileID: 4820266220875034893}
   timeRatioImage: {fileID: 4820266220822007081}
-  clockColors:
-  - {r: 1, g: 0, b: 0.6367698, a: 0}
-  - {r: 0.27141953, g: 0, b: 1, a: 0}
-  - {r: 0.0039215684, g: 1, b: 0.98049283, a: 0}
+  currentColors: {fileID: 11400000, guid: 144db8c6531551248b0f271fab928ac7, type: 2}
   timeRatio: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
   currentPlayerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
   gameSpeedUIs:
@@ -798,10 +795,6 @@ MonoBehaviour:
   - {fileID: 207690323061149646}
   ratioLine: {fileID: 189607014174102065}
   linesPreloadedCount: 3
-  healthColors:
-  - {r: 0.14012596, g: 1, b: 0.06132078, a: 0}
-  - {r: 0.9607843, g: 0.89805436, b: 0, a: 0}
-  - {r: 0.9622642, g: 0, b: 0.03584071, a: 0}
   healthImage: {fileID: 8763471826285345166}
   healthVar: {fileID: 11400000, guid: c0255e0a710a5d84dbb5c2eaf9715af1, type: 2}
 --- !u!1 &6321858714925472878

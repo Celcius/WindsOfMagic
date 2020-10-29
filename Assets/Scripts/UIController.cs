@@ -14,7 +14,7 @@ public class UIController : MonoBehaviour
     private Image timeRatioImage;
 
     [SerializeField]
-    private Color[] clockColors;
+    private ColorScheme currentColors;
     
     [SerializeField]
     private FloatVar timeRatio;
@@ -32,9 +32,6 @@ public class UIController : MonoBehaviour
 
     [SerializeField]
     private int linesPreloadedCount = 3;
-
-    [SerializeField]
-    private Color[] healthColors;
 
     [SerializeField]
     private Image healthImage;
@@ -79,7 +76,7 @@ public class UIController : MonoBehaviour
         float totalTime = currentPlayerStats.RollbackCount * currentPlayerStats.RollbackTime;
         timeRatioImage.fillAmount = timeRatio.Value / totalTime;
 
-        Color newColor = GetColor(clockColors, timeRatioImage.fillAmount);
+        Color newColor = currentColors.GetColor(ColorType.RewindColor);
         newColor.a = timeRatioImage.color.a;
         timeRatioImage.color = newColor;
     }
@@ -130,7 +127,7 @@ public class UIController : MonoBehaviour
     {
         float ratio = Mathf.Clamp01(healthVar.Value / currentPlayerStats.Health);
         healthImage.fillAmount = ratio;
-        Color newColor = GetColor(healthColors, ratio);
+        Color newColor = currentColors.GetColor(ColorType.HealthColor);
         newColor.a = healthImage.color.a;
         healthImage.color = newColor;
     }
