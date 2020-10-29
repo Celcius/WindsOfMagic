@@ -183,5 +183,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
             pickup.SetProjectileStats(representation.projectileStats,
                                       representation.image);
         }
+        pickup.topLabel = representation.topLabel;
+        pickup.botLabel = representation.botLabel;
     }
 }

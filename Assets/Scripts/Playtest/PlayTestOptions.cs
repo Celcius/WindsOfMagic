@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayTestOptions : ScriptableObject
 {
     public bool useTimeRecovery = true;
+    public bool useTimePickups = true;
     public bool alwaysTimeVoyage = false;
 
     [SerializeField]
@@ -28,7 +29,7 @@ public class PlayTestOptions : ScriptableObject
         {
             return;
         }
-        definition.Value = useTimeRecovery? timeDefinition : normalDefinition;
+        definition.Value = useTimePickups? timeDefinition : normalDefinition;
         rollbackTimer.SetPercentage(filledTimeBars);
     }
 

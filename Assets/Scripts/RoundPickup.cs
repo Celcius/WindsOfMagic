@@ -30,6 +30,10 @@ public class RoundPickup : MonoBehaviour
 
     private TransformMovement movement;
 
+    public string topLabel;
+    public string botLabel;
+
+
     Vector2 dir;
 
     private void Awake() 
@@ -76,7 +80,6 @@ public class RoundPickup : MonoBehaviour
         float speed = speedCurve.Evaluate(0, speedRatio);
 
         movement.SetAxisMultiplier(dir * speed);
-        Destroy(this);
     }
 
     public void SetPlayerStats(PlayerStats stats, Sprite representation)

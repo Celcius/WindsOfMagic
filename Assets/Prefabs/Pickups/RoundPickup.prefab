@@ -192,6 +192,32 @@ MonoBehaviour:
     TimeMultiplier: 1
   waveSpawner: {fileID: 11400000, guid: 74fc92dde75efab4e941f8a02ed54ffa, type: 2}
   wall: {fileID: 11400000, guid: 81a382ba0e856d549b5f13768ba515b2, type: 2}
+--- !u!114 &5412968245273960409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8176152215765214551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49440ec6164f4e54caee682c0916408b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  useTag: 1
+  otherTag: Player
+  toInstantiate: {fileID: 4797646016064752468, guid: aa9ec6601015c404887a70bfcf9f6651,
+    type: 3}
+  useOtherPos: 0
+  offset: {x: 0, y: 0, z: 0}
+  euler: {x: 0, y: 0, z: 0}
+  topLabel: 
+  botLabel: 
 --- !u!1001 &3227741784893745531
 PrefabInstance:
   m_ObjectHideFlags: 0

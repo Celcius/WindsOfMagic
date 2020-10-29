@@ -8,4 +8,6 @@ public struct PickupRepresentation
     public PlayerStats playerStats;
     public ProjectileStats projectileStats;
     public Sprite image;
+    public string topLabel;
+    public string botLabel;
 }
