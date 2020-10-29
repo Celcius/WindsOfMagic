@@ -29,4 +29,8 @@ public class Wall : MonoBehaviour
     {
         return !gameBounds.Contains(position);
     }
+
+    public void OnDrawGizmos() {
+        Gizmos.DrawWireCube(gameBounds.center, gameBounds.size);
+    }
 }

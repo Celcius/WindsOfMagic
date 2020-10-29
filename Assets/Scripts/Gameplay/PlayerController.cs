@@ -52,6 +52,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private PlayTestOptions playtest;
 
+    [SerializeField]
+    private WallScriptVar wall;
+
     private bool isTimeVoyaging = false;
     private bool IsTimeVoyaging
     {
@@ -240,6 +243,11 @@ public class PlayerController : MonoBehaviour
         Vector2 dir = Vector2.zero;
         foreach(Transform enemy in enemies.Value)
         {
+            if(wall.Value.IsOutOfBounds(enemy.position))
+            {
+                continue;
+            }
+
             Vector2 tempDist = (enemy.position - transform.position);
             float tempMagnitude = tempDist.magnitude;
             if(tempMagnitude < magnitude)

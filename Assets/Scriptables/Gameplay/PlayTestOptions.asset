@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec1d0b93264328488dfc6601de6f975, type: 3}
   m_Name: PlayTestOptions
   m_EditorClassIdentifier: 
-  useTimeRecovery: 0
+  useTimeRecovery: 1
   alwaysTimeVoyage: 0
   definition: {fileID: 11400000, guid: 09e62c48420299d42915d49a0184283a, type: 2}
   normalDefinition: {fileID: 11400000, guid: 20c1894caa4ec2440a3ef56d20ddf348, type: 2}
   timeDefinition: {fileID: 11400000, guid: e0a64a8efab24eb4a8c8f4ac85fd2a6a, type: 2}
-  filledTimeBars: 1
+  filledTimeBars: 0
   rollbackTimer: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
