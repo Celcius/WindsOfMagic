@@ -34,7 +34,7 @@ public class Chaser : MonoBehaviour
         dir =  Vector2.Lerp(dir, (Vector2)(player.Value.position - transform.position).normalized, steerSpeed / moveSpeed);
         
         Vector3 newPos = transform.position + (Vector3)dir.normalized * moveSpeed * GameTime.Instance.DeltaTime;
-        body.velocity = (Vector3)dir.normalized * moveSpeed;
+        body.velocity = (Vector3)dir.normalized * moveSpeed * GameTime.Instance.GameSpeed;
         //body.AddForce(dir.normalized * moveSpeed, ForceMode2D.Impulse);
         //body.MovePosition(newPos);
         //transform.position = newPos;
