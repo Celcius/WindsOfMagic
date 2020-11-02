@@ -15,6 +15,12 @@ MonoBehaviour:
   useTimeRecovery: 1
   useTimePickups: 1
   alwaysTimeVoyage: 0
+  useCustomPickupColor: 0
+  pickupsToChangeColor:
+  - {fileID: 2284707952574911249, guid: 4a45a36c658d18d458a26c3193a98345, type: 3}
+  - {fileID: 2713768412764392680, guid: bac2eb19ad7e350439bdd748be815c44, type: 3}
+  - {fileID: 2284707952574911249, guid: 36b27ba0c0879b34abd836de990eca71, type: 3}
+  customPickupColors: 070000000700000006000000
   definition: {fileID: 11400000, guid: 09e62c48420299d42915d49a0184283a, type: 2}
   normalDefinition: {fileID: 11400000, guid: 20c1894caa4ec2440a3ef56d20ddf348, type: 2}
   timeDefinition: {fileID: 11400000, guid: e0a64a8efab24eb4a8c8f4ac85fd2a6a, type: 2}

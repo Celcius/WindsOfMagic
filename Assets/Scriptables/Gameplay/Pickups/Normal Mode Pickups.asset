@@ -44,7 +44,7 @@ MonoBehaviour:
     projectileStats: {fileID: 0}
     image: {fileID: 1824485410431554308, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Fire Rate
-    botLabel: '- Rewin Speed'
+    botLabel: '- Rewind Speed'
   - playerStats: {fileID: 11400000, guid: 133c2c69cf7097a4d8167e3d7d792ace, type: 2}
     projectileStats: {fileID: 0}
     image: {fileID: 3956823666664838685, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}

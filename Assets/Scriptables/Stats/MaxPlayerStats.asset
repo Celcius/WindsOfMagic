@@ -16,7 +16,7 @@ MonoBehaviour:
   health: 5
   rollbackTime: 10
   rollbackCount: 1
-  rollbackRecoverySpeed: 0.9
+  rollbackRecoverySpeed: 0.75
   iframeTime: 2
   fireRate: 3
   fireAmount: 10

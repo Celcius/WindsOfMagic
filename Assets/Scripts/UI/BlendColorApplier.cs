@@ -8,7 +8,7 @@ using BlendModes;
 public class BlendColorApplier : MonoBehaviour
 {
     [SerializeField]
-    private ColorType type = ColorType.None;
+    public ColorType type = ColorType.None;
 
     [SerializeField]
     private ColorScheme currentColors;

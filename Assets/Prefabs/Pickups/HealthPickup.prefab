@@ -101,12 +101,12 @@ PrefabInstance:
     - target: {fileID: 6754477029475978286, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978286, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978290, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
@@ -116,22 +116,22 @@ PrefabInstance:
     - target: {fileID: 7828506043833718001, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: type
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: overlayColor.r
-      value: 0.8301887
+      value: 0.0005002022
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: overlayColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: overlayColor.b
-      value: 0.2812006
+      value: 0.10474162
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}

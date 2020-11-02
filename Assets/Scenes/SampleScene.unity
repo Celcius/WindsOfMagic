@@ -1517,7 +1517,7 @@ Material:
     - PixelSnap: 0
     - _EnableExternalAlpha: 0
     m_Colors:
-    - _BLENDMODES_OverlayColor: {r: 0.46262014, g: 0.72652376, b: 0.8679245, a: 1}
+    - _BLENDMODES_OverlayColor: {r: 0.31764707, g: 0.79607844, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1595,6 +1595,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aa4661a60a3cb946ab232b2ee648212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!21 &1629234696
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/UIDefault/Overlay
+  m_Shader: {fileID: 4800000, guid: 2edb12028265ebd439260c13049b998b, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_COLORBURN
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BLENDMODES_OverlayTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _BLENDMODES_OverlayColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &4820266220973805394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1602,6 +1641,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 238304470237042392, guid: 93cd6be3b81393042ae803ca66379db7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4820266220875034893, guid: 93cd6be3b81393042ae803ca66379db7,
         type: 3}
       propertyPath: m_Material
@@ -1612,6 +1656,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4820266221567209281, guid: 93cd6be3b81393042ae803ca66379db7,
+        type: 3}
+      propertyPath: timeVoyageRatio
+      value: 
+      objectReference: {fileID: 11400000, guid: e67e9ba0f10d23c47b3b5b810e9ff465,
+        type: 2}
     - target: {fileID: 4820266221567209285, guid: 93cd6be3b81393042ae803ca66379db7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1722,6 +1772,27 @@ PrefabInstance:
       propertyPath: m_ReferencePixelsPerUnit
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5699125063389773343, guid: 93cd6be3b81393042ae803ca66379db7,
+        type: 3}
+      propertyPath: blendMaterial
+      value: 
+      objectReference: {fileID: 1629234696}
+    - target: {fileID: 7900509301545308162, guid: 93cd6be3b81393042ae803ca66379db7,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 1629234696}
+    - target: {fileID: 7900509301545308162, guid: 93cd6be3b81393042ae803ca66379db7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7900509301545308162, guid: 93cd6be3b81393042ae803ca66379db7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e8fc13cc38d1ac14d92225d86d0e7dfb,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93cd6be3b81393042ae803ca66379db7, type: 3}
 --- !u!1001 &5403722845242370097

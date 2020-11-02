@@ -1,5 +1,165 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &238304470237042392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5898941951717769996}
+  - component: {fileID: 645246108842402618}
+  - component: {fileID: 7900509301545308162}
+  - component: {fileID: 5699125063389773343}
+  - component: {fileID: 8730157899822990087}
+  m_Layer: 5
+  m_Name: TimeRatio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5898941951717769996
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238304470237042392}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4820266220060852624}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &645246108842402618
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238304470237042392}
+  m_CullTransparentMesh: 0
+--- !u!114 &7900509301545308162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238304470237042392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.47058824}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e8fc13cc38d1ac14d92225d86d0e7dfb, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 1
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5699125063389773343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238304470237042392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 198ada6227b2f4c419bd5cbefdf722f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shaderFamily: UIDefault
+  blendMode: 2
+  renderMode: 1
+  maskMode: 0
+  maskBehaviour: 0
+  overlayColor: {r: 0, g: 0, b: 0, a: 1}
+  overlayTexture: {fileID: 0}
+  overlayTextureOffset: {x: 0, y: 0}
+  overlayTextureScale: {x: 1, y: 1}
+  framebufferEnabled: 0
+  unifiedGrabEnabled: 0
+  shareMaterial: 0
+  blendMaterial: {fileID: 0}
+  componentExtensionState:
+    extendedComponent: {fileID: 7900509301545308162}
+    shaderProperties:
+    - name: _Hue
+      type: 2
+      colorValue: {r: 1, g: 1, b: 1, a: 1}
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      floatValue: 0
+      textureValue: {fileID: 0}
+    - name: _Saturation
+      type: 2
+      colorValue: {r: 1, g: 1, b: 1, a: 1}
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      floatValue: 0
+      textureValue: {fileID: 0}
+    - name: _Brightness
+      type: 2
+      colorValue: {r: 1, g: 1, b: 1, a: 1}
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      floatValue: 0
+      textureValue: {fileID: 0}
+    - name: _Contrast
+      type: 2
+      colorValue: {r: 1, g: 1, b: 1, a: 1}
+      vectorValue: {x: 0, y: 0, z: 0, w: 0}
+      floatValue: 0
+      textureValue: {fileID: 0}
+  stencilId: 1
+--- !u!114 &8730157899822990087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238304470237042392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0934f33ae26deae43807e3aeae8c26b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  image: {fileID: 7900509301545308162}
+  frames:
+  - {fileID: 21300000, guid: e8fc13cc38d1ac14d92225d86d0e7dfb, type: 3}
+  - {fileID: 21300000, guid: 2fbf7f8a5b2d5394981cdcac9b52fc1b, type: 3}
+  - {fileID: 21300000, guid: a86e641336c6bdb4ea5522f543989f5b, type: 3}
+  - {fileID: 21300000, guid: 3b15aed518d42a84a8e26f0decfdd429, type: 3}
+  - {fileID: 21300000, guid: ef8bdae2832dc434380e89ab8f6d51c1, type: 3}
+  - {fileID: 21300000, guid: bc7bf20441a3f164993a4d3e77e9972b, type: 3}
+  - {fileID: 21300000, guid: e10051f566a6b1e47b0d0de16b6fc3a3, type: 3}
+  - {fileID: 21300000, guid: 0f5c3eb85b962c64eb3d01ee7326361e, type: 3}
+  - {fileID: 21300000, guid: 6357a17f3f6a95e4aaf2a54401bd4e26, type: 3}
+  - {fileID: 21300000, guid: 0912aa9cbdfe70644ad2d0b3d6f9e7ea, type: 3}
+  - {fileID: 21300000, guid: e774271e00aa84e4b8e8dd8b166404e7, type: 3}
+  frameTime: 0.1
+  randomizeStart: 1
+  loop: 1
+  playOnEnable: 1
 --- !u!1 &945176243806256079
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,6 +546,7 @@ RectTransform:
   m_Children:
   - {fileID: 4820266220822007080}
   - {fileID: 189607014174102065}
+  - {fileID: 5898941951717769996}
   m_Father: {fileID: 4820266219728950282}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -789,6 +950,7 @@ MonoBehaviour:
   timeRatioImage: {fileID: 4820266220822007081}
   currentColors: {fileID: 11400000, guid: 144db8c6531551248b0f271fab928ac7, type: 2}
   timeRatio: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
+  timeVoyageRatio: {fileID: 11400000, guid: e67e9ba0f10d23c47b3b5b810e9ff465, type: 2}
   currentPlayerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
   gameSpeedUIs:
   - {fileID: 5830158089917166645}
@@ -797,6 +959,7 @@ MonoBehaviour:
   linesPreloadedCount: 3
   healthImage: {fileID: 8763471826285345166}
   healthVar: {fileID: 11400000, guid: c0255e0a710a5d84dbb5c2eaf9715af1, type: 2}
+  timeVoyageImage: {fileID: 7900509301545308162}
 --- !u!1 &6321858714925472878
 GameObject:
   m_ObjectHideFlags: 0

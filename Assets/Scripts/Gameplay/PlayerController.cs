@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     private bool IsTimeVoyaging
     {
         get { return isTimeVoyaging; }
-        set { isTimeVoyaging = value || playtest.alwaysTimeVoyage; }
+        set { isTimeVoyaging = value; }
     }
 
     GameTimeBoundTransform timeBoundTransform;
@@ -166,7 +166,7 @@ public class PlayerController : MonoBehaviour
 
         if(input.IsReversing() && !gameTime.IsReversing && rollbackTimer.FilledRollbacks >= 1.0f)
         {
-            if(!IsTimeVoyaging && timeVoyageRatio.Value >= 1.0f)
+            if(!IsTimeVoyaging && (timeVoyageRatio.Value >= 1.0f || playtest.alwaysTimeVoyage))
             {
                 StartTimeVoyage();
             }
@@ -178,7 +178,10 @@ public class PlayerController : MonoBehaviour
             {
                 StopTimeVoyage();
             }
-            rollbackTimer.Value = rollbackTimer.FilledRollbacks;
+
+            rollbackTimer.Value = playtest.rewindConsumesAll ? 
+                                  rollbackTimer.FilledRollbacks : 
+                                  rollbackTimer.Value; 
             
             gameTime.Play();
         }
@@ -187,7 +190,9 @@ public class PlayerController : MonoBehaviour
             if(IsTimeVoyaging)
             {
                 StopTimeVoyage();
-                rollbackTimer.Value = 0;
+                rollbackTimer.Value = playtest.rewindConsumesAll ? 
+                                      0 : 
+                                      rollbackTimer.Value;
                 gameTime.Play();
             }
             else

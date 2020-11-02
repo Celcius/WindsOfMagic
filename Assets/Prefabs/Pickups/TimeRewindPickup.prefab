@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-337734835411735323
+--- !u!114 &3094360881347794265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3363098276734323660}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11fcddfa54d5a3f41abcd47152cfc333, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f1c1c97c1b96cb438eb15358dc03ba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   collisionType: 0
@@ -19,8 +19,8 @@ MonoBehaviour:
     m_Bits: 0
   useTag: 1
   otherTag: Player
-  timer: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
-  percentageToFill: 0.5
+  timeVoyageBar: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
+  ratioToFill: 1
 --- !u!1001 &8291295148395579360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 6754477029475978284, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: m_Name
-      value: RewindPickup
+      value: TimeRewindPickup
       objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978285, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
@@ -102,12 +102,12 @@ PrefabInstance:
     - target: {fileID: 6754477029475978286, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978286, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978290, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
@@ -117,7 +117,7 @@ PrefabInstance:
     - target: {fileID: 7828506043833718001, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: type
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
@@ -127,12 +127,12 @@ PrefabInstance:
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: overlayColor.g
-      value: 0.48933274
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: overlayColor.b
-      value: 0.6509434
+      value: 0.36763072
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}

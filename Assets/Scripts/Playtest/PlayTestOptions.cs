@@ -7,6 +7,12 @@ public class PlayTestOptions : ScriptableObject
     public bool useTimeRecovery = true;
     public bool useTimePickups = true;
     public bool alwaysTimeVoyage = false;
+    public bool useCustomPickupColor = false;
+    public bool rewindConsumesAll = false;
+
+    [SerializeField]
+    private BlendColorApplier[] pickupsToChangeColor;
+    [SerializeField] ColorType[] customPickupColors;
 
     [SerializeField]
     private DropsDefinitionVar definition;
@@ -31,6 +37,12 @@ public class PlayTestOptions : ScriptableObject
         }
         definition.Value = useTimePickups? timeDefinition : normalDefinition;
         rollbackTimer.SetPercentage(filledTimeBars);
+
+        for(int i = 0; i < customPickupColors.Length; i++)
+        {
+            BlendColorApplier blend = pickupsToChangeColor[i];
+            blend.type = useCustomPickupColor? customPickupColors[i] : ColorType.PickupColor;
+        }
     }
 
 }

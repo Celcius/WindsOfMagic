@@ -17,5 +17,5 @@ MonoBehaviour:
   EnemyColor: {r: 1, g: 0.08064836, b: 0, a: 1}
   EnemyBulletsColor: {r: 1, g: 0.32082564, b: 0, a: 1}
   PickupColor: {r: 0, g: 0.89716387, b: 1, a: 1}
-  HealthColor: {r: 0.9529412, g: 0, b: 0.43760324, a: 1}
+  HealthColor: {r: 0.024015376, g: 0.9529412, b: 0, a: 1}
   RewindColor: {r: 0.4129634, g: 0, b: 1, a: 1}

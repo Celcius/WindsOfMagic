@@ -994,6 +994,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1765607461842074090, guid: e3deb5e57a70ebe49811a8a943476e5d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 1819847934639228032, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}
       propertyPath: m_text
@@ -1278,6 +1283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3171143448313908504, guid: e3deb5e57a70ebe49811a8a943476e5d,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 3255999387075647712, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}
@@ -1834,6 +1844,31 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 5493554488257338334, guid: e3deb5e57a70ebe49811a8a943476e5d,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493554488257338334, guid: e3deb5e57a70ebe49811a8a943476e5d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493554488257338334, guid: e3deb5e57a70ebe49811a8a943476e5d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493554488257338334, guid: e3deb5e57a70ebe49811a8a943476e5d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493554488257338334, guid: e3deb5e57a70ebe49811a8a943476e5d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5553095193924898342, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}
       propertyPath: m_text
@@ -2377,7 +2412,7 @@ PrefabInstance:
     - target: {fileID: 9048734872218280968, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}
       propertyPath: m_Size
-      value: 0.21862069
+      value: 0.16965517
       objectReference: {fileID: 0}
     - target: {fileID: 9105255196046373942, guid: e3deb5e57a70ebe49811a8a943476e5d,
         type: 3}

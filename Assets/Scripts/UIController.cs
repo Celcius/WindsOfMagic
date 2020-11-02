@@ -20,6 +20,9 @@ public class UIController : MonoBehaviour
     private FloatVar timeRatio;
 
     [SerializeField]
+    private FloatVar timeVoyageRatio;
+
+    [SerializeField]
     private PlayerStats currentPlayerStats;
 
     [SerializeField]
@@ -39,6 +42,9 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private FloatVar healthVar;
 
+    [SerializeField]
+    private Image timeVoyageImage;
+
     private void Awake() 
     {
         CreateLines(linesPreloadedCount);    
@@ -47,6 +53,7 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         timeRatio.OnChange += OnTimeRatioChange;
+        timeVoyageRatio.OnChange += OnTimeVoyageChange;
         GameTime.Instance.OnSpeedChangeEvent += OnSpeedChange;
         currentPlayerStats.OnChangeEvent += OnStatsChange;
         healthVar.OnChange += OnHealthChange;
@@ -56,6 +63,7 @@ public class UIController : MonoBehaviour
     private void OnDestroy() 
     {
         timeRatio.OnChange -= OnTimeRatioChange;  
+        timeVoyageRatio.OnChange -= OnTimeVoyageChange;
          GameTime.Instance.OnSpeedChangeEvent -= OnSpeedChange;
          currentPlayerStats.OnChangeEvent -= OnStatsChange;
          healthVar.OnChange -= OnHealthChange;
@@ -64,6 +72,12 @@ public class UIController : MonoBehaviour
     private void OnTimeRatioChange(float oldVal, float newVal)
     {
         UpdateRollbackClock();
+    }
+
+    private void OnTimeVoyageChange(float oldVal, float newVal)
+    {
+        bool isVoyage = (newVal >= 1.0f);
+        timeVoyageImage.gameObject.SetActive(isVoyage);
     }
 
     private void OnHealthChange(float oldVal, float newVal)
