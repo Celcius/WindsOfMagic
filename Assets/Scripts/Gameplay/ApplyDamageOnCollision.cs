@@ -8,6 +8,8 @@ public class ApplyDamageOnCollision : ApplyOnCollision
     [SerializeField]
     private float damage = 0.0f;
 
+    [SerializeField]
+    private bool applyOnOther =  true;
     public float Damage 
     {
         get { return damage; }
@@ -20,7 +22,7 @@ public class ApplyDamageOnCollision : ApplyOnCollision
         {
             return;
         }
-        TimedHealth health = other.GetComponent<TimedHealth>();
+        TimedHealth health = (applyOnOther? other : transform).GetComponent<TimedHealth>();
         if(health == null)
         {
             return;

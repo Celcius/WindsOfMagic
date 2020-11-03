@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\HSBColor.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimeBoundCurveTransformMove.cs" />
      <Compile Include="Assets\Scripts\UI\ColorTypeVar.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Pickups\TimeRewindPickup.cs" />
      <Compile Include="Assets\Scripts\Wall.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Projectiles\PlayerProjectile.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\ProjectilePickups.cs" />
@@ -95,6 +96,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Pickups\DropPickupsOnDisable.cs" />
      <Compile Include="Assets\Scripts\UI\KeyChangeSetting.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStatsVar.cs" />
+     <Compile Include="Assets\Scripts\UI\ColorSettings.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTimeBoundTransform.cs" />
      <Compile Include="Assets\Scripts\Input\InputSchemeVar.cs" />
@@ -104,8 +106,9 @@
      <Compile Include="Assets\Scripts\WallScriptVar.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentationArr.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Pickups\TimeRewindPickup.cs" />
-     <Compile Include="Assets\Scripts\UI\ColorSettings.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\OnDisableDeath.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\SpawnOnDeath.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\TimedBoundDestroyAfter.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

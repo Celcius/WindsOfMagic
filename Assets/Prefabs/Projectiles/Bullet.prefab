@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6488877784065744974}
   - component: {fileID: 8485464173169576233}
   - component: {fileID: 3703824415889062729}
+  - component: {fileID: 2253850314962932153}
   - component: {fileID: 1671679668734070761}
   - component: {fileID: 2630988780769934401}
   - component: {fileID: 5287988110207457117}
@@ -242,6 +243,30 @@ MonoBehaviour:
   useTag: 0
   otherTag: 
   damage: 0
+--- !u!114 &2253850314962932153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146506474727049737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6281a937ebe57149b1d833d2b30a47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  useTag: 0
+  otherTag: 
+  sounds:
+  - {fileID: 8300000, guid: 15ebaa7e313dc3545b925aba86f49ae0, type: 3}
+  canPlaySound: {fileID: 11400000, guid: 222a3f116bb7b0d4a9dd4c6ddc1ed378, type: 2}
+  identifier: 
+  skipOnOverload: 1
 --- !u!114 &1671679668734070761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,7 +304,7 @@ MonoBehaviour:
   renderMode: 1
   maskMode: 0
   maskBehaviour: 0
-  overlayColor: {r: 0, g: 0.5286541, b: 1, a: 1}
+  overlayColor: {r: 0.31764707, g: 0.79607844, b: 1, a: 1}
   overlayTexture: {fileID: 0}
   overlayTextureOffset: {x: 0, y: 0}
   overlayTextureScale: {x: 1, y: 1}

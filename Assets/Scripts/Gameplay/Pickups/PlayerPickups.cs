@@ -16,7 +16,6 @@ public class PlayerPickups: ApplyOnCollision
 
     [SerializeField]
     protected PlayerStats maxCurrentStats;
-
     protected override void Apply(Transform Transform)
     {
         if(offsetToApply == null || GameTime.Instance.GameSpeed <= 0)

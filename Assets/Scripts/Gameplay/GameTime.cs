@@ -34,6 +34,9 @@ public class GameTime : SingletonScriptableObject<GameTime>
     [SerializeField]
     private BoolVar isPaused;
 
+    [SerializeField]
+    private BoolVar IsPlayingNormal;
+
     private float defaultSpeed = 1.0f;
     public float DefaultSpeed => defaultSpeed;
 
@@ -149,6 +152,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
         gameSpeed = defaultSpeed;
         isReversing = false;
         isStopped = false;
+        IsPlayingNormal.Value = true;
 
         isPaused.OnChange += PauseChange;
         PauseChange(false, isPaused.Value);
@@ -181,6 +185,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
     {
         isReversing = false;
         isStopped = false;
+        IsPlayingNormal.Value = true;
         ChangeTime(defaultSpeed, reverseSpeedOut, playSpeedIn);
     }
 
@@ -188,6 +193,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
     {
         isReversing = true;
         isStopped = false;
+        IsPlayingNormal.Value = false;
         ChangeTime(reverseSpeed, playSpeedOut, reverseSpeedIn);
     }
 
@@ -198,6 +204,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
             runner.StopCoroutine(timeInRoutine);            
         }
 
+        IsPlayingNormal.Value = false;
         isStopped = true;
         isReversing = false;
         gameSpeed = 0;

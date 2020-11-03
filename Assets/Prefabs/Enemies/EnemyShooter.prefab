@@ -17,6 +17,10 @@ MonoBehaviour:
   externalVar: {fileID: 0}
   ShouldRevertTime: 1
   isInvincible: 0
+  healthSprite: {fileID: 0}
+  iFrame: 0.1
+  usePlayerIFrame: 0
+  currentPlayerStats: {fileID: 0}
 --- !u!114 &4438334070418666223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +140,17 @@ PrefabInstance:
     - target: {fileID: 6697674482771637745, guid: 836acce49ca5ed04b80a18a09df15f04,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284941825918643773, guid: 836acce49ca5ed04b80a18a09df15f04,
+        type: 3}
+      propertyPath: toSpawnOnDeat
+      value: 
+      objectReference: {fileID: 4328940400455503169, guid: b61d3dcdf8e91de4ea4cdcb559f0f51e,
+        type: 3}
+    - target: {fileID: 8523979354514555622, guid: 836acce49ca5ed04b80a18a09df15f04,
+        type: 3}
+      propertyPath: blendMaterial
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []

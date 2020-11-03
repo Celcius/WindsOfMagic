@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Bits: 0
   useTag: 1
   otherTag: Player
-  timeVoyageBar: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
+  rollbackTimer: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
   ratioToFill: 1
 --- !u!1001 &8291295148395579360
 PrefabInstance:
@@ -102,12 +102,12 @@ PrefabInstance:
     - target: {fileID: 6754477029475978286, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978286, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978290, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}

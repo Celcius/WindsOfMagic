@@ -285,6 +285,21 @@ PrefabInstance:
       propertyPath: playerMinDistance
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 4719356227314222849, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: scale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719356227314222849, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: scale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719356227314222849, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: scale.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5921257752952908762, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: blendMaterial

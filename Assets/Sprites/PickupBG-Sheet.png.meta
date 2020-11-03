@@ -611,6 +611,9 @@ TextureImporter:
   - first:
       213: -3625472700893707790
     second: PickupBG-Sheet_191
+  - first:
+      213: 954631838641452788
+    second: PickupBG-Sheet_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -955,8 +958,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57a8b6de127b6a9b0800000000000000
-      internalID: -5069162974213862795
+      spriteID: 4f6708179988f3d00800000000000000
+      internalID: 954631838641452788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PickupBG-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f50d237323177f0800000000000000
+      internalID: -616656461315940607
       vertices: []
       indices: 
       edges: []

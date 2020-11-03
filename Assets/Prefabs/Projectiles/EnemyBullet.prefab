@@ -7,6 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 629541280581596520, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 8300000, guid: 69c0c03df7f03e74ea24cb8c1cd2ffb3, type: 3}
+    - target: {fileID: 629541280581596520, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 629541280581596520, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: useLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: useTag
@@ -25,7 +40,22 @@ PrefabInstance:
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: layerMask.m_Bits
-      value: 5120
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253850314962932153, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: sounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 69c0c03df7f03e74ea24cb8c1cd2ffb3, type: 3}
+    - target: {fileID: 2253850314962932153, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253850314962932153, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: useLayerMask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2630988780769934401, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
@@ -35,12 +65,12 @@ PrefabInstance:
     - target: {fileID: 2630988780769934401, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: overlayColor.r
-      value: 0.8156863
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2630988780769934401, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: overlayColor.g
-      value: 0.3455
+      value: 0.23969012
       objectReference: {fileID: 0}
     - target: {fileID: 2630988780769934401, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}

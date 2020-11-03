@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour
     private string timeVoyageMask;
     private string defaultMask;
 
+    [SerializeField]
+    private AudioClip shootSound;
 
     [SerializeField]
     private float deadzone = 0.05f;
@@ -62,6 +64,9 @@ public class PlayerController : MonoBehaviour
         set { isTimeVoyaging = value; }
     }
 
+    private bool hasRollBack => playtest.rewindConsumesAll ? 
+                                  rollbackTimer.FilledRollbacks >= 1.0f :
+                                  rollbackTimer.Value > 0.05f;
     GameTimeBoundTransform timeBoundTransform;
 
     GameTime gameTime;
@@ -164,7 +169,7 @@ public class PlayerController : MonoBehaviour
             timeBoundTransform.IgnoreGameSpeed = false;
         }
 
-        if(input.IsReversing() && !gameTime.IsReversing && rollbackTimer.FilledRollbacks >= 1.0f)
+        if(input.IsReversing() && !gameTime.IsReversing && hasRollBack)
         {
             if(!IsTimeVoyaging && (timeVoyageRatio.Value >= 1.0f || playtest.alwaysTimeVoyage))
             {
@@ -219,7 +224,9 @@ public class PlayerController : MonoBehaviour
         PlayerProjectile projectile = Instantiate(bullet,
                                                   transform.position,
                                                   Quaternion.Euler(0,0,angle));
-        projectile.SetPlayerProjectileStats(speedMagnitude, projectileStats);                                                  
+        projectile.SetPlayerProjectileStats(speedMagnitude, projectileStats); 
+
+        SoundSystem.Instance.PlaySound(shootSound);                                             
     }
 
     private void StartTimeVoyage()

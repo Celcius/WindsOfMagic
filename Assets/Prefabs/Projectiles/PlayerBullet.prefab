@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &496537412269196665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756724462080768333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6281a937ebe57149b1d833d2b30a47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 18432
+  useTag: 0
+  otherTag: 
+  sounds:
+  - {fileID: 8300000, guid: 69c0c03df7f03e74ea24cb8c1cd2ffb3, type: 3}
+  canPlaySound: {fileID: 11400000, guid: 222a3f116bb7b0d4a9dd4c6ddc1ed378, type: 2}
+  identifier: 
+  skipOnOverload: 1
 --- !u!114 &989803756278082413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,6 +43,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 629541280581596520, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: useLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 629541280581596520, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: layerMask.m_Bits
@@ -28,6 +62,11 @@ PrefabInstance:
         type: 3}
       propertyPath: useLayerMask
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253850314962932153, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 4096
       objectReference: {fileID: 0}
     - target: {fileID: 2630988780769934401, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}

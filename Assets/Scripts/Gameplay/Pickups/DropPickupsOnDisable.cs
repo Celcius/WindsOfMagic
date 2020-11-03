@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AmoaebaUtils;
 
 [RequireComponent(typeof(TimedHealth))]
-public class DropPickupsOnDisable : MonoBehaviour
+public class DropPickupsOnDisable : SpawnOnDeath
 {
 
     [SerializeField]
@@ -12,30 +13,30 @@ public class DropPickupsOnDisable : MonoBehaviour
     [SerializeField]
     private FloatVar playerHealth;
 
-    private TimedHealth health;
+    [SerializeField]
+    private AudioClip sound;
 
-    private void Start()
+    protected override void OnDeathEvent() 
     {
-        health = GetComponent<TimedHealth>();
-        health.OnDeathEvent += OnDeath;
-    }
+        Transform explosion = InstantiateEntity();
+        AnimateFramesDestroyInstantiate animate = explosion.GetComponent<AnimateFramesDestroyInstantiate>();
 
-    private void OnDestroy() 
-    {
-        health.OnDeathEvent -= OnDeath;    
-    }
-
-    private void OnDeath() 
-    {
+        
         if(definition == null || definition.Value == null || playerHealth.Value <= 0)
         {
             return;
         }
 
         Transform toInstantiate = definition.Value.GetNextRandomDrop();
-        if(toInstantiate != null)
+        if(animate != null)
         {
-            Instantiate(toInstantiate, transform.position, toInstantiate.rotation);
+            animate.ToInstantiate = toInstantiate;
+            animate.scale = scale;
+        }
+        else
+        {
+            Transform instance = Instantiate(toInstantiate, transform.position, toInstantiate.rotation);
+            instance.localScale = Vector3.Scale(instance.localScale, scale);
         }
     }
 }

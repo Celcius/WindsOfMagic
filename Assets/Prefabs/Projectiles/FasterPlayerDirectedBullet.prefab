@@ -22,6 +22,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1253390437747891409, guid: b9e324911fda2ea4fad8f0ee8703897c,
+        type: 3}
+      propertyPath: useTag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1253390437747891409, guid: b9e324911fda2ea4fad8f0ee8703897c,
+        type: 3}
+      propertyPath: useLayerMask
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3071597085985173801, guid: b9e324911fda2ea4fad8f0ee8703897c,
         type: 3}
       propertyPath: blendMaterial

@@ -94,6 +94,7 @@ MonoBehaviour:
   useTag: 0
   otherTag: 
   damage: 1
+  applyOnOther: 1
 --- !u!114 &8245579440775730966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +115,27 @@ MonoBehaviour:
   useTag: 0
   otherTag: 
   destructionType: 0
+--- !u!114 &8309965648712409697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495453202576260339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0a358b3c37e6c4ab9a1c400bfd2a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  useTag: 0
+  otherTag: 
+  damage: 999
+  applyOnOther: 0
 --- !u!114 &5380267862307857483
 MonoBehaviour:
   m_ObjectHideFlags: 0
