@@ -298,7 +298,6 @@ MonoBehaviour:
   disableOnDeath: 0
   externalVar: {fileID: 11400000, guid: c0255e0a710a5d84dbb5c2eaf9715af1, type: 2}
   ShouldRevertTime: 1
-  isInvincible: 0
   healthSprite: {fileID: 5477285701870237602}
   iFrame: 0.1
   usePlayerIFrame: 1
@@ -317,3 +316,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSpawnOnDeath: {fileID: 0}
   inheritRotation: 0
+  scale: {x: 1, y: 1, z: 1}

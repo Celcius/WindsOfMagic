@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: ShaderResources
   m_EditorClassIdentifier: 
   shaders:
+  - {fileID: 4800000, guid: 11092422122c14d42808f94161136923, type: 3}
+  - {fileID: 4800000, guid: a6f21d30290828547bb945874e41204b, type: 3}
+  - {fileID: 4800000, guid: 10a1bd3de3cde114d99d48302c191b1a, type: 3}
+  - {fileID: 4800000, guid: 99ede98ad0c2e814b959696a4a7640ad, type: 3}
+  - {fileID: 4800000, guid: d570cac58c19f1341a1d16de6d46c34b, type: 3}
+  - {fileID: 4800000, guid: 8c76d4bb4aa41574294dcc28fa335a9e, type: 3}
+  - {fileID: 4800000, guid: c0ec7b0a7bc757841bbcdb98f70325c5, type: 3}
+  - {fileID: 4800000, guid: 128e2b3ae208430488dbf36cde26c397, type: 3}
   - {fileID: 4800000, guid: e0f2a73efd53eac4db01d84558cf80dc, type: 3}
   - {fileID: 4800000, guid: bffc149893fcef64fbc4cff05fa4c761, type: 3}
   - {fileID: 4800000, guid: 4217fc974312bc24d8b991b2852e08d6, type: 3}
