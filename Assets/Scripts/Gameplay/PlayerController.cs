@@ -233,7 +233,7 @@ public class PlayerController : MonoBehaviour
     {
         gameObject.layer  =LayerMask.NameToLayer(timeVoyageMask);
         timeBoundTransform.IgnoreGameSpeed = IsTimeVoyaging = true;     
-        health.ShouldRevertTime = false;          
+        health.ShouldRevertTime = playtest.shouldRevertHealthOnTimeVoyage;          
     }
 
     private void StopTimeVoyage()

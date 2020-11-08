@@ -31,9 +31,8 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
     [SerializeField]
     public bool ShouldRevertTime = true;
 
-    [SerializeField]
-    private bool isInvincible = false;
-    public bool IsInvincible => isInvincible;
+    private TimelinedProperty<TimedBool, bool> isInvincible = new TimelinedProperty<TimedBool, bool>();
+    public bool IsInvincible => isInvincible.Value;
 
     [SerializeField]
     public SpriteRenderer healthSprite;
@@ -57,9 +56,11 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
 
     private void Start()
     {
+        isInvincible.SetValue(new TimedBool(GameTime.Instance.ElapsedTime, false));
+        spriteColor = healthSprite.color;
         SetupHealth(maxHealth, maxHealth);
         GameTime.Instance.AddTimeListener(this);
-        spriteColor = healthSprite.color;
+
     }
 
     private void OnDestroy()
@@ -84,9 +85,14 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
 
     public void SetHealthDelta(float delta)
     {
-        if(delta <= 0 && isInvincible)
+        if(delta <= 0 && IsInvincible)
         {
             return;
+        }
+
+        if(!IsInvincible && healthSprite.color != spriteColor)
+        {
+                 healthSprite.color = spriteColor;
         }
 
         float current = Mathf.Clamp(healthTimeline.Value + delta, 0, maxHealth);
@@ -120,27 +126,34 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
     {
         float toElapse = actualIFrame;
         float toElapseSprite = healthFrames;
-        isInvincible = true;
+        isInvincible.SetValue(new TimedBool(GameTime.Instance.ElapsedTime, true));
         
         Color healthColor = UnityEngineUtils.NegativeColor(spriteColor);
         healthSprite.color = healthColor;
 
-        while(toElapse >= 0)
+        while(toElapse >= 0 && toElapse <= actualIFrame)
         {
             yield return new WaitForEndOfFrame();
-            toElapse -= Time.deltaTime;
-            toElapseSprite -= Time.deltaTime;
+            toElapse -= GameTime.Instance.DeltaTime;
+            toElapseSprite -= GameTime.Instance.DeltaTime;
             
             if(toElapseSprite <= 0)
             {
                 healthSprite.color = (healthSprite.color == healthColor) ? spriteColor : healthColor;
-                toElapseSprite = healthFrames;    
+                toElapseSprite = healthFrames;
+            }
+            else if(toElapseSprite > healthFrames)
+            {
+                healthSprite.color = (healthSprite.color == healthColor) ? spriteColor : healthColor;
+                toElapseSprite = toElapseSprite % healthFrames;
             }
         }
 
         healthSprite.color = spriteColor;
+        StopCoroutine(invincibleAnim);
         invincibleAnim = null;
-        isInvincible = false;
+        
+        isInvincible.SetValue(new TimedBool(GameTime.Instance.ElapsedTime, false));
     }
 
     public void OnTimeElapsed(float timeElapsed)

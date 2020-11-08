@@ -31,12 +31,10 @@ public class DropPickupsOnDisable : SpawnOnDeath
         if(animate != null)
         {
             animate.ToInstantiate = toInstantiate;
-            animate.scale = scale;
         }
         else
         {
             Transform instance = Instantiate(toInstantiate, transform.position, toInstantiate.rotation);
-            instance.localScale = Vector3.Scale(instance.localScale, scale);
         }
     }
 }

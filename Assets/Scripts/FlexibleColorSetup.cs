@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 using TMPro;
-
+using UnityEngine.Assertions;
 
 [RequireComponent(typeof(FlexibleColorPicker))]
 public class FlexibleColorSetup : MonoBehaviour
@@ -34,7 +34,7 @@ public class FlexibleColorSetup : MonoBehaviour
             picker = GetComponent<FlexibleColorPicker>();
         }
         Assert.IsFalse(pickerColor.Value == ColorType.None);
-
+        Assert.IsFalse(picker== null, "No FlexibleColor Picker assigned to " + this.name);
         variableName.text = ColorTypeVar.GetColorTypeName(pickerColor.Value);
         picker.color = currentColorScheme.GetColor(pickerColor.Value);
     }

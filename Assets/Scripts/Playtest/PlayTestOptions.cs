@@ -10,6 +10,8 @@ public class PlayTestOptions : ScriptableObject
     public bool useCustomPickupColor = false;
     public bool rewindConsumesAll = false;
 
+    public bool shouldRevertHealthOnTimeVoyage = true;
+
     [SerializeField]
     private BlendColorApplier[] pickupsToChangeColor;
     [SerializeField] ColorType[] customPickupColors;
