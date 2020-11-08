@@ -18,6 +18,7 @@ public class DestroyOnBirth : MonoBehaviour
     {
         if(gameTime.GameSpeed < 0 && gameTime.ElapsedTime < birthTime)
         {
+            
             Destroy(gameObject);
         }
     }

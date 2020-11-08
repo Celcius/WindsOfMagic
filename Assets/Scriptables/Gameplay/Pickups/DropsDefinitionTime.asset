@@ -19,6 +19,3 @@ MonoBehaviour:
   - pickup: {fileID: 3363098276734323662, guid: 4a45a36c658d18d458a26c3193a98345,
       type: 3}
     dropPercentage: 0.1
-  - pickup: {fileID: 1491241409049121847, guid: bac2eb19ad7e350439bdd748be815c44,
-      type: 3}
-    dropPercentage: 0.1

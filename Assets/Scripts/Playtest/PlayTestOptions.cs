@@ -11,6 +11,7 @@ public class PlayTestOptions : ScriptableObject
     public bool rewindConsumesAll = false;
 
     public bool shouldRevertHealthOnTimeVoyage = true;
+    public bool spawnHealthOpposite = true;
 
     [SerializeField]
     private BlendColorApplier[] pickupsToChangeColor;

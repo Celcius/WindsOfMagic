@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8258174648229232773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7281999051850817702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ea9a9311ac01804ba9f9d22830bea03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  useTag: 1
+  otherTag: Player
+  percentageToFill: 1
+--- !u!1001 &1475312132231382513
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4643016363285413258, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: type
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515937478103903371, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: blendMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515937478103903371, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: overlayColor.r
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515937478103903371, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: overlayColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515937478103903371, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: overlayColor.b
+      value: 0.2339067
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888927315083973873, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: topLabel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888927315083973873, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: botLabel
+      value: Full Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.9197118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214549, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214550, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8176152215765214550, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7207808067841273161, guid: 0024eb47ebb11274aa5239de6d95b98a,
+        type: 3}
+    - target: {fileID: 8176152215765214551, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+        type: 3}
+      propertyPath: m_Name
+      value: RoundHealthPickup
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8176152215765214539, guid: 3a645c86b19cf2647a42d8b6e94d520b, type: 3}
+    - {fileID: 8176152215765214548, guid: 3a645c86b19cf2647a42d8b6e94d520b, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 3a645c86b19cf2647a42d8b6e94d520b, type: 3}
+--- !u!1 &7281999051850817702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8176152215765214551, guid: 3a645c86b19cf2647a42d8b6e94d520b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1475312132231382513}
+  m_PrefabAsset: {fileID: 0}

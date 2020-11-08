@@ -77,7 +77,6 @@ public class PickupText : MonoBehaviour
             float alphaRatio = elapsed <= fadeInStart ? Mathf.Clamp01(elapsed / fadeInStart) :
                                elapsed >= fadeOutStart ? 1.0f - Mathf.Clamp01((elapsed - fadeOutStart) / (moveTime - fadeOutStart)) 
                                : 1.0f;
-            Debug.Log(alphaRatio);
             transform.position = position+ Vector3.up * moveProfile.Evaluate(moveRatio) * moveDistance;
             ApplyColor(alphaRatio);
 

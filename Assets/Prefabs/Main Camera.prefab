@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves: {fileID: 11400000, guid: 261b781eeae5bf74a8e9d81fa91ab2dd, type: 2}
+  wallVar: {fileID: 11400000, guid: 81a382ba0e856d549b5f13768ba515b2, type: 2}
   aliveEnemies: {fileID: 11400000, guid: 5dcbe7e0783fcda4db9a549aa7b81077, type: 2}
   canSpawn: 1
   minWavePickups:
@@ -245,22 +246,22 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 3
+      value: 2
       inSlope: 0
       outSlope: 0
-      tangentMode: 136
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 1
+      value: 2
       inSlope: 0
       outSlope: 0
-      tangentMode: 136
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -269,7 +270,7 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 5
+      value: 2
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -278,7 +279,7 @@ MonoBehaviour:
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 3
+      value: 2
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -289,12 +290,16 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   wavesToMaxPickups: 5
+  pickupOffset: {x: 3, y: 2}
   roundPickupPrefab: {fileID: 7888927315083973873, guid: 3a645c86b19cf2647a42d8b6e94d520b,
     type: 3}
   currentPickups: {fileID: 11400000, guid: 9e2fbfe1e7326fe4ebebd53e23cf26bf, type: 2}
+  healthPickup: {fileID: 8719607737057349888, guid: c78d2a2783994bc418b578186c7776c3,
+    type: 3}
   normalModePickups: {fileID: 11400000, guid: aee25b6dfa0cc5f4397a3621c726e619, type: 2}
   assistModePickups: {fileID: 11400000, guid: 6ea51c23d5da2d4488f6d6d22120f633, type: 2}
   isAssistMode: {fileID: 11400000, guid: e5053ee69bac0b04fa8e38e0855bbde4, type: 2}
+  playTest: {fileID: 11400000, guid: 96e1d32d1f0de0a4997c74b19cc27b5c, type: 2}
 --- !u!114 &6471522227655755631
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,28 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1416427683528731343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8176152215765214551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b20c119a88aa11498c3508d636fd695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionType: 0
-  useLayerMask: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  useTag: 1
-  otherTag: Player
-  currentStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4, type: 2}
-  offsetToApply: {fileID: 0}
-  minCurrentStats: {fileID: 11400000, guid: ff6503773cd68594b94c615eacdb0f40, type: 2}
-  maxCurrentStats: {fileID: 11400000, guid: 75fd1d4e1a4befe4e91d637ddecc781e, type: 2}
 --- !u!114 &1583959400803808092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a114e616631dda478b22005d7576358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosOffset: 1.5
   roundsToMaxSpeed: 10
   speedCurve:
     Curve:
@@ -215,7 +191,6 @@ MonoBehaviour:
     AxisMultiplier: 1
     TimeMultiplier: 1
   waveSpawner: {fileID: 11400000, guid: 74fc92dde75efab4e941f8a02ed54ffa, type: 2}
-  wall: {fileID: 11400000, guid: 81a382ba0e856d549b5f13768ba515b2, type: 2}
   topLabel: 
   botLabel: 
 --- !u!1001 &3227741784893745531
@@ -229,6 +204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RoundPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 6754477029475978284, guid: 2dc220a5f6c5f304d9162e4766415820,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6754477029475978285, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}

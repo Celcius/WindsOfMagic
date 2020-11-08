@@ -11,6 +11,9 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     [SerializeField]
     private EnemyWaves waves;
 
+    [SerializeField]
+    private WallScriptVar wallVar;
+
 
     [SerializeField]
 
@@ -36,10 +39,16 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     private int wavesToMaxPickups = 5;
 
     [SerializeField]
+    private Vector2 pickupOffset;
+
+    [SerializeField]
     private RoundPickup roundPickupPrefab;
 
     [SerializeField]
     private TransformArrVar currentPickups;
+
+    [SerializeField]
+    private RoundPickup healthPickup;
 
     [SerializeField]
     private PickupRepresentationArr normalModePickups;
@@ -49,6 +58,11 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     [SerializeField]
     private BoolVar isAssistMode;
+
+    [SerializeField]
+    private PlayTestOptions playTest;
+
+    float lastAngle = 0;
 
     public void Start()
     {
@@ -141,13 +155,41 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         float ratio = Mathf.Clamp01((float) CurrentWave / wavesToMaxPickups);
         int toCreate = TimedBoundRandom.RandomInt((int)minWavePickups.Evaluate(ratio),
                                                   (int)maxWavePickups.Evaluate(ratio)+1);
-        toCreate = Mathf.Max(1, toCreate);
+        toCreate = Mathf.Max(1, toCreate) + 1;
+
+        float angle = TimedBoundRandom.RandomFloat(0,360);
+        lastAngle = angle;
+        float offsetInc = pickupOffset.y * 2.0f / (toCreate-1);
     
         for(int i = 0; i < toCreate; i++)
         {
-            RoundPickup pickup = Instantiate(roundPickupPrefab);
-            PopulatePickup(pickup);
+            Vector2 anchorPos = Vector2.right *(wallVar.Value.Radius + pickupOffset.x) 
+                                + Vector2.up * (-pickupOffset.y + offsetInc * i);
+            anchorPos = MathUtils.Rotate(anchorPos, angle);
+
+            Vector2 dir = (MathUtils.Rotate(Vector2.right, (angle + 180) % 360) - MathUtils.Rotate(Vector2.right, angle)).normalized;
+
+            bool isHealthPickup = (i == 1);
+
+            RoundPickup pickup = null;
+            if(isHealthPickup)
+            {
+                if(playTest.spawnHealthOpposite)
+                {
+                    anchorPos += anchorPos.magnitude * dir * 2;
+                    dir = -dir;
+                }
+                pickup = Instantiate(healthPickup, (Vector3) anchorPos, Quaternion.identity);
+            }
+            else
+            {
+                pickup = Instantiate(roundPickupPrefab, (Vector3) anchorPos , Quaternion.identity);
+                PopulatePickup(pickup);
+            }
+            
+            pickup.SetupPickup(dir);
         }
+
         SetIsInstantiatedValue(true);
     }
 
@@ -185,5 +227,19 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         }
         pickup.topLabel = representation.topLabel;
         pickup.botLabel = representation.botLabel;
+    }
+
+    private void OnDrawGizmos() 
+    {
+        if(wallVar != null && wallVar.Value != null)
+        {
+            Gizmos.color = Color.green;
+            Vector2 mid = MathUtils.Rotate(Vector2.right *(wallVar.Value.Radius + pickupOffset.x), lastAngle);
+            Vector2 bot = MathUtils.Rotate(Vector2.right *(wallVar.Value.Radius + pickupOffset.x) - Vector2.up * pickupOffset.y, lastAngle);
+            Vector2 top = MathUtils.Rotate(Vector2.right *(wallVar.Value.Radius + pickupOffset.x) + Vector2.up * pickupOffset.y, lastAngle);
+            
+            Gizmos.DrawLine(Vector3.zero, mid);
+            Gizmos.DrawLine(bot, top);
+        }
     }
 }

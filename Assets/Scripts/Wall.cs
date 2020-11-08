@@ -11,10 +11,13 @@ public class Wall : MonoBehaviour
     private Bounds gameBounds;
     public Bounds GameBounds => gameBounds; 
 
-    public float radius;
+    [SerializeField]
+    private float radius;
+    public float Radius => radius;
     
     [Range(2, 200)]
-    public int points = 50;
+    [SerializeField]
+    private int points = 50;
 
     private EdgeCollider2D edgeCollider2D;
     [SerializeField]
