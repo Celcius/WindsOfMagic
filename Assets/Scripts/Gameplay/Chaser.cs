@@ -6,10 +6,13 @@ using AmoaebaUtils;
 public class Chaser : MonoBehaviour
 {
     [SerializeField]
-    private TransformVar player;
+    protected TransformVar player;
 
     [SerializeField]
     private float moveSpeed;
+
+    [SerializeField]
+    protected float playerDetectDistance;
 
 
     [SerializeField, Range(0,1.0f)]
@@ -17,15 +20,18 @@ public class Chaser : MonoBehaviour
 
     private Vector2 dir = Vector2.zero;
 
-    private Rigidbody2D body;
-    private void Start()
+    protected Rigidbody2D body;
+
+    protected bool canMove = true;
+    
+    protected virtual void Start()
     {
         body = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
-        if(GameTime.Instance.GameSpeed <= 0 || GameTime.Instance.IsReversing || player.Value  == null)
+        if(!canMove || GameTime.Instance.GameSpeed <= 0 || GameTime.Instance.IsReversing || player.Value  == null)
         {
             body.velocity = Vector3.zero;
             return;
@@ -35,10 +41,20 @@ public class Chaser : MonoBehaviour
         
         Vector3 newPos = transform.position + (Vector3)dir.normalized * moveSpeed * GameTime.Instance.DeltaTime;
         body.velocity = (Vector3)dir.normalized * moveSpeed * GameTime.Instance.GameSpeed;
+
+        if(((Vector2)(player.Value.position - transform.position)).magnitude < playerDetectDistance)
+        {
+            OnWithinDistance();
+        }
         //body.AddForce(dir.normalized * moveSpeed, ForceMode2D.Impulse);
         //body.MovePosition(newPos);
         //transform.position = newPos;
         //Debug.DrawLine(transform.position, transform.position+(Vector3)dir.normalized, Color.red, 10.0f);
         
+    }
+
+    protected virtual void OnWithinDistance()
+    {
+
     }
 }

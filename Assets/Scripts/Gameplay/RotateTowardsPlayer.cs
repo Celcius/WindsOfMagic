@@ -14,6 +14,9 @@ public class RotateTowardsPlayer : MonoBehaviour
     [SerializeField]
     private bool destroyComponentOnStart = false;
 
+    [SerializeField]
+    private float rotateSpeed = 0;
+
     private void Start()
     {
         UpdateRotation();
@@ -31,6 +34,13 @@ public class RotateTowardsPlayer : MonoBehaviour
     private void UpdateRotation()
     {
         Vector2 dir = player.Value.position - transform.position;
-        transform.right = Quaternion.Euler(0,0, angleRot) * dir.normalized;
+        if(rotateSpeed <= 0)
+        {
+            transform.right = Quaternion.Euler(0,0, angleRot) * dir.normalized;
+        }
+        else
+        {
+            transform.right += Quaternion.Euler(0,0, angleRot) * dir.normalized * GameTime.Instance.DeltaTime * rotateSpeed;
+        }
     }
 }

@@ -124,9 +124,8 @@ MonoBehaviour:
   disableOnDeath: 1
   externalVar: {fileID: 0}
   ShouldRevertTime: 1
-  isInvincible: 0
   healthSprite: {fileID: 6697674482771637745}
-  iFrame: 1
+  iFrame: 0.5
   usePlayerIFrame: 0
   currentPlayerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
 --- !u!114 &1424341161905561398

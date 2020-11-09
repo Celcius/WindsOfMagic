@@ -198,7 +198,7 @@ PrefabInstance:
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: waves.Array.data[1].wave.rotation
-      value: 120
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -208,7 +208,7 @@ PrefabInstance:
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: waves.Array.data[0].wave.rotation
-      value: 120
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -406,17 +406,17 @@ PrefabInstance:
     - target: {fileID: 6576632964885528601, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: 6576632964885528601, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: 6576632964885528601, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
