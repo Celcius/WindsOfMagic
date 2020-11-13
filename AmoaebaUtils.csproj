@@ -65,8 +65,10 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\UnityEngineUtils.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\UpdateTextOnStringVarChange.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\StringEvent.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SoundSystem\PlaySoundOnCollision.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\ApplyOnCollision.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\ApplyToFloatVarOnCollision.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SoundSystem\SoundSystem.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\AnimationUtils\ScaleAnim.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\Parallax\ParallaxFromWindowBounds.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\BoolVar.cs" />
@@ -88,6 +90,8 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\BootScriptableObject.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\Parallax\Parallaxable.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\MenuUtils\BoolVarToggle.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SoundSystem\PlaySoundOnEnable.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\AnimateFramesDestroyInstantiate.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\UpdateTextOnVarChange.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\VoidEvent.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterRigidbody2D.cs" />
@@ -114,9 +118,11 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterArrayComponentVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\ApplyToIntVarOnCollision.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\Parallax\ParallaxFollowTransform.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\FadeDestroyAfter.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\StateMachine\ScriptableStateMachine.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\StringVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\ArrayVarIndexObserver.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\DestroyAfter.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\FollowTransform.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\TransformVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterTransform.cs" />
@@ -125,12 +131,7 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterComponentVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SceneTransitionHandler.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\TransformMovement.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\AnimateFramesDestroyInstantiate.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SoundSystem\SoundSystem.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SoundSystem\PlaySoundOnCollision.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SoundSystem\PlaySoundOnEnable.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\DestroyAfter.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\FadeDestroyAfter.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\MenuUtils\FloatVarToSlider.cs" />
      <None Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\AmoaebaUtils.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

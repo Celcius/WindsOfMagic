@@ -63,6 +63,8 @@ public class GameTime : SingletonScriptableObject<GameTime>
     public bool IsPaused => isPaused.Value;
     private float storedPauseSpeed = 0;
 
+    public bool IsRunning => !IsStopped && !IsPaused && !isReversing;
+
     private float speedModifier = 1.0f;
     public float SpeedModifier
     {
@@ -148,13 +150,17 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     public void Start()
     {
+        isPaused.OnChange += PauseChange;
+        PauseChange(false, isPaused.Value);
+    }
+
+    public void Reset() 
+    {
         elapsedTime = 0.0f;
         gameSpeed = defaultSpeed;
         isReversing = false;
         isStopped = false;
         IsPlayingNormal.Value = true;
-
-        isPaused.OnChange += PauseChange;
         PauseChange(false, isPaused.Value);
     }
 

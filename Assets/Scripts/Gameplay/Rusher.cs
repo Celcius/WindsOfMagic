@@ -16,8 +16,6 @@ public class Rusher : Chaser
     [SerializeField]
     private float acceptableRushAngle = 25;
     private float elapsedRush = 0;
-
-    private float rushStartTime = -1;
     private Vector3 startRushPos;
 
     private Vector3 rushDir;
@@ -38,7 +36,6 @@ public class Rusher : Chaser
             elapsedRush = 0;
             rotateComponent.enabled = false;
             startRushPos = transform.position;
-
             rushDir = dirTransform.up;
         }
     }
@@ -52,8 +49,8 @@ public class Rusher : Chaser
     {
         if(GameTime.Instance.GameSpeed <= 0 || GameTime.Instance.IsReversing)
         {
-            isRushing = GameTime.Instance.ElapsedTime > rushStartTime &&
-                        GameTime.Instance.ElapsedTime  < rushStartTime + rushDuration;
+            elapsedRush += GameTime.Instance.DeltaTime;
+            isRushing = elapsedRush > 0 && elapsedRush <= rushDuration;
             body.isKinematic = !isRushing;
             rotateComponent.enabled = false;
             body.velocity = Vector3.zero;

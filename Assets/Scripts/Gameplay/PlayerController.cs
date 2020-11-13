@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using AmoaebaUtils;
 using System;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(GameTimeBoundTransform))]
@@ -57,6 +56,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private WallScriptVar wall;
 
+    [SerializeField]
+    private GameController gameController;
+
     private bool isTimeVoyaging = false;
     private bool IsTimeVoyaging
     {
@@ -99,7 +101,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene(0,LoadSceneMode.Single);
+            gameController.EndGame();
         }
     }
 

@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\TimedBoundRotateAnim.cs" />
      <Compile Include="Assets\Scripts\Gameplay\EnemyWaves.cs" />
      <Compile Include="Assets\Scripts\Input\InputHandler.cs" />
+     <Compile Include="Assets\Scripts\TimeBoundVar\TimelineFloatVar.cs" />
      <Compile Include="Assets\Scripts\DestroyIfOutOfBounds.cs" />
      <Compile Include="Assets\Scripts\RegisterSpawnWaveVar.cs" />
      <Compile Include="Assets\Scripts\FlexibleColorSetup.cs" />
@@ -95,7 +96,9 @@
      <Compile Include="Assets\Scripts\UI\BlendColorApplier.cs" />
      <Compile Include="Assets\Scripts\Gameplay\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\ApplyDamageOnCollision.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Rusher.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PlayerPickups.cs" />
+     <Compile Include="Assets\Scripts\TimeBoundVar\ApplyToTimelineFloatVarOnCollision.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\DropPickupsOnDisable.cs" />
      <Compile Include="Assets\Scripts\UI\KeyChangeSetting.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStatsVar.cs" />
@@ -107,9 +110,10 @@
      <Compile Include="Assets\Scripts\UI\ColorScheme.cs" />
      <Compile Include="Assets\Scripts\WaveSpawnerVar.cs" />
      <Compile Include="Assets\Scripts\WallScriptVar.cs" />
+     <Compile Include="Assets\Scripts\TimeBoundVar\TimelineScriptVar.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentationArr.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Rusher.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ScoreAwarder.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

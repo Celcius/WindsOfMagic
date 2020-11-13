@@ -182,13 +182,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
   basePlayerStats: {fileID: 11400000, guid: 0c3cb16cf21cce642a09f38f1086c01b, type: 2}
-  projectileStats: {fileID: 11400000, guid: 75fd1d4e1a4befe4e91d637ddecc781e, type: 2}
-  baseProjectileStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4,
+  projectileStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4, type: 2}
+  baseProjectileStats: {fileID: 11400000, guid: 56ade1d5b291445458cdf6e104e344d6,
     type: 2}
   gameTime: {fileID: 11400000, guid: 8843693cf6ff95149afe803e02d0be85, type: 2}
   inputHandler: {fileID: 11400000, guid: e41409226a32ab34b8761019bfdfbd39, type: 2}
   pauseMenu: {fileID: 0}
   playTestOptions: {fileID: 11400000, guid: 96e1d32d1f0de0a4997c74b19cc27b5c, type: 2}
+  scoreRepresentation: {fileID: 11400000, guid: 50181c8f4a704dc4590eaf0234afc9e3,
+    type: 2}
+  roundScoreRepresentation: {fileID: 11400000, guid: f969ebc1ee70b5946a475c12e8322227,
+    type: 2}
+  score: {fileID: 11400000, guid: 2dd811d05e3ee00408885bb1d177b68c, type: 2}
+  roundScore: {fileID: 11400000, guid: bd63c9b6a29af6c41bc9c6dd16b17357, type: 2}
+  collectedPickups: {fileID: 11400000, guid: 95b2402ccdf2a494c82e544414309725, type: 2}
+  spawner: {fileID: 3033622361297763422}
 --- !u!114 &8994501835197992478
 MonoBehaviour:
   m_ObjectHideFlags: 0

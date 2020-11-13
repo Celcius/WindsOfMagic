@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 191380124226420909}
   - component: {fileID: 1424341161905561398}
   - component: {fileID: 5099112400819269964}
+  - component: {fileID: 7112068835322855123}
+  - component: {fileID: 3620457680818269606}
   m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
@@ -164,6 +166,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d04792df65742e409618b1ea84bddb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7112068835322855123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198734045632575377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784460bb8240f354a851098d1ae99c60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionType: 0
+  useLayerMask: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  useTag: 0
+  otherTag: Player
+  var: {fileID: 11400000, guid: bd63c9b6a29af6c41bc9c6dd16b17357, type: 2}
+  inc: 5
+--- !u!114 &3620457680818269606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198734045632575377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c459c4175c313914ab652afa2cb1f1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 300
+  scoreOffset: 15
+  roundVar: {fileID: 11400000, guid: bd63c9b6a29af6c41bc9c6dd16b17357, type: 2}
 --- !u!1 &3626544013409883689
 GameObject:
   m_ObjectHideFlags: 0

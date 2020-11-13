@@ -8,6 +8,10 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     private TimelinedProperty<TimedFloat, float> currentIndex = new TimelinedProperty<TimedFloat, float>();
     private TimelinedProperty<TimedBool, bool> instantiatedWave = new TimelinedProperty<TimedBool, bool>(); 
     
+
+    public delegate void OnWillSpawnWave();
+    public OnWillSpawnWave OnWillSpawnWaveEvent;
+
     [SerializeField]
     private EnemyWaves waves;
 
@@ -135,6 +139,8 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     private void InstantiateWave()
     {
         SetCurrentIndexValue((int)currentIndex.Value+1);
+
+        OnWillSpawnWaveEvent?.Invoke();
 
         int index = TimedBoundRandom.RandomInt(0, waves.Waves.Length);
         Transform prefab = waves.Waves[index].transform;

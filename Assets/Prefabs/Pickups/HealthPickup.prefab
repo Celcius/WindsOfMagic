@@ -286,17 +286,17 @@ PrefabInstance:
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: overlayColor.r
-      value: 0.9529412
+      value: 0.024015376
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: overlayColor.g
-      value: 0
+      value: 0.9529412
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
       propertyPath: overlayColor.b
-      value: 0.2339067
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8549657902041744880, guid: 2dc220a5f6c5f304d9162e4766415820,
         type: 3}
