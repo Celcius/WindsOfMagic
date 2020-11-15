@@ -23,6 +23,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1342588612311603026, guid: ebc96e763926ab047b023fd0e3c636ea,
+        type: 3}
+      propertyPath: score
+      value: 204
+      objectReference: {fileID: 0}
     - target: {fileID: 2465805575960050265, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
       propertyPath: maxHealth
@@ -88,6 +93,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OmniShooter
       objectReference: {fileID: 0}
+    - target: {fileID: 3881203929448359907, guid: ebc96e763926ab047b023fd0e3c636ea,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4482670226726937795, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
       propertyPath: waves.Array.size
@@ -108,6 +118,11 @@ PrefabInstance:
       propertyPath: waves.Array.data[0].wave.rotation
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4768329876327089191, guid: ebc96e763926ab047b023fd0e3c636ea,
+        type: 3}
+      propertyPath: inc
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6256876614777976850, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
       propertyPath: blendMaterial
@@ -127,6 +142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8495666899924332889, guid: ebc96e763926ab047b023fd0e3c636ea,
+        type: 3}
+      propertyPath: damage
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8965907482897387269, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}

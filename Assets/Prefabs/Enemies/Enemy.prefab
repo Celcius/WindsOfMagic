@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 300
-  scoreOffset: 15
+  scoreOffsetPercent: 0.05
   roundVar: {fileID: 11400000, guid: bd63c9b6a29af6c41bc9c6dd16b17357, type: 2}
 --- !u!1 &3626544013409883689
 GameObject:

@@ -84,6 +84,7 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\ReflectionUtils.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\CoroutineRunner.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\Parallax\AnimateParallax.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\MenuUtils\FloatVarToSlider.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\ChangeFollowOffsetOnScreenSize.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\IntArrVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\Rigidbody2DVar.cs" />
@@ -131,8 +132,14 @@
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\ScriptableObjectUtils\ScriptVar\RegisterComponentVar.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\SceneTransitionHandler.cs" />
      <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\GameplayUtils\TransformMovement.cs" />
-     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\MenuUtils\FloatVarToSlider.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\Combinatorics\GenerateOption.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\Combinatorics\Variations.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\Combinatorics\IMetaCollection.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\Combinatorics\Permutations.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\Combinatorics\SmallPrimeUtility.cs" />
+     <Compile Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\Combinatorics\Combinations.cs" />
      <None Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\AmoaebaUtils.asmdef" />
+     <None Include="Assets\Packages\AmoaebaUtils\AmoaebaUtils\Core\Combinatorics\Readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

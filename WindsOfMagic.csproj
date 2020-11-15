@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Pickups\InstantiatePickupTextOnCollision.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\DropsDefinition.cs" />
      <Compile Include="Assets\Scripts\Gameplay\BulletWaveShooter.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\ScoreAwarder.cs" />
      <Compile Include="Assets\Scripts\HSBColor.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TimeBoundCurveTransformMove.cs" />
      <Compile Include="Assets\Scripts\UI\ColorTypeVar.cs" />
@@ -113,7 +114,7 @@
      <Compile Include="Assets\Scripts\TimeBoundVar\TimelineScriptVar.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentationArr.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\ScoreAwarder.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\DifficultyCalculator.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

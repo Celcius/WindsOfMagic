@@ -1958,6 +1958,11 @@ PrefabInstance:
       propertyPath: canSpawn
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3033622361297763422, guid: 2410d857e34bc4e439f136bbc3cd8739,
+        type: 3}
+      propertyPath: instantiateDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8994501835197992476, guid: 2410d857e34bc4e439f136bbc3cd8739,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -61,6 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 11400000, guid: 65fba8915f3678848a77128dea7b96b3, type: 2}
   moveSpeed: 0.65
+  playerDetectDistance: 0
   steerSpeed: 0.5
 --- !u!114 &3636208660513731290
 MonoBehaviour:
@@ -93,7 +94,7 @@ MonoBehaviour:
     m_Bits: 1024
   useTag: 0
   otherTag: 
-  damage: 1
+  damage: 1.2
   applyOnOther: 1
 --- !u!114 &8245579440775730966
 MonoBehaviour:
@@ -192,7 +193,7 @@ PrefabInstance:
     - target: {fileID: 191380124226420909, guid: 836acce49ca5ed04b80a18a09df15f04,
         type: 3}
       propertyPath: maxHealth
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1198734045632575377, guid: 836acce49ca5ed04b80a18a09df15f04,
         type: 3}
@@ -275,6 +276,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: ce46c8fa3726a1d4c9e36cb4c038f9ad,
         type: 3}
+    - target: {fileID: 3620457680818269606, guid: 836acce49ca5ed04b80a18a09df15f04,
+        type: 3}
+      propertyPath: score
+      value: 43
+      objectReference: {fileID: 0}
     - target: {fileID: 6697674482771637745, guid: 836acce49ca5ed04b80a18a09df15f04,
         type: 3}
       propertyPath: m_Sprite
@@ -300,6 +306,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112068835322855123, guid: 836acce49ca5ed04b80a18a09df15f04,
+        type: 3}
+      propertyPath: inc
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7614388108570463167, guid: 836acce49ca5ed04b80a18a09df15f04,
         type: 3}

@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98ec6f7c07d767b4a88ec9562d8dd251, type: 3}
+  m_Name: DificultyCalculator
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 2629122823573628612, guid: facb1cfb2b4391840ba3bf431171cc56, type: 3}
+  - {fileID: 1610522397324231834, guid: 8ad68835f25adfd4c90aaf4cef828e0c, type: 3}
+  - {fileID: 1342588612311603026, guid: ebc96e763926ab047b023fd0e3c636ea, type: 3}
+  - {fileID: 4189794458739627150, guid: c37d709efd9dceb49b4983e3d4f8ec3e, type: 3}
+  - {fileID: 4189794458739627150, guid: e6b778e077b951d489f36be500f114dc, type: 3}
+  - {fileID: 633188112425380832, guid: be38d5365fdca124a93a77c7312ef4f7, type: 3}
+  - {fileID: 6577417357284807256, guid: 1942c0a04b190cf44a01b8ac235fd89c, type: 3}
+  maxDifficultyCutOff: 850
+  DifficultyMultiplierPerEnemy:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: Infinity
+      tangentMode: 97
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 3
+      value: 1.2
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 7
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 6
+      value: 1.5
+      inSlope: 0
+      outSlope: Infinity
+      tangentMode: 97
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    - serializedVersion: 3
+      time: 9
+      value: 2
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 12
+      value: 3
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 15
+      value: 4
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 103
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  DifficultyTierPerScore:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 150
+      inSlope: 90.166275
+      outSlope: 90.166275
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04783501
+    - serializedVersion: 3
+      time: 1
+      value: 150
+      inSlope: Infinity
+      outSlope: 37.111355
+      tangentMode: 7
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.6340077
+    - serializedVersion: 3
+      time: 4
+      value: 220
+      inSlope: 13.972941
+      outSlope: 53.23111
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.47396794
+      outWeight: 0.551888
+    - serializedVersion: 3
+      time: 6
+      value: 300
+      inSlope: 35.705475
+      outSlope: 72.725296
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.7659819
+      outWeight: 0.36869335
+    - serializedVersion: 3
+      time: 9
+      value: 500
+      inSlope: 31.289598
+      outSlope: 31.289598
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 13
+      value: 620
+      inSlope: 19.649199
+      outSlope: 19.649199
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 17
+      value: 700
+      inSlope: 9.033975
+      outSlope: 22.473665
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.3728128
+    - serializedVersion: 3
+      time: 24
+      value: 790
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

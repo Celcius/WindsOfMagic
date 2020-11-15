@@ -17,6 +17,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1610522397324231834, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: score
+      value: 99
+      objectReference: {fileID: 0}
     - target: {fileID: 1708675444389892134, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: maxHealth
@@ -300,6 +305,11 @@ PrefabInstance:
       propertyPath: scale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5103966437779232751, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: inc
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5921257752952908762, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: blendMaterial
@@ -417,6 +427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151164187050746513, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
+        type: 3}
+      propertyPath: damage
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}

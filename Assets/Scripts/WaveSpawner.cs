@@ -8,7 +8,6 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     private TimelinedProperty<TimedFloat, float> currentIndex = new TimelinedProperty<TimedFloat, float>();
     private TimelinedProperty<TimedBool, bool> instantiatedWave = new TimelinedProperty<TimedBool, bool>(); 
     
-
     public delegate void OnWillSpawnWave();
     public OnWillSpawnWave OnWillSpawnWaveEvent;
 
@@ -17,6 +16,9 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     [SerializeField]
     private WallScriptVar wallVar;
+
+    [SerializeField]
+    private float instantiateDistance;
 
 
     [SerializeField]
@@ -65,6 +67,9 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     [SerializeField]
     private PlayTestOptions playTest;
+
+    [SerializeField]
+    private DifficultyCalculator difficultySpawner;
 
     float lastAngle = 0;
 
@@ -141,7 +146,22 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         SetCurrentIndexValue((int)currentIndex.Value+1);
 
         OnWillSpawnWaveEvent?.Invoke();
+        
+        if(playTest.difficultySpawn)
+        {
+            InstantiateByDifficulty();
+        }
+        else
+        {
+            InstantiateFromWaveList();
+        }
+        
 
+        SetIsInstantiatedValue(true);
+    }
+
+    private void InstantiateFromWaveList()
+    {
         int index = TimedBoundRandom.RandomInt(0, waves.Waves.Length);
         Transform prefab = waves.Waves[index].transform;
 
@@ -150,8 +170,22 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
             Transform childPrefab = prefab.GetChild(i);
             Instantiate(childPrefab, childPrefab.position, childPrefab.rotation);
         }
+    }
 
-        SetIsInstantiatedValue(true);
+    private void InstantiateByDifficulty()
+    {
+        int currentWave = Mathf.CeilToInt(currentIndex.Value/2.0f);
+        List<ScoreAwarder> wave = difficultySpawner.GetNewDifficultyTierWave(currentWave);
+        foreach(ScoreAwarder awarder in wave)
+        {
+            InstantiateOnDistance(awarder.transform);
+        }
+    }
+
+    private void InstantiateOnDistance(Transform t)
+    {
+        Vector3 pos = GeometryUtils.PointInCircle(instantiateDistance, Random.Range(0,360));
+        Instantiate(t, pos, Quaternion.Euler(0,0, Random.Range(0,360)));
     }
 
     private void InstantiatePickups()
@@ -247,5 +281,8 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
             Gizmos.DrawLine(Vector3.zero, mid);
             Gizmos.DrawLine(bot, top);
         }
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(Vector3.zero, instantiateDistance);
     }
 }

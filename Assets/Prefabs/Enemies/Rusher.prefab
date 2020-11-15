@@ -142,6 +142,16 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1505641978206718927, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: maxHealth
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629122823573628612, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: score
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3013738270878703045, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
       propertyPath: m_Size.x

@@ -13,6 +13,8 @@ public class PlayTestOptions : ScriptableObject
     public bool shouldRevertHealthOnTimeVoyage = true;
     public bool spawnHealthOpposite = true;
 
+    public bool difficultySpawn = true;
+
     [SerializeField]
     private BlendColorApplier[] pickupsToChangeColor;
     [SerializeField] ColorType[] customPickupColors;

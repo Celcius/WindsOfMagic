@@ -15,6 +15,7 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: 65fba8915f3678848a77128dea7b96b3, type: 2}
   angleRot: 270
   destroyComponentOnStart: 0
+  rotateSpeed: 0
 --- !u!114 &4237263270236681995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,7 +59,7 @@ PrefabInstance:
     - target: {fileID: 495453202576260339, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
       propertyPath: m_Name
-      value: SimpleShooter
+      value: ChaserShooter
       objectReference: {fileID: 0}
     - target: {fileID: 495453202576260343, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
@@ -120,10 +121,20 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2629122823573628612, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: score
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 2707599690226135672, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}
       propertyPath: maxHealth
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4844743403904401615, guid: facb1cfb2b4391840ba3bf431171cc56,
+        type: 3}
+      propertyPath: damage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5380267862307857483, guid: facb1cfb2b4391840ba3bf431171cc56,
         type: 3}

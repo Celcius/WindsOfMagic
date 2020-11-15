@@ -10,9 +10,10 @@ public class ScoreAwarder : MonoBehaviour
 
     [SerializeField]
     private float score;
+    public float Score => score;
 
     [SerializeField]
-    private float scoreOffset;
+    private float scoreOffsetPercent;
 
     [SerializeField]
     private TimelineFloatVar roundVar;
@@ -29,6 +30,6 @@ public class ScoreAwarder : MonoBehaviour
     }
     private void ScoreOnDeath()
     {
-        roundVar.Value += score + (int)TimedBoundRandom.RandomFloat(-scoreOffset,scoreOffset);
+        roundVar.Value += score + (int)TimedBoundRandom.RandomFloat(-scoreOffsetPercent*score,scoreOffsetPercent*score);
     }
 }
