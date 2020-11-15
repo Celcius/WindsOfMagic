@@ -71,6 +71,9 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     [SerializeField]
     private DifficultyCalculator difficultySpawner;
 
+    [SerializeField]
+    private FloatVar currentWaveVar;
+
     float lastAngle = 0;
 
     public void Start()
@@ -144,7 +147,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     private void InstantiateWave()
     {
         SetCurrentIndexValue((int)currentIndex.Value+1);
-
+        currentWaveVar.Value = Mathf.CeilToInt(currentIndex.Value/2.0f);
         OnWillSpawnWaveEvent?.Invoke();
         
         if(playTest.difficultySpawn)
@@ -174,8 +177,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     private void InstantiateByDifficulty()
     {
-        int currentWave = Mathf.CeilToInt(currentIndex.Value/2.0f);
-        List<ScoreAwarder> wave = difficultySpawner.GetNewDifficultyTierWave(currentWave);
+        List<ScoreAwarder> wave = difficultySpawner.GetNewDifficultyTierWave((int)currentWaveVar.Value);
         foreach(ScoreAwarder awarder in wave)
         {
             InstantiateOnDistance(awarder.transform);

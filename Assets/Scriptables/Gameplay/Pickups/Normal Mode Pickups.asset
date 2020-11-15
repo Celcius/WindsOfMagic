@@ -15,48 +15,50 @@ MonoBehaviour:
   pickups:
   - playerStats: {fileID: 11400000, guid: bf6041e60cd2fb149abc7b0f3578b3bf, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: 2886992322533997917, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+    image: {fileID: -4094623777635274464, guid: 0024eb47ebb11274aa5239de6d95b98a,
+      type: 3}
     topLabel: + Health
     botLabel: '- Fire Rate'
   - playerStats: {fileID: 11400000, guid: 187ed4cecc86c13418c3f79e830f0f49, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: 504316003040135311, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+    image: {fileID: -1470546188998404393, guid: 0024eb47ebb11274aa5239de6d95b98a,
+      type: 3}
     topLabel: + Speed
     botLabel: '- Rewind Time'
   - playerStats: {fileID: 11400000, guid: c3dd20fbfa04c1c4cbc857c1ee8e3b21, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: -3021750769373421687, guid: 0024eb47ebb11274aa5239de6d95b98a,
-      type: 3}
+    image: {fileID: -124937581328811404, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Rewind Time
     botLabel: '- Bullet Size'
   - playerStats: {fileID: 11400000, guid: a0a6c886f4dcbe840bbbcf1718ec7cb3, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: -7855135459221035460, guid: 0024eb47ebb11274aa5239de6d95b98a,
-      type: 3}
+    image: {fileID: 512169750061864025, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Rewind Recovery
     botLabel: '- Bullet Speed'
   - playerStats: {fileID: 11400000, guid: 4c824b262609e614589c7e8e33721a42, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: 9072153261115446230, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+    image: {fileID: -1422880029469058201, guid: 0024eb47ebb11274aa5239de6d95b98a,
+      type: 3}
     topLabel: + Invulnerability
     botLabel: '- Damage'
   - playerStats: {fileID: 11400000, guid: 7b212085adfa42142b2878803de031b6, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: 1824485410431554308, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+    image: {fileID: 463430155152594369, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Fire Rate
     botLabel: '- Rewind Speed'
   - playerStats: {fileID: 11400000, guid: 133c2c69cf7097a4d8167e3d7d792ace, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: 3956823666664838685, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+    image: {fileID: 6621741232403021686, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Bullet Speed
     botLabel: '- Invulnerability'
   - playerStats: {fileID: 11400000, guid: 3d95b97a0752e6145a81ab40254ef751, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: 4755841339584763518, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+    image: {fileID: -5929933196828492582, guid: 0024eb47ebb11274aa5239de6d95b98a,
+      type: 3}
     topLabel: + Bullet Size
     botLabel: '- Speed'
   - playerStats: {fileID: 11400000, guid: 34252c1ab1a3bdd46975189da99c24db, type: 2}
     projectileStats: {fileID: 0}
-    image: {fileID: 3502465980181349762, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
+    image: {fileID: 3912849791963988114, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Damage
     botLabel: '- Health'

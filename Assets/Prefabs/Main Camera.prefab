@@ -310,6 +310,7 @@ MonoBehaviour:
   isAssistMode: {fileID: 11400000, guid: e5053ee69bac0b04fa8e38e0855bbde4, type: 2}
   playTest: {fileID: 11400000, guid: 96e1d32d1f0de0a4997c74b19cc27b5c, type: 2}
   difficultySpawner: {fileID: 11400000, guid: 7f9d612779c0c8d4bad4a2adc6da50c7, type: 2}
+  currentWaveVar: {fileID: 11400000, guid: 1904104efe38bdd4b9fa7873df352ec0, type: 2}
 --- !u!114 &6471522227655755631
 MonoBehaviour:
   m_ObjectHideFlags: 0
