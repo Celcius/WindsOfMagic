@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public struct PickupRepresentation
 {
-    public PlayerStats playerStats;
-    public ProjectileStats projectileStats;
+    public PlayerStatType[] increments;
+    public PlayerStatType[] decrements;
     public Sprite image;
     public string topLabel;
     public string botLabel;

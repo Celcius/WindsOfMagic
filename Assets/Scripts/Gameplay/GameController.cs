@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     [SerializeField]
-    private PlayerStats playerStats;
-
-    [SerializeField]
-    private PlayerStats basePlayerStats;
-
-    [SerializeField]
-    private ProjectileStats projectileStats;
-
-    [SerializeField]
-    private ProjectileStats baseProjectileStats;
-
-    [SerializeField]
     private GameTime gameTime;
 
     [SerializeField]
@@ -45,12 +33,17 @@ public class GameController : MonoBehaviour
     
     [SerializeField]
     private WaveSpawner spawner;
+
+    [SerializeField]
+    private PlayerStatsBalancer balancer;
+
+    [SerializeField]
+    private PlayerController player;
     
     void Start()
     {
         playTestOptions.ResetOptions();
-        playerStats.SetPlayerStats(basePlayerStats);
-        projectileStats.SetProjectileStats(baseProjectileStats);
+
         GameTime.Instance.Start();
 
         transform.GetComponent<WaveSpawner>();
@@ -59,6 +52,7 @@ public class GameController : MonoBehaviour
         score.OnChange += OnScoreChange;
         roundScore.OnChange += OnRoundScoreUpdate;
         collectedPickups.OnChange += OnCollectedPickupsUpdate;
+        ResetGame();
     }
 
     private void OnDisable() 
@@ -72,6 +66,12 @@ public class GameController : MonoBehaviour
     public void EndGame()
     {
         SceneManager.LoadScene(0,LoadSceneMode.Single);
+        ResetGame();
+    }
+
+    public void ResetGame()
+    {
+        
         GameTime.Instance.Reset();
         roundScore.Reset();
         score.Reset();
@@ -79,6 +79,8 @@ public class GameController : MonoBehaviour
         roundScoreRepresentation.Reset();
         roundScore.Value = 0;
         score.Value = 0;
+        balancer.ResetStats();
+        player.StartController();
     }
     
     void Update()

@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &23325003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4406686250223132562, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 41150409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd40e25b3862c0f4f8a4454eba66c18a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &41150409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2023,6 +2035,16 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 1011906028}
+    - target: {fileID: 8994501835197992477, guid: 2410d857e34bc4e439f136bbc3cd8739,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 23325003}
+    - target: {fileID: 8994501835197992477, guid: 2410d857e34bc4e439f136bbc3cd8739,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 23325003}
     - target: {fileID: 8994501835197992478, guid: 2410d857e34bc4e439f136bbc3cd8739,
         type: 3}
       propertyPath: followRatio

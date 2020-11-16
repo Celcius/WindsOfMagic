@@ -87,9 +87,8 @@ public class PlayerStatsTimeHandler : ScriptableObject, IGameTimeListener
                                           playerStats[(int)StatsIndex.RollbackRecoverySpeed].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.iFrameTime].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.FireRate].InterpolatedValueAt(timeElapsed),
-                                          playerStats[(int)StatsIndex.FireAmount].InterpolatedValueAt(timeElapsed));
-        
-        currentProjectileStats.SetProjectileStats(playerStats[(int)StatsIndex.ProjectileAddedSpeed].InterpolatedValueAt(timeElapsed),
+                                          playerStats[(int)StatsIndex.FireAmount].InterpolatedValueAt(timeElapsed),
+                                          playerStats[(int)StatsIndex.ProjectileAddedSpeed].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.ProjectileSize].InterpolatedValueAt(timeElapsed),
                                           playerStats[(int)StatsIndex.ProjectileDamage].InterpolatedValueAt(timeElapsed));
     }

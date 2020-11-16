@@ -75,6 +75,8 @@ public class PlayerController : MonoBehaviour
 
     TimedHealth health;
 
+    private bool hasStarted = false;
+
     void Start()
     {
         gameTime = GameTime.Instance;
@@ -90,6 +92,12 @@ public class PlayerController : MonoBehaviour
         defaultMask = LayerMask.LayerToName(gameObject.layer);
 
         playerStats.OnChangeEvent += OnStatsChanged;
+        hasStarted = false;
+    }
+
+    public void StartController()
+    {
+        hasStarted = true;
         OnStatsChanged();
     }
 
@@ -107,6 +115,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnStatsChanged()
     {
+        if(!hasStarted)
+        {
+            return;
+        }
         if(health.CurrentMaxHealth != playerStats.Health)
         {
             float delta = playerStats.Health - health.CurrentMaxHealth;

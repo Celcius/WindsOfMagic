@@ -20,7 +20,7 @@ MonoBehaviour:
   - {fileID: 4189794458739627150, guid: e6b778e077b951d489f36be500f114dc, type: 3}
   - {fileID: 633188112425380832, guid: be38d5365fdca124a93a77c7312ef4f7, type: 3}
   - {fileID: 6577417357284807256, guid: 1942c0a04b190cf44a01b8ac235fd89c, type: 3}
-  maxDifficultyCutOff: 850
+  maxDifficultyCutOff: 1500
   DifficultyMultiplierPerEnemy:
     serializedVersion: 2
     m_Curve:
@@ -97,64 +97,28 @@ MonoBehaviour:
       time: 1
       value: 150
       inSlope: Infinity
-      outSlope: 37.111355
+      outSlope: 3.3542778
       tangentMode: 7
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.6340077
+      outWeight: 0.16349716
     - serializedVersion: 3
-      time: 4
-      value: 220
-      inSlope: 13.972941
-      outSlope: 53.23111
+      time: 5
+      value: 275
+      inSlope: 77.05444
+      outSlope: 66.80691
       tangentMode: 1
       weightedMode: 0
-      inWeight: 0.47396794
-      outWeight: 0.551888
-    - serializedVersion: 3
-      time: 6
-      value: 300
-      inSlope: 35.705475
-      outSlope: 72.725296
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.7659819
-      outWeight: 0.36869335
-    - serializedVersion: 3
-      time: 9
-      value: 500
-      inSlope: 31.289598
-      outSlope: 31.289598
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 13
-      value: 620
-      inSlope: 19.649199
-      outSlope: 19.649199
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 17
-      value: 700
-      inSlope: 9.033975
-      outSlope: 22.473665
-      tangentMode: 1
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.3728128
+      inWeight: 0.3291285
+      outWeight: 0.06226921
     - serializedVersion: 3
       time: 24
-      value: 790
-      inSlope: 0
-      outSlope: 0
+      value: 800
+      inSlope: 2.6091228
+      outSlope: 2.6091228
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.28788877
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

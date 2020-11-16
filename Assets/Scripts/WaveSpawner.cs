@@ -256,17 +256,9 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         }
 
         PickupRepresentation representation = possiblePickups.Pickups[chosenIndex];
-        if(representation.playerStats != null)
-        {
-            pickup.SetPlayerStats(representation.playerStats, 
-                                  representation.image);
-        }
-        
-        if(representation.projectileStats != null)
-        {
-            pickup.SetProjectileStats(representation.projectileStats,
-                                      representation.image);
-        }
+        pickup.SetPlayerStats(representation.increments,
+                              representation.decrements, 
+                              representation.image);
         pickup.topLabel = representation.topLabel;
         pickup.botLabel = representation.botLabel;
     }

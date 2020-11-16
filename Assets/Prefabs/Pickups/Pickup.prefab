@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6754477029475978286}
   - component: {fileID: 6754477029475978285}
   - component: {fileID: 6754477029475978288}
-  - component: {fileID: 6754477029475978287}
   - component: {fileID: 6754477029475978290}
   - component: {fileID: 6754477029475978291}
   - component: {fileID: 6754477029475978289}
@@ -112,33 +111,9 @@ MonoBehaviour:
     m_Bits: 0
   useTag: 1
   otherTag: Player
-  currentStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
-  offsetToApply: {fileID: 0}
-  minCurrentStats: {fileID: 11400000, guid: cec9e519dc106934391d9dd9528ffb0e, type: 2}
-  maxCurrentStats: {fileID: 11400000, guid: 90e4dbaf9745ac74a9c34cf3eab0f382, type: 2}
---- !u!114 &6754477029475978287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6754477029475978284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b20c119a88aa11498c3508d636fd695, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionType: 4
-  useLayerMask: 0
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  useTag: 1
-  otherTag: Player
-  currentStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4, type: 2}
-  offsetToApply: {fileID: 0}
-  minCurrentStats: {fileID: 11400000, guid: ff6503773cd68594b94c615eacdb0f40, type: 2}
-  maxCurrentStats: {fileID: 11400000, guid: 75fd1d4e1a4befe4e91d637ddecc781e, type: 2}
+  currentStats: {fileID: 11400000, guid: e6b4df058fc349b48aa06b5039c14cdb, type: 2}
+  increments: 
+  decrements: 
 --- !u!58 &6754477029475978290
 CircleCollider2D:
   m_ObjectHideFlags: 0

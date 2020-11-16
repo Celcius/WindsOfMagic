@@ -180,11 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de34567058929fe4da29053c1cd127a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 11400000, guid: 95c7493975f79154c8bd5afc614017cd, type: 2}
-  basePlayerStats: {fileID: 11400000, guid: 0c3cb16cf21cce642a09f38f1086c01b, type: 2}
-  projectileStats: {fileID: 11400000, guid: 330fca13936690e4a868bd23ce911be4, type: 2}
-  baseProjectileStats: {fileID: 11400000, guid: 56ade1d5b291445458cdf6e104e344d6,
-    type: 2}
   gameTime: {fileID: 11400000, guid: 8843693cf6ff95149afe803e02d0be85, type: 2}
   inputHandler: {fileID: 11400000, guid: e41409226a32ab34b8761019bfdfbd39, type: 2}
   pauseMenu: {fileID: 0}
@@ -197,6 +192,8 @@ MonoBehaviour:
   roundScore: {fileID: 11400000, guid: bd63c9b6a29af6c41bc9c6dd16b17357, type: 2}
   collectedPickups: {fileID: 11400000, guid: 95b2402ccdf2a494c82e544414309725, type: 2}
   spawner: {fileID: 3033622361297763422}
+  balancer: {fileID: 11400000, guid: 51d32646d7d834140a55a50398b0864e, type: 2}
+  player: {fileID: 0}
 --- !u!114 &8994501835197992478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +303,7 @@ MonoBehaviour:
   healthPickup: {fileID: 8719607737057349888, guid: c78d2a2783994bc418b578186c7776c3,
     type: 3}
   normalModePickups: {fileID: 11400000, guid: aee25b6dfa0cc5f4397a3621c726e619, type: 2}
-  assistModePickups: {fileID: 11400000, guid: 6ea51c23d5da2d4488f6d6d22120f633, type: 2}
+  assistModePickups: {fileID: 11400000, guid: aee25b6dfa0cc5f4397a3621c726e619, type: 2}
   isAssistMode: {fileID: 11400000, guid: e5053ee69bac0b04fa8e38e0855bbde4, type: 2}
   playTest: {fileID: 11400000, guid: 96e1d32d1f0de0a4997c74b19cc27b5c, type: 2}
   difficultySpawner: {fileID: 11400000, guid: 7f9d612779c0c8d4bad4a2adc6da50c7, type: 2}

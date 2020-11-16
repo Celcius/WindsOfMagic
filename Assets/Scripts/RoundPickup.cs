@@ -18,8 +18,6 @@ public class RoundPickup : MonoBehaviour
 
     private PlayerPickups playerStats;
 
-    private ProjectilePickups projectileStats;
-
     private SpriteRenderer image;
 
     private TransformMovement movement;
@@ -33,7 +31,6 @@ public class RoundPickup : MonoBehaviour
     private void Awake() 
     {
         this.image = GetComponent<SpriteRenderer>();
-        projectileStats = GetComponent<ProjectilePickups>();
         playerStats = GetComponent<PlayerPickups>();
     }
     public void SetupPickup(Vector2 dir)
@@ -46,15 +43,10 @@ public class RoundPickup : MonoBehaviour
         movement.SetAxisMultiplier(dir * speed);
     }
 
-    public void SetPlayerStats(PlayerStats stats, Sprite representation)
+    public void SetPlayerStats(PlayerStatType[] increments, PlayerStatType[] decrements, Sprite representation)
     {
-        this.playerStats.offsetToApply = stats;
-        this.image.sprite = representation;
-    }
-
-    public void SetProjectileStats(ProjectileStats stats,  Sprite representation)
-    {
-        this.projectileStats.offsetToApply = stats;
+        this.playerStats.increments = increments;
+        this.playerStats.decrements = decrements;
         this.image.sprite = representation;
     }
 }
