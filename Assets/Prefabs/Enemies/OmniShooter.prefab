@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: 1342588612311603026, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
       propertyPath: score
-      value: 204
+      value: 234
       objectReference: {fileID: 0}
     - target: {fileID: 2465805575960050265, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
@@ -101,12 +101,12 @@ PrefabInstance:
     - target: {fileID: 4482670226726937795, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
       propertyPath: waves.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4482670226726937795, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
       propertyPath: waves.Array.data[0].timeToSpawn
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4482670226726937795, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
@@ -118,10 +118,25 @@ PrefabInstance:
       propertyPath: waves.Array.data[0].wave.rotation
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4482670226726937795, guid: ebc96e763926ab047b023fd0e3c636ea,
+        type: 3}
+      propertyPath: waves.Array.data[1].timeToSpawn
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482670226726937795, guid: ebc96e763926ab047b023fd0e3c636ea,
+        type: 3}
+      propertyPath: waves.Array.data[1].wave.amount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482670226726937795, guid: ebc96e763926ab047b023fd0e3c636ea,
+        type: 3}
+      propertyPath: waves.Array.data[1].wave.rotation
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 4768329876327089191, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
       propertyPath: inc
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6256876614777976850, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
@@ -177,7 +192,12 @@ PrefabInstance:
     - target: {fileID: 8968880591292618205, guid: ebc96e763926ab047b023fd0e3c636ea,
         type: 3}
       propertyPath: animationSpeed.AxisMultiplier
-      value: 100
+      value: 11.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968880591292618205, guid: ebc96e763926ab047b023fd0e3c636ea,
+        type: 3}
+      propertyPath: animationSpeed.TimeMultiplier
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2238186214426586195, guid: ebc96e763926ab047b023fd0e3c636ea, type: 3}

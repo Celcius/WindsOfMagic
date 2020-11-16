@@ -78,15 +78,20 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     public void Start()
     {
-        currentIndex.Clear();
-        instantiatedWave.Clear();
-        SetCurrentIndexValue(0);
-        SetIsInstantiatedValue(false);
+        Reset();
         aliveEnemies.OnChange -= OnEnemyChange;
         aliveEnemies.OnChange += OnEnemyChange;
         currentPickups.OnChange -= OnPickupChange;
         currentPickups.OnChange += OnPickupChange;
         GameTime.Instance.AddTimeListener(this);
+    }
+
+    public void Reset()
+    {
+        currentIndex.Clear();
+        instantiatedWave.Clear();
+        SetCurrentIndexValue(0);
+        SetIsInstantiatedValue(false);
     }
 
     private void OnDestroy() 

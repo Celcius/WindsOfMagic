@@ -27,6 +27,14 @@ public class ProjectileStats : ScriptableObject
                            other.Damage);
     }
 
+    public void SetProjectileStats(PlayerStats other)
+    {
+        SetProjectileStats(other.GetStat(PlayerStatType.ProjectileSpeed),
+                           other.GetStat(PlayerStatType.ProjectileSize),
+                           other.GetStat(PlayerStatType.ProjectileDamage));
+    }
+
+
     public void SetProjectileStats(float addedSpeed, float size, float damage)
     {
         this.AddedSpeed = addedSpeed;

@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDeath()
     {
-        if(rollbackTimer.FilledRollbacks >= 1)
+        if(rollbackTimer.FilledRollbacks >= 1 || rollbackTimer.UnfilledRatio >= deadzone)
         {
             GameTime.Instance.Stop();
         }
@@ -140,7 +140,9 @@ public class PlayerController : MonoBehaviour
 
         if(timeBoundTransform.IgnoreGameSpeed || (!gameTime.IsReversing && timeHandler.GameSpeed > 0 && !gameTime.IsStopped))
         {
-            float delta =  (IsTimeVoyaging || timeBoundTransform.IgnoreGameSpeed)? Time.deltaTime : gameTime.DeltaTime;
+            float gameSpeedWeight = 0.5f;
+            float delta =  (IsTimeVoyaging || timeBoundTransform.IgnoreGameSpeed)? Time.deltaTime * (1.0f - gameSpeedWeight + gameSpeedWeight * Mathf.Abs(gameTime.GameSpeed))
+                                                                                 : gameTime.DeltaTime;
             Vector2 moveDir = input.GetMoveAxis();
             Vector3 speed = (Vector3)moveDir * playerStats.MoveSpeed;
             Vector3 nextPos = transform.position + speed * delta;
@@ -238,8 +240,9 @@ public class PlayerController : MonoBehaviour
         PlayerProjectile projectile = Instantiate(bullet,
                                                   transform.position,
                                                   Quaternion.Euler(0,0,angle));
-        projectile.SetPlayerProjectileStats(speedMagnitude, projectileStats); 
 
+        projectileStats.SetProjectileStats(playerStats);
+        projectile.SetPlayerProjectileStats(speedMagnitude, projectileStats); 
         SoundSystem.Instance.PlaySound(shootSound);                                             
     }
 

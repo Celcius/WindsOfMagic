@@ -73,6 +73,7 @@ public class GameController : MonoBehaviour
     {
         
         GameTime.Instance.Reset();
+        spawner.Reset();
         roundScore.Reset();
         score.Reset();
         scoreRepresentation.Reset();

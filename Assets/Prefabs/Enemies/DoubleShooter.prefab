@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 1610522397324231834, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: score
-      value: 99
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 1708675444389892134, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -45,7 +45,7 @@ PrefabInstance:
     - target: {fileID: 2792268842175670673, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: maxHealth
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3541134176908325931, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -213,7 +213,7 @@ PrefabInstance:
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: waves.Array.data[0].wave.rotation
-      value: 45
+      value: 135
       objectReference: {fileID: 0}
     - target: {fileID: 4237263270236681995, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -308,7 +308,7 @@ PrefabInstance:
     - target: {fileID: 5103966437779232751, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: inc
-      value: 2.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5921257752952908762, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
@@ -436,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
       propertyPath: animationSpeed.AxisMultiplier
-      value: 15
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8687357697225868821, guid: 8ad68835f25adfd4c90aaf4cef828e0c,
         type: 3}
