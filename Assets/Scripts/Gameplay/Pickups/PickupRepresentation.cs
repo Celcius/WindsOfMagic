@@ -10,4 +10,5 @@ public struct PickupRepresentation
     public Sprite image;
     public string topLabel;
     public string botLabel;
+    public PlayerStatType type;
 }

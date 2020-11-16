@@ -19,46 +19,55 @@ MonoBehaviour:
       type: 3}
     topLabel: + Health
     botLabel: '- Fire Rate'
+    type: 2
   - increments: 01000000
     decrements: 03000000
     image: {fileID: -1470546188998404393, guid: 0024eb47ebb11274aa5239de6d95b98a,
       type: 3}
     topLabel: + Speed
     botLabel: '- Rewind Time'
+    type: 1
   - increments: 03000000
     decrements: 0a000000
     image: {fileID: -124937581328811404, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Rewind Time
     botLabel: '- Bullet Size'
+    type: 3
   - increments: 05000000
     decrements: 09000000
     image: {fileID: 512169750061864025, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Rewind Recovery
     botLabel: '- Bullet Speed'
+    type: 5
   - increments: 06000000
     decrements: 0b000000
     image: {fileID: -1422880029469058201, guid: 0024eb47ebb11274aa5239de6d95b98a,
       type: 3}
     topLabel: + Invulnerability
     botLabel: '- Damage'
+    type: 6
   - increments: 07000000
     decrements: 05000000
     image: {fileID: 463430155152594369, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Fire Rate
     botLabel: '- Rewind Speed'
+    type: 7
   - increments: 09000000
     decrements: 06000000
     image: {fileID: 6621741232403021686, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Bullet Speed
     botLabel: '- Invulnerability'
+    type: 9
   - increments: 0a000000
     decrements: 01000000
     image: {fileID: -5929933196828492582, guid: 0024eb47ebb11274aa5239de6d95b98a,
       type: 3}
     topLabel: + Bullet Size
     botLabel: '- Speed'
+    type: 10
   - increments: 0b000000
     decrements: 02000000
     image: {fileID: 3912849791963988114, guid: 0024eb47ebb11274aa5239de6d95b98a, type: 3}
     topLabel: + Damage
     botLabel: '- Health'
+    type: 11

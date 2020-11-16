@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Gameplay\PlayerStatsTimeHandler.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentation.cs" />
      <Compile Include="Assets\Scripts\Gameplay\RotateTowardsPlayer.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Stats\StatTierList.cs" />
      <Compile Include="Assets\Scripts\Gameplay\DestroyOnBirth.cs" />
      <Compile Include="Assets\Scripts\Gameplay\TransformMovementTimeBoundAdapter.cs" />
      <Compile Include="Assets\Scripts\SettingNameFromColorType.cs" />
@@ -102,21 +103,21 @@
      <Compile Include="Assets\Scripts\Gameplay\Pickups\DropPickupsOnDisable.cs" />
      <Compile Include="Assets\Scripts\Gameplay\DifficultyCalculator.cs" />
      <Compile Include="Assets\Scripts\UI\KeyChangeSetting.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStatType.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\ProjectileStatsVar.cs" />
      <Compile Include="Assets\Scripts\UI\ColorSettings.cs" />
      <Compile Include="Assets\Scripts\WaveSpawner.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameTimeBoundTransform.cs" />
      <Compile Include="Assets\Scripts\Input\InputSchemeVar.cs" />
      <Compile Include="Assets\Scripts\DisableAndRespawn.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStatsBalancer.cs" />
      <Compile Include="Assets\Scripts\UI\ColorScheme.cs" />
      <Compile Include="Assets\Scripts\WaveSpawnerVar.cs" />
      <Compile Include="Assets\Scripts\WallScriptVar.cs" />
      <Compile Include="Assets\Scripts\TimeBoundVar\TimelineScriptVar.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentationArr.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStatsBalancer.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Stats\StatTierList.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStatType.cs" />
+     <Compile Include="Assets\Scripts\UI\StatUI.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
