@@ -39,6 +39,9 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private PlayerController player;
+
+    [SerializeField]
+    private RollbackTimer rollbackTimer;
     
     void Start()
     {
@@ -61,6 +64,7 @@ public class GameController : MonoBehaviour
         roundScore.OnChange -= OnRoundScoreUpdate;
         collectedPickups.OnChange -= OnCollectedPickupsUpdate; 
         spawner.OnWillSpawnWaveEvent -= OnWillSpawnWave;
+        
     }
 
     public void EndGame()
@@ -82,6 +86,7 @@ public class GameController : MonoBehaviour
         score.Value = 0;
         balancer.ResetStats();
         player.StartController();
+        rollbackTimer.SetPercentage(playTestOptions.filledTimeBars);
     }
     
     void Update()

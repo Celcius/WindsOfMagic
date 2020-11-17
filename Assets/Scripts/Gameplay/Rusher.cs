@@ -49,11 +49,18 @@ public class Rusher : Chaser
     {
         if(GameTime.Instance.GameSpeed <= 0 || GameTime.Instance.IsReversing)
         {
-            elapsedRush += GameTime.Instance.DeltaTime;
-            isRushing = elapsedRush > 0 && elapsedRush <= rushDuration;
-            body.isKinematic = !isRushing;
-            rotateComponent.enabled = false;
+            
             body.velocity = Vector3.zero;
+
+            isRushing = elapsedRush > 0 && elapsedRush <= rushDuration;
+            if(isRushing)
+            {
+                elapsedRush += GameTime.Instance.DeltaTime;
+            }
+
+            rotateComponent.enabled = !isRushing;
+            body.isKinematic = !isRushing;
+
             canMove = !isRushing;
             dirTransform.up = isRushing? rushDir : dirTransform.up;
             return;

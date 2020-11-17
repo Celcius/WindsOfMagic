@@ -194,6 +194,7 @@ MonoBehaviour:
   spawner: {fileID: 3033622361297763422}
   balancer: {fileID: 11400000, guid: 51d32646d7d834140a55a50398b0864e, type: 2}
   player: {fileID: 0}
+  rollbackTimer: {fileID: 11400000, guid: 74f82c29daf784943990a9704d5ac59b, type: 2}
 --- !u!114 &8994501835197992478
 MonoBehaviour:
   m_ObjectHideFlags: 0

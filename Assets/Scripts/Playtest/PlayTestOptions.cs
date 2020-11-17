@@ -15,6 +15,8 @@ public class PlayTestOptions : ScriptableObject
 
     public bool difficultySpawn = true;
 
+    public float filledTimeBars = 0.15f;
+    
     [SerializeField]
     private BlendColorApplier[] pickupsToChangeColor;
     [SerializeField] ColorType[] customPickupColors;
@@ -27,12 +29,7 @@ public class PlayTestOptions : ScriptableObject
 
     [SerializeField]
     private DropsDefinition timeDefinition;
-
-    [SerializeField]
-    public float filledTimeBars = 1.0f;
-
-    [SerializeField]
-    private RollbackTimer rollbackTimer;
+    
 
     public void ResetOptions() 
     {
@@ -41,7 +38,6 @@ public class PlayTestOptions : ScriptableObject
             return;
         }
         definition.Value = useTimePickups? timeDefinition : normalDefinition;
-        rollbackTimer.SetPercentage(filledTimeBars);
 
         for(int i = 0; i < customPickupColors.Length; i++)
         {
