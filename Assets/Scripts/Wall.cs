@@ -12,18 +12,26 @@ public class Wall : MonoBehaviour
     public Bounds GameBounds => gameBounds; 
 
     [SerializeField]
-    private float radius;
-    public float Radius => radius;
+    private float wallRadius;
+    public float Radius => wallRadius;
     
     [Range(2, 200)]
     [SerializeField]
-    private int points = 50;
+    private int wallPoints = 50;
 
+    [SerializeField]
+    private float pickupColliderRadius;
+
+    [SerializeField]
+    private int pickupColliderPoints;
+    [SerializeField]
     private EdgeCollider2D edgeCollider2D;
+    
+    [SerializeField]
+    private EdgeCollider2D pickupEdgeCollider2D;
+
     [SerializeField]
     private LineRenderer[] representations;
-    private int currentColliderPoints = -1;
-    private float currentColliderRadius = -1;
 
     [SerializeField]
     private ColorScheme currentColors;
@@ -50,7 +58,7 @@ public class Wall : MonoBehaviour
 
         
     }
-
+    
     private void UpdateCollider()
     {
         if(representations[0].sharedMaterial != null)
@@ -58,22 +66,21 @@ public class Wall : MonoBehaviour
             Color color = currentColors.GetColor(colorType);
             representations[0].sharedMaterial.color = color;
         }
-        
-        if(currentColliderPoints == points && currentColliderRadius == radius)
-        {
-            return;
-        }
 
-        if(edgeCollider2D == null)
-        {
-            edgeCollider2D = GetComponent<EdgeCollider2D>();
-        }
+        UpdateColliderPoints(edgeCollider2D, wallPoints, wallRadius, true);
+        UpdateColliderPoints(pickupEdgeCollider2D, pickupColliderPoints, pickupColliderRadius, false);
+    }
 
+    private void UpdateColliderPoints(EdgeCollider2D collider, int points, float radius, bool updateRepresentation)
+    {
         Vector2[] pointsVec = new Vector2[points+3];
     
-        foreach(LineRenderer representation in representations)
+        if(updateRepresentation)
         {
-            representation.positionCount = pointsVec.Length;
+            foreach(LineRenderer representation in representations)
+            {
+                representation.positionCount = pointsVec.Length;
+            }
         }
 
         for(int i = 0; i <= points; i++)
@@ -81,23 +88,28 @@ public class Wall : MonoBehaviour
             float angle = (360 /points * i) % 360;
             pointsVec[i] = GeometryUtils.PointInCircle(radius, angle);
 
-            foreach(LineRenderer representation in representations)
+            if(updateRepresentation)
             {
-                representation.SetPosition(i, (Vector3)pointsVec[i]);
+                foreach(LineRenderer representation in representations)
+                {
+                    representation.SetPosition(i, (Vector3)pointsVec[i]);
+                }
             }
         }
+
         pointsVec[points+1] = pointsVec[0];
         pointsVec[points+2] = pointsVec[1];
-        foreach(LineRenderer representation in representations)
+
+        if(updateRepresentation)
         {
-            representation.SetPosition(points+1, pointsVec[0]);
-            representation.SetPosition(points+2, pointsVec[1]);
+            foreach(LineRenderer representation in representations)
+            {
+                representation.SetPosition(points+1, pointsVec[0]);
+                representation.SetPosition(points+2, pointsVec[1]);
+            }
         }
-    
         
-        edgeCollider2D.points = pointsVec;
-        currentColliderRadius = radius;
-        currentColliderPoints = points;
+        collider.points = pointsVec;
     }
 
 #if UNITY_EDITOR
@@ -109,7 +121,7 @@ private void OnValidate()
 
     public bool IsOutOfBounds(Vector2 position)
     {
-        return (position - (Vector2)transform.position).magnitude >= radius;
+        return (position - (Vector2)transform.position).magnitude >= wallRadius;
     }
 
     public void OnDrawGizmos() {

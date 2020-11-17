@@ -36,13 +36,10 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     public int CurrentWave => (int)currentIndex.Value;
 
     [SerializeField]
-    private AnimationCurve minWavePickups;
-    
-    [SerializeField]
-    private AnimationCurve maxWavePickups;
+    private int wavePickupAmounts = 2;
 
     [SerializeField]
-    private int wavesToMaxPickups = 5;
+    private AnimationCurve pickupSpeed;
 
     [SerializeField]
     private Vector2 pickupOffset;
@@ -199,10 +196,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     {
         SetCurrentIndexValue((int)currentIndex.Value+1);
 
-        float ratio = Mathf.Clamp01((float) CurrentWave / wavesToMaxPickups);
-        int toCreate = TimedBoundRandom.RandomInt((int)minWavePickups.Evaluate(ratio),
-                                                  (int)maxWavePickups.Evaluate(ratio)+1);
-        toCreate = Mathf.Max(1, toCreate) + 1;
+        int toCreate = wavePickupAmounts + 1;
 
         float angle = TimedBoundRandom.RandomFloat(0,360);
         lastAngle = angle;
@@ -215,6 +209,9 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
             anchorPos = MathUtils.Rotate(anchorPos, angle);
 
             Vector2 dir = (MathUtils.Rotate(Vector2.right, (angle + 180) % 360) - MathUtils.Rotate(Vector2.right, angle)).normalized;
+
+            Keyframe lastKey = pickupSpeed.keys[pickupSpeed.keys.Length-1];
+            float speed = pickupSpeed.Evaluate(Mathf.Clamp(CurrentWave, 0, lastKey.time));
 
             bool isHealthPickup = (i == 1);
 
@@ -234,7 +231,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
                 PopulatePickup(pickup);
             }
             
-            pickup.SetupPickup(dir);
+            pickup.SetupPickup(dir, speed);
         }
 
         SetIsInstantiatedValue(true);

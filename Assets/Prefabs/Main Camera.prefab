@@ -247,56 +247,32 @@ MonoBehaviour:
   instantiateDistance: 3.5
   aliveEnemies: {fileID: 11400000, guid: 5dcbe7e0783fcda4db9a549aa7b81077, type: 2}
   canSpawn: 1
-  minWavePickups:
+  wavePickupAmounts: 2
+  pickupSpeed:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 2
+      value: 0.7
       inSlope: 0
       outSlope: 0
-      tangentMode: 34
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.33333334
+      outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 2
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 34
+      time: 15
+      value: 5
+      inSlope: 0.51557857
+      outSlope: 0.51557857
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.111978434
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  maxWavePickups:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 2
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 2
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 136
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  wavesToMaxPickups: 3
-  pickupOffset: {x: 3, y: 2}
+  pickupOffset: {x: 1.5, y: 2}
   roundPickupPrefab: {fileID: 7888927315083973873, guid: 3a645c86b19cf2647a42d8b6e94d520b,
     type: 3}
   currentPickups: {fileID: 11400000, guid: 9e2fbfe1e7326fe4ebebd53e23cf26bf, type: 2}

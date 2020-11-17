@@ -33,12 +33,9 @@ public class RoundPickup : MonoBehaviour
         this.image = GetComponent<SpriteRenderer>();
         playerStats = GetComponent<PlayerPickups>();
     }
-    public void SetupPickup(Vector2 dir)
+    public void SetupPickup(Vector2 dir, float speed)
     {
         movement = GetComponent<TransformMovement>();
-
-        float speedRatio = (float) (Mathf.Clamp(waveSpawner.Value.CurrentWave,0,roundsToMaxSpeed) / roundsToMaxSpeed);
-        float speed = speedCurve.Evaluate(0, speedRatio);
 
         movement.SetAxisMultiplier(dir * speed);
     }

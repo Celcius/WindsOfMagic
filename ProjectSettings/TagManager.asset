@@ -21,8 +21,8 @@ TagManager:
   - Wall
   - PlayerInvincible
   - UncollidableEnemy
-  - 
-  - 
+  - DestroyPickups
+  - Pickup
   - 
   - 
   - 
