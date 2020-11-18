@@ -54,13 +54,20 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
 
     private Color spriteColor;
 
+    private float lastInvincibleStart = 0;
+
+    private bool hasStarted = false;
+
+    private void Awake() 
+    {
+        spriteColor = healthSprite.color;
+    }
     private void Start()
     {
         isInvincible.SetValue(new TimedBool(GameTime.Instance.ElapsedTime, false));
-        spriteColor = healthSprite.color;
         SetupHealth(maxHealth, maxHealth);
         GameTime.Instance.AddTimeListener(this);
-
+        hasStarted = true;
     }
 
     private void OnDestroy()
@@ -92,7 +99,7 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
 
         if(!IsInvincible && healthSprite.color != spriteColor)
         {
-                 healthSprite.color = spriteColor;
+            healthSprite.color = spriteColor;
         }
 
         float current = Mathf.Clamp(healthTimeline.Value + delta, 0, maxHealth);
@@ -117,13 +124,41 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
             {
                 StopCoroutine(invincibleAnim);
             }
+            lastInvincibleStart = GameTime.Instance.ElapsedTime;
             invincibleAnim = InvincibleRoutine();
             StartCoroutine(invincibleAnim);
         }
     }
 
+    private void OnEnable() 
+    {
+        if(usePlayerIFrame || !hasStarted)
+        {
+            return;
+        }
+
+        healthSprite.color = spriteColor;
+        invincibleAnim = InvincibleRoutine();
+        StartCoroutine(invincibleAnim); 
+    }
+
     private IEnumerator InvincibleRoutine()
     {
+        while(GameTime.Instance.GameSpeed <= 0)
+        {
+            yield return new WaitForEndOfFrame();
+        }
+
+        if(GameTime.Instance.ElapsedTime < lastInvincibleStart || GameTime.Instance.ElapsedTime >= lastInvincibleStart + actualIFrame)
+        {
+            healthSprite.color = spriteColor;
+            StopCoroutine(invincibleAnim);
+            invincibleAnim = null;
+        
+            isInvincible.SetValue(new TimedBool(GameTime.Instance.ElapsedTime, false));
+            yield break;
+        }
+
         float toElapse = actualIFrame;
         float toElapseSprite = healthFrames;
         isInvincible.SetValue(new TimedBool(GameTime.Instance.ElapsedTime, true));
@@ -160,7 +195,7 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
     {
         if(ShouldRevertTime && timeElapsed < healthTimeline.LastInstant)
         {
-            healthTimeline.ClipDurationFromEnd(timeElapsed, false);
+            healthTimeline.ClipDurationFromEnd(healthTimeline.LastInstant - timeElapsed, false);
 
             if(externalVar != null)
             {

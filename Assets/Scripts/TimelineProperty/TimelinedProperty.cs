@@ -99,7 +99,7 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
 
     public void ClipDurationFromEnd(float duration, bool interpolate = true)
     {
-        if(Duration <= duration)
+        if(Duration <= duration || duration <= 0)
         {
             return;
         }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8090df33e3171d43a59ae84646a6608, type: 3}
   m_Name: SoundSystem
   m_EditorClassIdentifier: 
-  mainVolume: 0.494
+  mainVolume: 0.195
   maxConcurrentSounds: 12
