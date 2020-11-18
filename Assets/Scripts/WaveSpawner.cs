@@ -188,8 +188,8 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     private void InstantiateOnDistance(Transform t)
     {
-        Vector3 pos = GeometryUtils.PointInCircle(instantiateDistance, Random.Range(0,360));
-        Instantiate(t, pos, Quaternion.Euler(0,0, Random.Range(0,360)));
+        Vector3 pos = GeometryUtils.PointInCircle(instantiateDistance, TimedBoundRandom.RandomFloat(0,360));
+        Instantiate(t, pos, Quaternion.Euler(0,0, TimedBoundRandom.RandomFloat(0,360)));
     }
 
     private void InstantiatePickups()
