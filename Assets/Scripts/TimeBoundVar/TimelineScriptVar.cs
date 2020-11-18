@@ -20,7 +20,7 @@ public abstract class TimelineScriptVar<T, V> : ScriptVar<V>
                 float timeInstant = GetElapsedTime();
                 if(timeInstant < history.LastInstant)
                 {
-                    history.ClipDurationFromEnd(timeInstant, false);
+                    history.ClipDurationFromEnd(timeInstant-history.FirstInstant, false);
                 }
                 else
                 {

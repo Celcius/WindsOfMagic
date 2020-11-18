@@ -195,7 +195,7 @@ public class TimedHealth : MonoBehaviour, IGameTimeListener
     {
         if(ShouldRevertTime && timeElapsed < healthTimeline.LastInstant)
         {
-            healthTimeline.ClipDurationFromEnd(healthTimeline.LastInstant - timeElapsed, false);
+            healthTimeline.ClipDurationFromEnd(timeElapsed - healthTimeline.FirstInstant, false);
 
             if(externalVar != null)
             {

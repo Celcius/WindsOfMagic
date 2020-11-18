@@ -128,20 +128,29 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         {
             return;
         }
-        if(GameTime.Instance.IsReversing)
+        
+        if(GameTime.Instance.GameSpeed > 0 && !GameTime.Instance.IsReversing)
         {
-            currentIndex.InterpolatedValueAt(GameTime.Instance.ElapsedTime);
-            instantiatedWave.InterpolatedValueAt(GameTime.Instance.ElapsedTime);
-        }
-        else if(!GameTime.Instance.IsStopped && !instantiatedWave.Value)
-        {
-            if(currentIndex.Value % 2 == 0)
+            if(currentIndex.LastInstant > timeElapsed)
             {
-                InstantiateWave();
+                currentIndex.ClipDurationFromEnd(timeElapsed - currentIndex.FirstInstant, false);
             }
-            else
+
+            if(instantiatedWave.LastInstant > timeElapsed)
             {
-                InstantiatePickups();
+                instantiatedWave.ClipDurationFromEnd(timeElapsed - instantiatedWave.FirstInstant, false);
+            }
+
+            if(!instantiatedWave.Value)
+            {
+                if(currentIndex.Value % 2 == 0)
+                {
+                    InstantiateWave();
+                }
+                else
+                {
+                    InstantiatePickups();
+                }
             }
         }
     }

@@ -72,6 +72,11 @@ public class GameTime : SingletonScriptableObject<GameTime>
         set { speedModifier = value; }
     }
 
+    private void OnEnable() 
+    {
+        ElapsedTime = 0;    
+    }
+
     public float ElapsedTime
     {
         get { return elapsedTime; }

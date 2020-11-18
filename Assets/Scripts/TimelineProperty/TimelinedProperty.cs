@@ -17,6 +17,8 @@ public class TimelinedProperty<T,V> where T : TimedValue<V>
 
     public T FirstValue => !HasValue? null : timeline[0];
 
+    public float FirstInstant => HasValue? FirstValue.Timestamp : 0;
+
     public int TimePoints => timeline.Count;
     
     public bool HasValueBefore(float timestamp)
