@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using AmoaebaUtils;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
@@ -43,5 +45,14 @@ public class PauseMenu : MonoBehaviour
     private void OnDisable() 
     {
         isPaused.Value = false;    
+    }
+
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }
