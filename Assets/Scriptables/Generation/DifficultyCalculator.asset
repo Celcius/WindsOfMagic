@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98ec6f7c07d767b4a88ec9562d8dd251, type: 3}
-  m_Name: DificultyCalculator
+  m_Name: DifficultyCalculator
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 2629122823573628612, guid: facb1cfb2b4391840ba3bf431171cc56, type: 3}
