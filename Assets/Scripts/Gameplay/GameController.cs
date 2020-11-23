@@ -43,8 +43,12 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private RollbackTimer rollbackTimer;
     
+    [SerializeField]
+    private GameObject recoverableDeathPopup;
+
     void Start()
     {
+        recoverableDeathPopup.SetActive(false);
         playTestOptions.ResetOptions();
 
         GameTime.Instance.Start();
@@ -55,6 +59,7 @@ public class GameController : MonoBehaviour
         score.OnChange += OnScoreChange;
         roundScore.OnChange += OnRoundScoreUpdate;
         collectedPickups.OnChange += OnCollectedPickupsUpdate;
+        
         ResetGame();
     }
 
@@ -64,7 +69,11 @@ public class GameController : MonoBehaviour
         roundScore.OnChange -= OnRoundScoreUpdate;
         collectedPickups.OnChange -= OnCollectedPickupsUpdate; 
         spawner.OnWillSpawnWaveEvent -= OnWillSpawnWave;
-        
+    }
+
+    public void LesserDeath()
+    {
+        recoverableDeathPopup.SetActive(true);
     }
 
     public void EndGame()
@@ -94,6 +103,11 @@ public class GameController : MonoBehaviour
         if(inputHandler.IsPauseDown())
         {
             pauseMenu.SwapPause();
+        }
+
+        if(GameTime.Instance.IsReversing && recoverableDeathPopup.activeInHierarchy)
+        {
+            recoverableDeathPopup.SetActive(false);
         }
     }
 

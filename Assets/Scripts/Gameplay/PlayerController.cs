@@ -106,6 +106,7 @@ public class PlayerController : MonoBehaviour
         if(rollbackTimer.FilledRollbacks >= 1 || rollbackTimer.UnfilledRatio >= deadzone)
         {
             GameTime.Instance.Stop();
+            gameController.LesserDeath();
         }
         else
         {

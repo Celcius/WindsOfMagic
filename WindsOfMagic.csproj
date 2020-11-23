@@ -85,6 +85,7 @@
      <Compile Include="Assets\Scripts\Wall.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Projectiles\PlayerProjectile.cs" />
      <Compile Include="Assets\Scripts\Playtest\PlayTestOptions.cs" />
+     <Compile Include="Assets\Scripts\UI\VolumeSetting.cs" />
      <Compile Include="Assets\Scripts\Gameplay\IGameTimeListener.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Stats\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
@@ -118,7 +119,7 @@
      <Compile Include="Assets\Scripts\UI\StatUI.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Pickups\PickupRepresentationArr.cs" />
      <Compile Include="Assets\Scripts\TimedBoundRandom.cs" />
-     <Compile Include="Assets\Scripts\UI\VolumeSetting.cs" />
+     <Compile Include="Assets\Scripts\UI\ReverseTutorial.cs" />
      <None Include="Assets\Scripts\WindsOfMagic.asmdef" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.8f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
