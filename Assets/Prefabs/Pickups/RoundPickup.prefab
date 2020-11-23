@@ -132,6 +132,7 @@ MonoBehaviour:
   useOtherPos: 0
   offset: {x: 0, y: 0, z: 0}
   euler: {x: 0, y: 0, z: 0}
+  statTierList: {fileID: 11400000, guid: e6b4df058fc349b48aa06b5039c14cdb, type: 2}
 --- !u!114 &7671398613948948337
 MonoBehaviour:
   m_ObjectHideFlags: 0

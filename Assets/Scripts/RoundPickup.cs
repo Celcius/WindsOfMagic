@@ -17,6 +17,7 @@ public class RoundPickup : MonoBehaviour
     private WaveSpawnerVar waveSpawner;
 
     private PlayerPickups playerStats;
+    public PlayerPickups PlayerStats => playerStats;
 
     private SpriteRenderer image;
 
@@ -24,7 +25,6 @@ public class RoundPickup : MonoBehaviour
 
     public string topLabel;
     public string botLabel;
-
 
     Vector2 dir;
 

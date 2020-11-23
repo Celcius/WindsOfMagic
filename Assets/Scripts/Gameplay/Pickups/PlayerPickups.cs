@@ -32,9 +32,12 @@ public class PlayerPickups: ApplyOnCollision
             foreach(PlayerStatType type in increments)
             {
                 int prev = currentStats.GetTier(type);
+                bool isMax = prev == StatTierList.MaxTier;
                 currentStats.IncrementTier(type);
                 currentStats.IncrementTier(type);
                 int end = currentStats.GetTier(type);
+                if(isMax)
+                
                 toPrint += "[+]["+type+"]" + prev + " -> " + end + "\n";
             }
         }
@@ -44,6 +47,7 @@ public class PlayerPickups: ApplyOnCollision
             foreach(PlayerStatType type in decrements)
             {
                 int prev = currentStats.GetTier(type);
+                bool isMin = prev == StatTierList.MaxTier;
                 currentStats.DecrementTier(type);
                 int end = currentStats.GetTier(type);
                 toPrint += "[-]["+type+"]" + prev + " -> " + end + "\n";
