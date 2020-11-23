@@ -210,7 +210,10 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         float angle = TimedBoundRandom.RandomFloat(0,360);
         lastAngle = angle;
         float offsetInc = pickupOffset.y * 2.0f / (toCreate-1);
-    
+        PickupRepresentationArr allPickups = isAssistMode.Value? assistModePickups : normalModePickups;
+        List<PickupRepresentation> possiblePickups = new List<PickupRepresentation>();
+        possiblePickups.AddRange(allPickups.Pickups);
+
         for(int i = 0; i < toCreate; i++)
         {
             Vector2 anchorPos = Vector2.right *(wallVar.Value.Radius + pickupOffset.x) 
@@ -237,7 +240,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
             else
             {
                 pickup = Instantiate(roundPickupPrefab, (Vector3) anchorPos , Quaternion.identity);
-                PopulatePickup(pickup);
+                possiblePickups = PopulatePickup(pickup, possiblePickups);
             }
             
             pickup.SetupPickup(dir, speed);
@@ -256,22 +259,24 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         instantiatedWave.SetValue(new TimedBool(GameTime.Instance.ElapsedTime, val));
     }
 
-    private void PopulatePickup(RoundPickup pickup)
+    private List<PickupRepresentation> PopulatePickup(RoundPickup pickup, List<PickupRepresentation> pickups)
     {
-        PickupRepresentationArr possiblePickups = isAssistMode.Value? assistModePickups : normalModePickups;
-
-        int chosenIndex = TimedBoundRandom.RandomInt(0, possiblePickups.Pickups.Length);
-        if(chosenIndex >= possiblePickups.Pickups.Length)
+        if(pickups == null || pickups.Count <= 0)
         {
-            return;
+            return pickups;
         }
 
-        PickupRepresentation representation = possiblePickups.Pickups[chosenIndex];
+        int chosenIndex = TimedBoundRandom.RandomInt(0, pickups.Count);
+
+        PickupRepresentation representation = pickups[chosenIndex];
         pickup.SetPlayerStats(representation.increments,
                               representation.decrements, 
                               representation.image);
         pickup.topLabel = representation.topLabel;
         pickup.botLabel = representation.botLabel;
+
+        pickups.RemoveAt(chosenIndex);
+        return pickups;
     }
 
     private void OnDrawGizmos() 
