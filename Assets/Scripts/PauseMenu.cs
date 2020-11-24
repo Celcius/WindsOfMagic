@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
     private BoolVar isPaused;
+    public bool IsPaused => isPaused.Value;
 
     [SerializeField]
     private GameObject[] enableOnPause;

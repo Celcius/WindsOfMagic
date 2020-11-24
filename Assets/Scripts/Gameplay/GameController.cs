@@ -46,15 +46,21 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private GameObject recoverableDeathPopup;
 
+    [SerializeField]
+    private GameObject endGame;
+
+    private bool IsGameRunning;
+
     void Start()
     {
         recoverableDeathPopup.SetActive(false);
+        endGame.SetActive(false);
         playTestOptions.ResetOptions();
 
         GameTime.Instance.Start();
 
         transform.GetComponent<WaveSpawner>();
-        spawner.OnWillSpawnWaveEvent += OnWillSpawnWave;
+        spawner.OnWillSpawnWaveEvent += UpdateNewWaveScore;
 
         score.OnChange += OnScoreChange;
         roundScore.OnChange += OnRoundScoreUpdate;
@@ -68,7 +74,7 @@ public class GameController : MonoBehaviour
         score.OnChange -= OnScoreChange;
         roundScore.OnChange -= OnRoundScoreUpdate;
         collectedPickups.OnChange -= OnCollectedPickupsUpdate; 
-        spawner.OnWillSpawnWaveEvent -= OnWillSpawnWave;
+        spawner.OnWillSpawnWaveEvent -= UpdateNewWaveScore;
     }
 
     public void LesserDeath()
@@ -78,8 +84,20 @@ public class GameController : MonoBehaviour
 
     public void EndGame()
     {
-        SceneManager.LoadScene(0,LoadSceneMode.Single);
+        GameTime.Instance.Stop();
+        UpdateNewWaveScore();
+        IsGameRunning = false;
+        if(pauseMenu.IsPaused)
+        {
+            pauseMenu.SwapPause();
+        }
+        endGame.SetActive(true);
+    }
+
+    public void RestartGame()
+    {
         ResetGame();
+        SceneManager.LoadScene(0,LoadSceneMode.Single);
     }
 
     public void ResetGame()
@@ -96,11 +114,12 @@ public class GameController : MonoBehaviour
         balancer.ResetStats();
         player.StartController();
         rollbackTimer.SetPercentage(playTestOptions.filledTimeBars);
+        IsGameRunning = true;
     }
     
     void Update()
     {    
-        if(inputHandler.IsPauseDown())
+        if(IsGameRunning && inputHandler.IsPauseDown())
         {
             pauseMenu.SwapPause();
         }
@@ -131,7 +150,7 @@ public class GameController : MonoBehaviour
         roundScoreRepresentation.Value = (int)(roundScore.Value / (collectedPickups.Value + 1));
     }
 
-    private void OnWillSpawnWave()
+    public void UpdateNewWaveScore()
     {
         score.Value +=  roundScoreRepresentation.Value;
         collectedPickups.Value = 0;
