@@ -84,8 +84,8 @@ public class GameController : MonoBehaviour
 
     public void EndGame()
     {
-        GameTime.Instance.Stop();
         UpdateNewWaveScore();
+        GameTime.Instance.Stop();
         IsGameRunning = false;
         if(pauseMenu.IsPaused)
         {

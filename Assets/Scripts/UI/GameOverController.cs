@@ -5,6 +5,11 @@ using TMPro;
 using UnityEngine.UI;
 using AmoaebaUtils;
 
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 public class GameOverController : MonoBehaviour
 {
     [SerializeField]
@@ -49,6 +54,14 @@ public class GameOverController : MonoBehaviour
     private float scoreIncreaseDuration = 2.0f;
 
     private bool canDetectKey = false;
+
+    public const string HIGHSCORE_KEY = "highScoreKey";
+    public const string WAVE_KEY = "waveKey";
+    public void ReloadScore() 
+    {
+        highScore.Value = PlayerPrefs.GetFloat(HIGHSCORE_KEY, 0);
+        maxWave.Value = PlayerPrefs.GetFloat(WAVE_KEY, 0);
+    }
     private void OnEnable()
     {
         StopAllCoroutines();
@@ -59,6 +72,7 @@ public class GameOverController : MonoBehaviour
 
     private void PrepareAssets()
     {
+        ReloadScore();
         canDetectKey = false;
 
         foreach(TextMeshProUGUI asset in assets)
@@ -67,8 +81,8 @@ public class GameOverController : MonoBehaviour
             c.a = 0;
             asset.color = c;
         }
-        highScoreLabel.text = (score.Value > highScore.Value)? "New Record!" : ("Max: " + highScore.Value);
-        maxWaveLabel.text = currentWave.Value > maxWave.Value? "New Record!" : ("Max: " + maxWave.Value);
+        highScoreLabel.text = (score.Value > highScore.Value)? "New Record!" : ("Best: " + highScore.Value);
+        maxWaveLabel.text = currentWave.Value > maxWave.Value? "New Record!" : ("Best: " + maxWave.Value);
     }
 
     private void Update()
@@ -77,6 +91,10 @@ public class GameOverController : MonoBehaviour
         {
             highScore.Value = score.Value;
             maxWave.Value = currentWave.Value;
+
+            PlayerPrefs.SetFloat(GameOverController.HIGHSCORE_KEY, highScore.Value);
+            PlayerPrefs.SetFloat(GameOverController.WAVE_KEY, maxWave.Value);
+
             canDetectKey = false;
             controller.RestartGame();
         }
@@ -179,3 +197,20 @@ public class GameOverController : MonoBehaviour
         graphic.color = c;
     }
 }
+
+#if UNITY_EDITOR
+[CustomEditor(typeof(GameOverController))]
+public class GameOverControllerInspector : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        if (GUILayout.Button("ResetScore"))
+        {
+            PlayerPrefs.DeleteKey(GameOverController.HIGHSCORE_KEY);
+            PlayerPrefs.DeleteKey(GameOverController.WAVE_KEY);
+            ((GameOverController)target).ReloadScore();
+        }
+    }
+}
+#endif

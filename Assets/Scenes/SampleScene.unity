@@ -2251,6 +2251,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EndGame
       objectReference: {fileID: 0}
+    - target: {fileID: 5731811115198093449, guid: 3e9cea23af4ea4d4ea6925d07fda8bd2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5731811115198093460, guid: 3e9cea23af4ea4d4ea6925d07fda8bd2,
         type: 3}
       propertyPath: controller
