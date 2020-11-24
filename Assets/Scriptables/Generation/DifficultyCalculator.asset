@@ -20,6 +20,7 @@ MonoBehaviour:
   - {fileID: 4189794458739627150, guid: e6b778e077b951d489f36be500f114dc, type: 3}
   - {fileID: 633188112425380832, guid: be38d5365fdca124a93a77c7312ef4f7, type: 3}
   - {fileID: 6577417357284807256, guid: 1942c0a04b190cf44a01b8ac235fd89c, type: 3}
+  - {fileID: 2347419024021936400, guid: 97d675eda6c04a145a2b374421de8da1, type: 3}
   maxDifficultyCutOff: 1500
   DifficultyMultiplierPerEnemy:
     serializedVersion: 2

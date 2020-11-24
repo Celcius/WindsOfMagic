@@ -10,6 +10,12 @@ public class ApplyDamageOnCollision : ApplyOnCollision
 
     [SerializeField]
     private bool applyOnOther =  true;
+
+    [SerializeField]
+    protected Transform applyTransform;
+
+    public Transform TargetTransform => (applyTransform != null? applyTransform : transform);
+
     public float Damage 
     {
         get { return damage; }
@@ -22,12 +28,23 @@ public class ApplyDamageOnCollision : ApplyOnCollision
         {
             return;
         }
-        TimedHealth health = (applyOnOther? other : transform).GetComponent<TimedHealth>();
+
+        Transform target = (applyOnOther? other : TargetTransform);
+        
+        TimedHealth health = target.GetComponent<TimedHealth>();
         if(health == null)
         {
-            return;
+            ApplyDamageOnCollision collision = target.GetComponent<ApplyDamageOnCollision>();
+            if(collision == null)
+            {
+                return;
+            }
+            health = collision.TargetTransform.GetComponent<TimedHealth>();
         }
 
-        health.SetHealthDelta(-damage);
+        if(health != null)
+        {
+            health.SetHealthDelta(-damage);
+        }
     }
 }

@@ -31,7 +31,7 @@ public class RotateTowardsPlayer : MonoBehaviour
        UpdateRotation();
     }
 
-    private void UpdateRotation()
+    public void UpdateRotation()
     {
         Vector2 dir = player.Value.position - transform.position;
         if(rotateSpeed <= 0)

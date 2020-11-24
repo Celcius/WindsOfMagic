@@ -53,6 +53,12 @@ public class Chaser : MonoBehaviour
         
     }
 
+    public void Stop()
+    {
+        body.velocity = Vector3.zero;
+    }
+    
+
     protected virtual void OnWithinDistance()
     {
 

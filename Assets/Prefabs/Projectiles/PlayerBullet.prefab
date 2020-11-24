@@ -56,7 +56,7 @@ PrefabInstance:
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
       propertyPath: layerMask.m_Bits
-      value: 22528
+      value: 153600
       objectReference: {fileID: 0}
     - target: {fileID: 1671679668734070761, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}
@@ -67,6 +67,11 @@ PrefabInstance:
         type: 3}
       propertyPath: layerMask.m_Bits
       value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 2456233595099944614, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2630988780769934401, guid: 283ed9dbfb9213a4a8e635ce84ca72e0,
         type: 3}

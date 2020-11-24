@@ -230,7 +230,7 @@ public class PlayerController : MonoBehaviour
 
     private void Shoot(float speedMagnitude)
     {
-        Vector2 shootDir = IsAssistModeOn.Value? GetClosestEnemyDir() : input.GetShootAxis();
+        Vector2 shootDir = input.IsShooting()?  input.GetShootAxis() : IsAssistModeOn.Value? GetClosestEnemyDir() : input.GetShootAxis();
         if(bullet == null || Mathf.Approximately(shootDir.magnitude,0))
         {
             return;

@@ -17,7 +17,7 @@ public class InstantiatePickupTextOnCollision : InstantiateOnCollision
         {
             PickupText text = instantiated.GetComponent<PickupText>();
             RoundPickup pickup = GetComponent<RoundPickup>();
-            if(pickup != null)
+            if(pickup != null && pickup.PlayerStats != null && pickup.PlayerStats.increments.Length > 0 && pickup.PlayerStats.decrements.Length > 0)
             {
                 bool isMax = pickup.PlayerStats.increments.Length > 0 && IsMaxStat(pickup.PlayerStats.increments[0]);
                 bool isMin = pickup.PlayerStats.decrements.Length > 0 && IsMinStat(pickup.PlayerStats.decrements[0]);

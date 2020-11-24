@@ -16,7 +16,7 @@ public class BulletWaveShooter : MonoBehaviour
 
 
     [SerializeField]
-    private bool repeat = true;
+    protected bool repeat = true;
 
     [SerializeField]
     private float spawnRadiusOffset = 0;
@@ -28,23 +28,32 @@ public class BulletWaveShooter : MonoBehaviour
     private bool ignoreRotation = false;
 
     private GameTime timeHandler;
-    private float elapsedTime = 0.0f;
+    protected float elapsedTime = 0.0f;
 
-    private int currentWaveIndex = 0;
+    protected int currentWaveIndex = 0;
+
+    private bool hasFinishedShooting = false;
+    public bool HasFinishedShooting => hasFinishedShooting;
 
     [SerializeField]
-    private float playerMinDistance = float.MaxValue;
+    protected float playerMinDistance = float.MaxValue;
 
     [SerializeField]
-    private TransformVar player;
+    protected TransformVar player;
 
-    private void Start() 
+    protected virtual void Start() 
     {
         timeHandler = GameTime.Instance;
     }
 
-    private void Update()
-    {   
+    protected virtual void Update()
+    {
+         bool isPlayerClose = playerMinDistance == float.MaxValue 
+                            || Vector2.Distance(player.Value.position, transform.position) <= playerMinDistance;
+        ShootUpdate(isPlayerClose);
+    }   
+    protected void ShootUpdate(bool isPlayerClose)
+    {
         if(waves.Length == 0 || (!repeat && currentWaveIndex >= waves.Length))
         {
             return;
@@ -63,8 +72,7 @@ public class BulletWaveShooter : MonoBehaviour
             return;
         }
 
-        bool isPlayerClose = playerMinDistance == float.MaxValue 
-                            || Vector2.Distance(player.Value.position, transform.position) <= playerMinDistance;
+       
 
         if(elapsedTime >= waves[currentWaveIndex].timeToSpawn && isPlayerClose)
         {
@@ -74,12 +82,21 @@ public class BulletWaveShooter : MonoBehaviour
             ++currentWaveIndex;
             if(repeat && currentWaveIndex >= waves.Length)
             {
-                elapsedTime = 0;
-                currentWaveIndex = 0;
+                ResetShot();
+            }
+            else if(currentWaveIndex >= waves.Length)
+            {
+                hasFinishedShooting = true;
             }
         }
     }
 
+    public void ResetShot()
+    {   
+        hasFinishedShooting = false;
+        elapsedTime = 0;
+        currentWaveIndex = 0;
+    }
     private void SpawnWave(BulletWave wave)
     {
         BulletInstanceDefinition[] waveDefinitions = GetWaveDefinitions(wave);

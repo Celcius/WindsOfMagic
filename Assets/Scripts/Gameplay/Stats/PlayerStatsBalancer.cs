@@ -14,6 +14,7 @@ public class PlayerStatsBalancer : ScriptableObject
     public struct PlayerStatBalance
     {
         public AnimationCurve statCurve;
+        public AnimationCurve assistStatCurve;
 
         public PlayerStatType type;
     }
@@ -40,6 +41,9 @@ public class PlayerStatsBalancer : ScriptableObject
     [SerializeField]
     private PlayerStats currentStats;
 
+    [SerializeField]
+    private BoolVar isAssistMode;
+
     private Dictionary<PlayerStatType, int> computedIndexes;
 
     private void OnEnable() 
@@ -50,14 +54,21 @@ public class PlayerStatsBalancer : ScriptableObject
         {
             return;
         }
-
+        isAssistMode.OnChange += OnAssistModeChange;
         currentTiers.OnStatsChangeEvent -= OnStatsChanged;
     }
 
     private void OnDisable() 
     {
+        isAssistMode.OnChange -= OnAssistModeChange;
         currentTiers.OnStatsChangeEvent -= OnStatsChanged;
     }
+
+    private void OnAssistModeChange(bool oldVal, bool newVal)
+    {
+        UpdateStats();
+    }
+
     public void ResetStats()
     {
         currentTiers.OnStatsChangeEvent -= OnStatsChanged;
@@ -108,7 +119,8 @@ public class PlayerStatsBalancer : ScriptableObject
             ComputeIndexes();
         }
 
-        return statCurves[computedIndexes[type]].statCurve;
+        PlayerStatBalance stat = statCurves[computedIndexes[type]];
+        return isAssistMode.Value? stat.assistStatCurve : stat.statCurve;
     }
 
     private void ComputeIndexes()
@@ -182,6 +194,25 @@ public class PlayerStatsBalancerEditor : Editor
         if(GUILayout.Button("Update Stats"))
         {
             balancer.ResetStats();
+        }
+
+        if(GUILayout.Button("Copy to empty Assist Stats"))
+        {
+            PlayerStatsBalancer.PlayerStatBalance[] curves = balancer.StatCurves;
+            foreach(PlayerStatsBalancer.PlayerStatBalance curve in curves)
+            {
+                if(curve.assistStatCurve.keys.Length > 0)
+                {
+                    continue;
+                }
+
+                foreach(Keyframe key in curve.statCurve.keys)
+                {
+                    curve.assistStatCurve.AddKey(key);
+                }
+            }
+
+            balancer.StatCurves = curves;
         }
     }
 }
