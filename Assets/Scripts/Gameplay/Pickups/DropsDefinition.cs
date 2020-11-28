@@ -18,8 +18,20 @@ public class DropsDefinition : ScriptableObject
 
     private float totalWeight = 0;
 
+    [SerializeField]
+    private int firstDropIndex = 0;
+
     [System.NonSerialized]
     private bool hasComputed = false;
+
+    
+    [System.NonSerialized]
+    private static bool hasSpawned = false;
+
+    private void OnEnable() 
+    {
+        hasSpawned = false;
+    }
 
     private void Compute() 
     {
@@ -45,6 +57,12 @@ public class DropsDefinition : ScriptableObject
     {
         Compute();
         
+        if(!hasSpawned)
+        {
+            hasSpawned = true;  
+            return drops[firstDropIndex].pickup;
+        }
+
         float roll = TimedBoundRandom.RandomFloat(0, 1);
         for(int i = 0; i < drops.Length; i++)
         {

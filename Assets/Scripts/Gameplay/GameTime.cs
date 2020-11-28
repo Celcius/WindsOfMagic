@@ -63,8 +63,12 @@ public class GameTime : SingletonScriptableObject<GameTime>
     public bool IsPaused => isPaused.Value;
     private float storedPauseSpeed = 0;
 
-    public bool IsRunning => !IsStopped && !IsPaused && !isReversing;
+    private bool hasEnded = false;
 
+    public bool IsRunning => !IsStopped && !IsPaused && !isReversing && !hasEnded;
+
+    private bool hasStarted = false;
+    public bool HasStarted => hasStarted;
     private float speedModifier = 1.0f;
     public float SpeedModifier
     {
@@ -74,7 +78,10 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     private void OnEnable() 
     {
-        ElapsedTime = 0;    
+        ElapsedTime = 0;
+        speedModifier = 0;
+        isStopped = true;
+        hasStarted = false;
     }
 
     public float ElapsedTime
@@ -97,7 +104,7 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     public float GameSpeed
     {
-        get { return gameSpeed * speedModifier; }
+        get { return hasEnded? 0 : gameSpeed * speedModifier; }
         set 
         { 
             gameSpeed = value;  
@@ -155,12 +162,16 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     public void Start()
     {
+        hasStarted = true;
+        isStopped = false;
+        speedModifier = 1.0f;
         isPaused.OnChange += PauseChange;
         PauseChange(false, isPaused.Value);
     }
 
     public void Reset() 
     {
+        hasEnded = false;
         elapsedTime = 0.0f;
         gameSpeed = defaultSpeed;
         isReversing = false;
@@ -194,6 +205,10 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     public void Play()
     {
+        if(hasEnded)
+        {
+            return;
+        }
         isReversing = false;
         isStopped = false;
         IsPlayingNormal.Value = true;
@@ -202,14 +217,37 @@ public class GameTime : SingletonScriptableObject<GameTime>
 
     public void Reverse()
     {
+        if(hasEnded)
+        {
+            return;
+        }
         isReversing = true;
         isStopped = false;
         IsPlayingNormal.Value = false;
         ChangeTime(reverseSpeed, playSpeedOut, reverseSpeedIn);
     }
 
+    
+    public void End()
+    {
+        if(runner != null && timeInRoutine != null)
+        {
+            runner.StopCoroutine(timeInRoutine);            
+        }
+
+        IsPlayingNormal.Value = false;
+        isStopped = true;
+        isReversing = false;
+        hasEnded = true;
+        gameSpeed = 0;
+    }
+
     public void Stop()
     {
+        if(hasEnded)
+        {
+            return;
+        }
         if(runner != null && timeInRoutine != null)
         {
             runner.StopCoroutine(timeInRoutine);            

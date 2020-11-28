@@ -253,6 +253,7 @@ MonoBehaviour:
   enemies: {fileID: 11400000, guid: 5dcbe7e0783fcda4db9a549aa7b81077, type: 2}
   playtest: {fileID: 11400000, guid: 96e1d32d1f0de0a4997c74b19cc27b5c, type: 2}
   wall: {fileID: 11400000, guid: 81a382ba0e856d549b5f13768ba515b2, type: 2}
+  gameController: {fileID: 0}
 --- !u!58 &4406686250223132563
 CircleCollider2D:
   m_ObjectHideFlags: 0

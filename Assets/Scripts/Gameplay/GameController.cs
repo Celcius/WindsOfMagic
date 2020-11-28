@@ -51,10 +51,19 @@ public class GameController : MonoBehaviour
 
     private bool IsGameRunning;
 
-    void Start()
+    private bool isInTutorial;
+    public bool InTutorial => isInTutorial;
+
+    private void Start() 
     {
+        isInTutorial = true;
         recoverableDeathPopup.SetActive(false);
-        endGame.SetActive(false);
+        endGame.SetActive(false);   
+        StartGame();
+    }
+    
+    public void StartGame()
+    {
         playTestOptions.ResetOptions();
 
         GameTime.Instance.Start();
@@ -66,7 +75,7 @@ public class GameController : MonoBehaviour
         roundScore.OnChange += OnRoundScoreUpdate;
         collectedPickups.OnChange += OnCollectedPickupsUpdate;
         
-        ResetGame();
+        ResetGame(false);
     }
 
     private void OnDisable() 
@@ -85,7 +94,7 @@ public class GameController : MonoBehaviour
     public void EndGame()
     {
         UpdateNewWaveScore();
-        GameTime.Instance.Stop();
+        GameTime.Instance.End();
         IsGameRunning = false;
         if(pauseMenu.IsPaused)
         {
@@ -96,11 +105,11 @@ public class GameController : MonoBehaviour
 
     public void RestartGame()
     {
-        ResetGame();
+        ResetGame(true);
         SceneManager.LoadScene(0,LoadSceneMode.Single);
     }
 
-    public void ResetGame()
+    public void ResetGame(bool canSpawn)
     {
         
         GameTime.Instance.Reset();
@@ -113,8 +122,22 @@ public class GameController : MonoBehaviour
         score.Value = 0;
         balancer.ResetStats();
         player.StartController();
-        rollbackTimer.SetPercentage(playTestOptions.filledTimeBars);
         IsGameRunning = true;
+        if(canSpawn)
+        {
+            StartSpawn();
+        }
+        else
+        {
+            rollbackTimer.SetPercentage(0.5f);
+        }
+    }
+
+    public void StartSpawn()
+    {
+        isInTutorial = false;
+        rollbackTimer.SetPercentage(playTestOptions.filledTimeBars);
+        spawner.StartSpawn();
     }
     
     void Update()

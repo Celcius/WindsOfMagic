@@ -72,12 +72,13 @@ public class UIController : MonoBehaviour
     private void OnTimeRatioChange(float oldVal, float newVal)
     {
         UpdateRollbackClock();
+        bool isVoyage = GameTime.Instance.IsReversing;
+        timeVoyageImage.gameObject.SetActive(isVoyage);
     }
 
     private void OnTimeVoyageChange(float oldVal, float newVal)
     {
-        bool isVoyage = (newVal >= 1.0f);
-        timeVoyageImage.gameObject.SetActive(isVoyage);
+
     }
 
     private void OnHealthChange(float oldVal, float newVal)
@@ -120,7 +121,7 @@ public class UIController : MonoBehaviour
         bool stopped = GameTime.Instance.IsStopped;
         bool reversing = GameTime.Instance.IsReversing;
 
-        grainImage.gameObject.SetActive(reversing || stopped);
+        grainImage.gameObject.SetActive((reversing || stopped) && GameTime.Instance.HasStarted);
         
         gameSpeedUIs[0].gameObject.SetActive(stopped);
         gameSpeedUIs[1].gameObject.SetActive(!stopped);

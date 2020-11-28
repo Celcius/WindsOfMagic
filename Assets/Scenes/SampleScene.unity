@@ -226,12 +226,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 405336407}
+      objectReference: {fileID: 600891893}
     - target: {fileID: 7092935080451778976, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
         type: 3}
       propertyPath: blendMaterial
       value: 
-      objectReference: {fileID: 405336407}
+      objectReference: {fileID: 0}
     - target: {fileID: 8692218515124674985, guid: bc0dfb49a83f0e54091e9e3a4c79f1e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1479,46 +1479,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7187568d9099ab3409bbc573b2f9ec9a, type: 3}
---- !u!21 &405336407
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 9
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/BlendModes/SpritesDefault/Overlay
-  m_Shader: {fileID: 4800000, guid: 98bb90fb860195a4bb287a6149b2f4a4, type: 3}
-  m_ShaderKeywords: BLENDMODES_MODE_HUE ETC1_EXTERNAL_ALPHA
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BLENDMODES_OverlayTexture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _BLENDMODES_OverlayColor: {r: 0, g: 1, b: 0.8638129, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!850595691 &569144789
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -1580,6 +1540,46 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaDirect: 0.5
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
+--- !u!21 &600891893
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Overlay
+  m_Shader: {fileID: 4800000, guid: 98bb90fb860195a4bb287a6149b2f4a4, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_HUE ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BLENDMODES_OverlayTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _BLENDMODES_OverlayColor: {r: 0, g: 1, b: 0.8638129, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &651939041 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 570832635791847511, guid: 725d022612fb0b54992845741895063b,
@@ -1598,6 +1598,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de34567058929fe4da29053c1cd127a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!21 &788867770
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 9
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/BlendModes/SpritesDefault/Overlay
+  m_Shader: {fileID: 4800000, guid: 98bb90fb860195a4bb287a6149b2f4a4, type: 3}
+  m_ShaderKeywords: BLENDMODES_MODE_HUE ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BLENDMODES_OverlayTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _BLENDMODES_OverlayColor: {r: 0, g: 1, b: 0.8638129, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &835303116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5731811115198093449, guid: 3e9cea23af4ea4d4ea6925d07fda8bd2,
@@ -1656,6 +1696,12 @@ Material:
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+--- !u!1 &1547664824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6231242689164870204, guid: 93cd6be3b81393042ae803ca66379db7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4820266220973805394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!21 &1629234696
 Material:
   serializedVersion: 6
@@ -2045,6 +2091,110 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93cd6be3b81393042ae803ca66379db7, type: 3}
+--- !u!1001 &4884014089565642267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4884014090337943338, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: objectsToHide.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943338, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: objectsToHide.Array.data[0]
+      value: 
+      objectReference: {fileID: 1547664824}
+    - target: {fileID: 4884014090337943338, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 675182583}
+    - target: {fileID: 4884014090337943338, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: fadeDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943338, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: startDuration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943338, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: objectsToHide.Array.data[1]
+      value: 
+      objectReference: {fileID: 1547664824}
+    - target: {fileID: 4884014090337943338, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: hideTutorial
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943339, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884014090337943348, guid: 56015c8e02e8f694b8193b4ea5bf405e,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 56015c8e02e8f694b8193b4ea5bf405e, type: 3}
 --- !u!1001 &5403722845242370097
 PrefabInstance:
   m_ObjectHideFlags: 0

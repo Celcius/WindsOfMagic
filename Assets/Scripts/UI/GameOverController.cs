@@ -27,7 +27,7 @@ public class GameOverController : MonoBehaviour
     private FloatVar currentWave;
 
     [SerializeField]
-    private TextMeshProUGUI[] assets;
+    private Graphic[] assets;
 
     [SerializeField]
     private TextMeshProUGUI scoreLabel;
@@ -45,7 +45,7 @@ public class GameOverController : MonoBehaviour
     private TextMeshProUGUI anyKeyLabel;
 
     [SerializeField]
-    private TextMeshProUGUI gameOverLabel;
+    private Image gameOverLabel;
 
     [SerializeField]
     private Image panel;
@@ -75,7 +75,7 @@ public class GameOverController : MonoBehaviour
         ReloadScore();
         canDetectKey = false;
 
-        foreach(TextMeshProUGUI asset in assets)
+        foreach(Graphic asset in assets)
         {
             Color c = asset.color;
             c.a = 0;

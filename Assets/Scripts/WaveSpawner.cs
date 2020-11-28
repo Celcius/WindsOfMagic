@@ -27,7 +27,6 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
 #if UNITY_EDITOR
     [SerializeField]
-
     private bool canSpawn = true;
 #else
     private bool canSpawn = true;
@@ -71,9 +70,10 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
     [SerializeField]
     private FloatVar currentWaveVar;
 
+    private bool hasStarted = false;
     float lastAngle = 0;
 
-    public void Start()
+    public void StartSpawn()
     {
         Reset();
         aliveEnemies.OnChange -= OnEnemyChange;
@@ -81,6 +81,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
         currentPickups.OnChange -= OnPickupChange;
         currentPickups.OnChange += OnPickupChange;
         GameTime.Instance.AddTimeListener(this);
+        hasStarted = true;
     }
 
     public void Reset()
@@ -124,7 +125,7 @@ public class WaveSpawner : MonoBehaviour, IGameTimeListener
 
     public void OnTimeElapsed(float timeElapsed)
     {
-        if(!canSpawn)
+        if(!canSpawn || !hasStarted)
         {
             return;
         }
