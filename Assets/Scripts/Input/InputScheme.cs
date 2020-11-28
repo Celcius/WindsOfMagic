@@ -19,6 +19,9 @@ public class InputScheme : ScriptableObject
 
     public KeyCode PauseKey = KeyCode.Escape;
 
+    [SerializeField]
+    public bool IsPSInput;
+
     public enum KeyActionType
     {
         PositiveXMove,
@@ -111,5 +114,45 @@ public class InputScheme : ScriptableObject
                 return PauseKey;
         }
         return KeyCode.None;
+    }
+
+    public string GetCodeString(KeyCode code)
+    {
+        if(!UseJoysticks)
+        {
+            return code.ToString();
+        }
+
+        switch (code)
+        {
+            case KeyCode.JoystickButton0:
+                return IsPSInput? "Square": "A";
+            case KeyCode.JoystickButton1:
+                return IsPSInput? "X": "B";
+            case KeyCode.JoystickButton2:
+                return IsPSInput? "Circle": "X";
+            case KeyCode.JoystickButton3:
+                return IsPSInput? "Triangle": "Y";
+            case KeyCode.JoystickButton4:
+                return IsPSInput? "L1": "LB";
+            case KeyCode.JoystickButton5:
+                return IsPSInput? "R1": "RB";
+            case KeyCode.JoystickButton6:
+                return IsPSInput? "L2": code.ToString();
+            case KeyCode.JoystickButton7:
+                return IsPSInput? "R2": "Start";
+            case KeyCode.JoystickButton8:
+                return IsPSInput? "Share": code.ToString();
+            case KeyCode.JoystickButton9:
+                return IsPSInput? "Options": code.ToString();
+            case KeyCode.JoystickButton10:
+                return IsPSInput? "L3": code.ToString();
+            case KeyCode.JoystickButton11:
+                return IsPSInput? "R3": code.ToString();
+            case KeyCode.JoystickButton12:
+                return IsPSInput? "Play": code.ToString();
+        }      
+
+        return code.ToString();  
     }
 }

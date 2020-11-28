@@ -58,7 +58,8 @@ public class KeyChangeSetting : MonoBehaviour
 
     private void UpdateLabels()
     {
-        keyLabel.text = currentScheme.Value.CodeFromType(actionType).ToString();
+        KeyCode code = currentScheme.Value.CodeFromType(actionType);
+        keyLabel.text = currentScheme.Value.GetCodeString(code);
         string actionLabelText = "";
 
         switch(actionType)

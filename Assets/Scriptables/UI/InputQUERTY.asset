@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcdce1152c8de5748a0a0207cf942952, type: 3}
   m_Name: InputQUERTY
   m_EditorClassIdentifier: 
-  PresetName: Querty Keyboard
+  PresetName: QWERTY Keyboard
   UseJoysticks: 0
   PositiveXKey: 100
   NegativeXKey: 97
@@ -24,3 +24,4 @@ MonoBehaviour:
   NegativeShootYKey: 274
   ReverseTimeKey: 32
   PauseKey: 27
+  IsPSInput: 0

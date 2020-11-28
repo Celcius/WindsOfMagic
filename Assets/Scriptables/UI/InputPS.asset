@@ -24,3 +24,4 @@ MonoBehaviour:
   NegativeShootYKey: 275
   ReverseTimeKey: 335
   PauseKey: 339
+  IsPSInput: 1
