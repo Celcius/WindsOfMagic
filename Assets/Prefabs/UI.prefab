@@ -1202,7 +1202,7 @@ RectTransform:
   m_GameObject: {fileID: 7309249735562135162}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0566666, y: 1.0566666, z: 1.0566666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540639777984672698}
   m_RootOrder: 0
@@ -1328,6 +1328,52 @@ MonoBehaviour:
   TMPLabel: {fileID: 8428761101016320146}
   format: Score\n{0}
   replaceNewLine: 1
+  animate: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 10
+      outSlope: 10
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.1
+      value: 1
+      inSlope: -0.06211742
+      outSlope: Infinity
+      tangentMode: 97
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33184713
+    - serializedVersion: 3
+      time: 0.2
+      value: 1
+      inSlope: Infinity
+      outSlope: -0.056638967
+      tangentMode: 7
+      weightedMode: 0
+      inWeight: 0.251938
+      outWeight: 0.33550674
+    - serializedVersion: 3
+      time: 0.5
+      value: 0
+      inSlope: -3.3333333
+      outSlope: -3.3333333
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationScaleTo: {x: 1, y: 1.05, z: 1}
+  animationColorTo: {r: 1, g: 0.7076588, b: 0, a: 1}
+  animateOnStart: 0
 --- !u!1 &7542801920704576520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,7 +1670,7 @@ RectTransform:
   m_GameObject: {fileID: 8939207240633421323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0566666, y: 1.0566666, z: 1.0566666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540639777984672698}
   m_RootOrder: 2
@@ -1750,6 +1796,52 @@ MonoBehaviour:
   TMPLabel: {fileID: 6609067139425287471}
   format: Wave\n{0}
   replaceNewLine: 1
+  animate: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 10
+      outSlope: 10
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.1
+      value: 1
+      inSlope: -0.06211742
+      outSlope: Infinity
+      tangentMode: 97
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33184713
+    - serializedVersion: 3
+      time: 0.2
+      value: 1
+      inSlope: Infinity
+      outSlope: -0.056638967
+      tangentMode: 7
+      weightedMode: 0
+      inWeight: 0.251938
+      outWeight: 0.33550674
+    - serializedVersion: 3
+      time: 0.5
+      value: 0
+      inSlope: -3.3333333
+      outSlope: -3.3333333
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationScaleTo: {x: 1, y: 1.05, z: 1}
+  animationColorTo: {r: 1, g: 0.7076588, b: 0, a: 1}
+  animateOnStart: 0
 --- !u!1 &9090288722850918930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,7 +1870,7 @@ RectTransform:
   m_GameObject: {fileID: 9090288722850918930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0566666, y: 1.0566666, z: 1.0566666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1540639777984672698}
   m_RootOrder: 1
@@ -1906,3 +1998,49 @@ MonoBehaviour:
   TMPLabel: {fileID: 6603354084635062661}
   format: Round\n{0}
   replaceNewLine: 1
+  animate: 1
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 10
+      outSlope: 10
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.1
+      value: 1
+      inSlope: -0.06211742
+      outSlope: Infinity
+      tangentMode: 97
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33184713
+    - serializedVersion: 3
+      time: 0.2
+      value: 1
+      inSlope: Infinity
+      outSlope: -0.056638967
+      tangentMode: 7
+      weightedMode: 0
+      inWeight: 0.251938
+      outWeight: 0.33550674
+    - serializedVersion: 3
+      time: 0.5
+      value: 0
+      inSlope: -3.3333333
+      outSlope: -3.3333333
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationScaleTo: {x: 1, y: 1.05, z: 1}
+  animationColorTo: {r: 1, g: 0.7076588, b: 0, a: 1}
+  animateOnStart: 0

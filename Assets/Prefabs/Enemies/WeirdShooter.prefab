@@ -36,7 +36,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5647282256325017927}
   rotateComponent: {fileID: 5461462491322140303}
   chaserComponent: {fileID: 571586039686998433}
-  shootAnimationTime: 1.5
+  shootAnimationTime: 2
   normalCollider: {fileID: 9010392784745556117}
   shootingCollider: {fileID: 5309749558566616293}
 --- !u!1 &5099349983944260804

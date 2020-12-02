@@ -150,7 +150,8 @@ public class PlayerController : MonoBehaviour
 
             if(!IsTimeVoyaging)
             {
-                shotElapsed -= delta;
+                if(gameTime.GameSpeed > 0)
+                    shotElapsed -= delta;
                 if(shotElapsed <= 0 && (input.IsShooting() || IsAssistModeOn.Value))
                 {
                     Shoot(speed.magnitude);
