@@ -277,6 +277,12 @@ public class GameTime : SingletonScriptableObject<GameTime>
         {
             while(elapsed < duration)
             {
+                if(IsPaused)
+                {
+                    yield return new WaitForEndOfFrame();
+                    continue;
+                }
+
                 gameSpeed = curveFrom.Evaluate(gameSpeed, duration - elapsed) * startSpeed;
                 elapsed += Time.deltaTime;
                 
@@ -292,6 +298,11 @@ public class GameTime : SingletonScriptableObject<GameTime>
         
         while(elapsed < duration)
         {
+            if(IsPaused)
+            {
+                yield return new WaitForEndOfFrame();
+                continue;
+            }
             gameSpeed = curveTo.Evaluate(gameSpeed, elapsed)* value;
             elapsed += Time.deltaTime;
             OnSpeedChangeEvent?.Invoke(); 
