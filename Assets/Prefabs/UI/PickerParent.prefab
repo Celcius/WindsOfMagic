@@ -412,7 +412,9 @@ MonoBehaviour:
   pickerColor: {fileID: 11400000, guid: eea3507b3cd55c34c8aae1fed772403a, type: 2}
   currentColorScheme: {fileID: 11400000, guid: 144db8c6531551248b0f271fab928ac7, type: 2}
   defaultColorScheme: {fileID: 11400000, guid: f39edd02178bc7e4a9d8acdea5dfffb8, type: 2}
+  customColorScheme: {fileID: 11400000, guid: 2697271af61a0774e817331fad6e6e79, type: 2}
   variableName: {fileID: 4206293903130270873}
+  settingsController: {fileID: 0}
 --- !u!1 &7389509351266510951
 GameObject:
   m_ObjectHideFlags: 0

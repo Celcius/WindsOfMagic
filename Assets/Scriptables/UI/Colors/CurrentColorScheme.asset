@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad526eddd9cc202418297946df5a3919, type: 3}
+  m_Name: CurrentColorScheme
+  m_EditorClassIdentifier: 
+  schemeName: 
+  PlayerColor: {r: 0.003921569, g: 0.15294118, b: 1, a: 1}
+  PlayerBulletsColor: {r: 0.003921569, g: 0.15294118, b: 1, a: 1}
+  EnemyColor: {r: 0.9960785, g: 0.14117648, b: 0.003921569, a: 1}
+  EnemyBulletsColor: {r: 1, g: 0.5254902, b: 0.003921569, a: 1}
+  PickupColor: {r: 0.003921569, g: 0.15294118, b: 1, a: 1}
+  HealthColor: {r: 0.003921569, g: 0.15294118, b: 1, a: 1}
+  RewindColor: {r: 0.003921569, g: 0.15294118, b: 1, a: 1}

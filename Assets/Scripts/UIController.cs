@@ -57,16 +57,24 @@ public class UIController : MonoBehaviour
         GameTime.Instance.OnSpeedChangeEvent += OnSpeedChange;
         currentPlayerStats.OnChangeEvent += OnStatsChange;
         healthVar.OnChange += OnHealthChange;
+        currentColors.OnChange += OnChangeColors;
         OnStatsChange();
     }
 
     private void OnDestroy() 
     {
+        currentColors.OnChange -= OnChangeColors;
         timeRatio.OnChange -= OnTimeRatioChange;  
         timeVoyageRatio.OnChange -= OnTimeVoyageChange;
          GameTime.Instance.OnSpeedChangeEvent -= OnSpeedChange;
          currentPlayerStats.OnChangeEvent -= OnStatsChange;
          healthVar.OnChange -= OnHealthChange;
+    }
+
+    private void OnChangeColors()
+    {
+        UpdateHealth();
+        UpdateClockLines();
     }
 
     private void OnTimeRatioChange(float oldVal, float newVal)

@@ -9,6 +9,9 @@ public class ColorScheme : ScriptableObject
     public event OnValueChange OnChange;
 
     [SerializeField]
+    public string schemeName;
+
+    [SerializeField]
     private Color PlayerColor;
 
     [SerializeField]

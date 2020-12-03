@@ -88,6 +88,8 @@ public class InputSettingsController : MonoBehaviour
         isCyclingPreset = false;
     }
 
+  
+
     private void UpdatePresets()
     {
         presetLabel.text = currentScheme.Value.PresetName;

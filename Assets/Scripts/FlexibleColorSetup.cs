@@ -18,7 +18,15 @@ public class FlexibleColorSetup : MonoBehaviour
     private ColorScheme defaultColorScheme;
 
     [SerializeField]
+    private ColorScheme customColorScheme;
+
+
+    [SerializeField]
     private TextMeshProUGUI variableName;
+    
+    [SerializeField]
+    private ColorSettings settingsController;
+
 
     private FlexibleColorPicker picker = null;
 
@@ -33,6 +41,7 @@ public class FlexibleColorSetup : MonoBehaviour
         {
             picker = GetComponent<FlexibleColorPicker>();
         }
+        settingsController.PrepareCustomColor();
         Assert.IsFalse(pickerColor.Value == ColorType.None);
         Assert.IsFalse(picker== null, "No FlexibleColor Picker assigned to " + this.name);
         variableName.text = ColorTypeVar.GetColorTypeName(pickerColor.Value);
@@ -44,6 +53,7 @@ public class FlexibleColorSetup : MonoBehaviour
         Color color = defaultColorScheme.GetColor(pickerColor.Value);
         picker.color = color;
         currentColorScheme.SetColor(pickerColor.Value, color);
+        customColorScheme.SetColor(pickerColor.Value, color);
     }
 
     public void Confirm()
@@ -51,6 +61,7 @@ public class FlexibleColorSetup : MonoBehaviour
         Color color = picker.color;
         color.a = 1.0f;
         currentColorScheme.SetColor(pickerColor.Value, color);
+        customColorScheme.SetColor(pickerColor.Value, color);
         picker.transform.parent.gameObject.SetActive(false);
     }
 }
